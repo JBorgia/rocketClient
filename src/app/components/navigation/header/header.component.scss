@@ -1,0 +1,35 @@
+@import '../../../../styles/theme/palette';
+
+.navbar {
+  background-color: $primary-blue;
+  height: 70px;
+  padding: 0;
+  li a {
+    color: $accent-yellow;
+    padding: 23px 10px;
+    &.active {
+      background-color: $accent-yellow;
+      color: $white;
+    }
+  }
+}
+
+#navbarSupportedContent {
+  padding: 0 30px;
+}
+
+.navbar li a:hover {
+  color: $white;
+  background-color: $primary-blue;
+}
+
+img {
+  width: 140px;
+  padding: 10px;
+}
+
+.banner {
+  background-color: $white;
+  color: $primary-blue;
+  font-weight: 500;
+}

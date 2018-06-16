@@ -1,0 +1,166 @@
+//colors
+$white: #fff;
+$alto: #dbdbdb;
+$alabaster: #fafafa;
+$color_mine_shaft_approx: #333;
+$black: #000;
+$color_nobel_approx: #b5b5b5;
+
+//@extend-elements
+//original selectors
+//.app-flex-table th, .app-flex-table td
+%extend_1 {
+	text-align: left;
+	padding: 0.5em 0.75em;
+	border-bottom-color: $alto;
+}
+
+span {
+	white-space: nowrap !important;
+}
+.app-flex-table {
+	background-color: $white;
+	table-layout: fixed;
+	border-collapse: collapse;
+	table {
+		width: 100%;
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+	th {
+		@extend %extend_1;
+		&:nth-child(n) {
+			min-width: 150px;
+		}
+		&:nth-last-child(1) {
+			max-width: 150px;
+		}
+	}
+	td {
+		@extend %extend_1;
+		border: 1px solid $alto;
+		border-width: 0 0 1px;
+		&:nth-child(n) {
+			min-width: 150px;
+		}
+		&:nth-last-child(1) {
+			max-width: 150px;
+		}
+	}
+	header {
+		height: 10rem;
+		.sorted {
+			background-color: $white;
+		}
+		th {
+			text-transform: uppercase;
+			cursor: pointer;
+			background-color: $white;
+			border-bottom: 1px solid;
+		}
+		tr {
+			display: block;
+			position: relative;
+			&:nth-child(1):hover {
+				background-color: $white;
+			}
+		}
+		.block {
+			display: none;
+		}
+		content {
+			display: flex;
+			align-items: center;
+			color: $color_mine_shaft_approx;
+			input {
+				display: block;
+				&:focus {
+					background-color: $white !important;
+				}
+			}
+			.icon {
+				display: inline-flex;
+				flex-grow: 1;
+				justify-content: flex-end;
+				align-items: center;
+			}
+		}
+	}
+	body {
+		display: block;
+		overflow-x: auto;
+		width: 100%;
+		height: 500px;
+		.sorted {
+			background-color: $alabaster;
+		}
+	}
+	input {
+		border: 1px solid;
+		font-size: 14px;
+		padding: 3px;
+		display: block;
+		background-color: $white;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 3px;
+		color: $black;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all 0.2s ease;
+		background-color: $white;
+		width: 100%;
+		outline: none;
+		&:disabled {
+			border: none;
+			background-color: transparent;
+			color: $color_mine_shaft_approx;
+		}
+	}
+	.inner-addon {
+		position: relative;
+		i {
+			visibility: hidden;
+			opacity: 0;
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: visibility 0s, all 0.2s ease;
+		}
+		.icon {
+			position: absolute;
+			cursor: pointer;
+			color: $color_nobel_approx;
+		}
+		&:hover i {
+			visibility: visible;
+			opacity: 0.6;
+		}
+	}
+	tr:hover {
+		background-color: $alabaster;
+	}
+	span.column-resizer {
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin: 0;
+		width: 8px;
+		height: 100%;
+		padding: 0;
+		cursor: col-resize;
+		border: 1px solid transparent;
+	}
+	input[value]:not([value=""]) {
+		background-color: $white;
+	}
+	.left-addon .icon {
+		left: 0;
+	}
+	.right-addon .icon {
+		right: 0;
+	}
+	nav{
+		margin: 0 10px;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+	}
+}

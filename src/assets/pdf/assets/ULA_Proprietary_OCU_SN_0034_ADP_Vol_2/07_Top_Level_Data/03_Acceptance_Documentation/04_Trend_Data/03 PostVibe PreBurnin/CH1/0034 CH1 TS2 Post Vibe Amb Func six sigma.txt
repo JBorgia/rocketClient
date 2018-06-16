@@ -1,0 +1,57 @@
+                   VARIABLE                            LO     HI
+ NO                  NAME                    TWARN/%  LIMIT  LIMIT     VALUE     AVERAGE       STD_DEV         mu - 3*sig      mu + 3*sig    UNITS    SIG OUT      FILE     LINE
+==== ======================================= =======  =====  =====  ==========  ==========  ===============  ==============  ==============  =====  ===========  ========  ======
+   1 P_Bat_Sig_Out                              -32%   1.25   1.75      1.4194      1.4084    0.00356251555      1.39771028      1.41908537  VDC    3.088316042  file 47      532
+   2 Cnt_Pwr2_In_Out                              3%   27.5   28.5     28.0136     28.0043    0.00298935809     27.99532540     28.01326155  VDC    3.113217435  file 47     1005
+   3 P_Bat_Sig_Out                              -50%   1.25   1.75      1.3748      1.3610    0.00364810073      1.35002526      1.37191387  VDC    3.791132921  file 47    23900
+   4 Cnt_Pwr1_In_Out                              1%   27.5   28.5     28.0063     27.9962    0.00298503276     27.98722968     28.00513988  VDC    3.388645348  file 47    23919
+   5 Cnt_Pwr2_In_Out                              1%   27.5   28.5     28.0074     27.9975    0.00290740938     27.98876255     28.00620701  VDC    3.410327235  file 47    23924
+   6 Pyro_Cmd11_Out                               0%   -0.5    0.5      0.0003      0.0002    0.00000000000      0.00020000      0.00020000  VDC            N/A  file 47    30117
+file 1: SN 0008 CH2.Txt
+file 2: SN 0004 CH1.Txt
+file 3: SN 0004 CH2.Txt
+file 4: SN 0005 CH1.Txt
+file 5: SN 0005 CH2.Txt
+file 6: SN 0006 CH1.Txt
+file 7: SN 0006 CH2.Txt
+file 8: SN 0007 CH1.Txt
+file 9: SN 0009 CH1.Txt
+file 10: SN 0007 CH2.Txt
+file 11: SN 0009 CH2.Txt
+file 12: SN 0012 CH1.Txt
+file 13: SN 0012 CH2.Txt
+file 14: SN 0013 CH1.Txt
+file 15: SN 0013 CH2.Txt
+file 16: SN 0014 CH1.Txt
+file 17: SN 0014 CH2.Txt
+file 18: SN 0015 CH1.Txt
+file 19: SN 0015 CH2.Txt
+file 20: SN 0017 CH1.Txt
+file 21: SN 0017 CH2.Txt
+file 22: SN 0018 CH1.Txt
+file 23: SN 0018 CH2.Txt
+file 24: SN 0024 CH1.Txt
+file 25: SN 0024 CH2.Txt
+file 26: SN 0025 CH1.Txt
+file 27: SN 0025 CH2.Txt
+file 28: SN 0026 CH1.Txt
+file 29: SN 0026 CH2.Txt
+file 30: SN 0028 CH1.Txt
+file 31: SN 0028 CH2.Txt
+file 32: SN 0029 CH1.Txt
+file 33: SN 0029 CH2.Txt
+file 34: SN 0031 CH1.Txt
+file 35: SN 0031 CH2.Txt
+file 36: SN 0019 CH1.Txt
+file 37: SN 0010 CH1.Txt
+file 38: SN 0019 CH2.Txt
+file 39: SN 0008 CH1.Txt
+file 40: SN 0010 CH2.Txt
+file 41: SN 0021 CH1.Txt
+file 42: SN 0021 CH2.Txt
+file 43: SN 0030 CH1.Txt
+file 44: SN 0030 CH2.Txt
+file 45: 0032 CH1 TS1 Init Amb Func 091416.Txt
+file 46: 0032 CH2 TS1 Init Amb Func 091416.Txt
+file 47: \\ohcincefs01\Space_Test\Acceptance_Data_Packages\Controls\Data Packs\OCU\SN0034\07_Top_Level_Data\03_Acceptance_Documentation\04_Trend_Data\03 Sequence 7a\CH1\0034 CH1 TS2 Post Vibe Amb Func 101116.Txt
+

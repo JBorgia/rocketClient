@@ -1,0 +1,70 @@
+<!-- • User can indicate to App that s/he wants to generate a Mission Report
+ • App presents User with the available Missions (by Tail number, or ideally by tail number and mission name) 
+and asks for the User to choose one
+ • Once a Mission is selected, a report is presented that includes: 
+ • Review Status for each part in the App that is found with this Mission Assignment
+• Review Closure date, if applicable, and Lead(s)
+ • Supplier name of the Parts
+  • Part Number/Serial/Number/Lot Number 
+ • This generated report can be downloaded as a pdf or Excel-compatible file -->
+
+<div class="container">
+  <div class="card">
+    <div class="reportSearch">
+      <div class="form-group">
+         <!-- • App presents User with the available Missions (by Tail number, or ideally by tail number and mission name) and asks for
+        the User to choose one -->
+        <div class="row">
+          <div style="text-align: right" class="col-sm-2"><label>Mission Name</label></div>
+          <div class="col-sm-4"><input class="form-control" style="width: 100%" placeholder="Mission (Optional) "></div>
+          <div class="col-sm-6"></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="row">
+          <div style="text-align: right" class="col-sm-2"><label>Tail Number</label></div>
+          <div class="col-sm-4"><input class="form-control" style="width: 100%" placeholder="Tail Number (requiered) "></div>
+          <div class="col-sm-6"></div>
+        </div>
+      </div>
+      <button class="btn btn-info">Submit</button>
+      <div>
+        search results returned here (need details here from product owner)
+      </div>
+    </div>
+  </div>
+
+    <div>
+    
+      <h4>Mission status report</h4>
+      <table>
+        <thead>
+          <tr>
+            <th>Document Name</th>
+            <th>Document Status</th>
+            <th>Signed off By</th>
+            <th>Signed Date</th>
+            <th>Comments</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              doc-name
+            </td>
+            <td>
+              doc-status
+            </td>
+            <td>
+              Sign-off
+            </td>
+            <td>
+              Sign-off-date
+            </td>
+            <td>
+              comment
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>

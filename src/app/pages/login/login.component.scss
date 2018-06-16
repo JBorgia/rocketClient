@@ -1,0 +1,60 @@
+input {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.header {
+  margin-top: 80px;
+}
+
+.header p {
+  margin: 0;
+  font-size: 3em;
+}
+
+.header h1 {
+  font-size: 4.5em;
+  font-weight: 900;
+}
+
+.card {
+  padding: 10px 30px;
+  margin-top: 15px;
+  max-height: 200px;
+}
+
+.welcome {
+  font-size: 3vw;
+  @media only screen and (max-width: 600px) {
+    font-size: 1.5rem;
+  }
+}
+
+.title {
+  font-size: 4vw;
+  font-weight: 900;
+  @media only screen and (max-width: 600px) {
+    font-size: 2rem;
+    word-spacing: 100vw;
+    line-height: 2rem;
+  }
+}
+
+.container-fluid {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: calc(100vh - 90px - 3rem);
+  background-color: #fff;
+  background-image: url('../../../assets/images/schematic.jpg');
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: calc(70vw);
+  @media only screen and (max-width: 800px) {
+    background-size: 560px;
+  }
+  @media only screen and (min-width: 1500px) {
+    background-size: 1050px;
+  }
+}

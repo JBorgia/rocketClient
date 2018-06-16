@@ -1,0 +1,26 @@
+<!-- Let's clean up the login background. Perhaps just a black and white rocket schematic. Higher visibility and a clean look. -->
+<div class="container-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 header">
+        <div class="welcome">Welcome to the</div>
+        <div class="title">Automated Review System</div>
+      </div>
+      <div class="col-md-5">
+        <div class="card ml-auto">
+          <div class="s-login-pg">
+            <form class="s-login-pg-form" name="form" (ngSubmit)="login()" #f="ngForm" novalidate>
+              <input class="has-danger" type="text" placeholder="AD Username" name="username" [(ngModel)]="model.username" #username="ngModel"
+                required/>
+              <input type="password" placeholder="Password " name="password" [(ngModel)]="model.password" #password="ngModel" required/>
+              <button type="submit" class="btn btn-primary mr-auto">LOG IN</button>
+            </form>
+            <div class="s-login-pg-foot">
+              <div *ngIf="errMsg" style="color:indianred; font-weight: bold">{{errMsg}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

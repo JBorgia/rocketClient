@@ -1,0 +1,1750 @@
+TestExecutive(R) Version 4.1.04
+ 
+10:09:54   Tuesday, October 04, 2016
+C:\DITMCO\TESTFILE\ULA\OCU\OCU_CHASSIS.RO
+ 
+; SAL,C:\DITMCO_TEST_RESULTS\OCU\CHASSIS\0034_CH2.TXT
+   
+                            ***DISCARD THIS PAGE*** 
+   
+      LL       3333333   CCCCCCC  EEEEEEE 
+     LL            33   CC       EE 
+    LL         33333   CC       EEEEE 
+   LL            33   CC       EE 
+  LLLLLLL  3333333   CCCCCCC  EEEEEEE 
+   
+  THE SERIAL NUMBER OF PN 1F67730 IS: 0034_CH2 
+   
+  OPERATORS BADGE OR ID NUMBER: 11333 
+   
+; SKP SUBASSEMBLY 
+; ENS SUBASSEMBLY 
+; TIM 
+  
+04 OCT 16  10:09:54 
+; ENB,CER,DIG 
+; C SMU       0.005A    850.0      910.0    00.300S    00.050T 
+:       CC  00201                             J4-2 
+:                  00218 PASS   891.6     OHM J4-19 
+; F SMU       30V       1.000M              00.200S    00.050T 
+:       FF  00207        PASS  >947.7M    OHM J4-8 
+; C SMU       0.100A               20.00    00.300S    00.050T 
+:       CC  00207                             J4-8 
+:                  03509 PASS   2.604     OHM XA2J2-179 
+; S SMU       30V       1.000M              00.200S    00.050T 
+:       SS  03509        PASS   363.7M    OHM XA2J2-179 
+:       FF  00220        PASS  >898.4M    OHM J4-21 
+:       CC  00220                             J4-21 
+:                  02416 PASS   2.500     OHM XA1J2-17 
+:       SS  02416        PASS  >946.8M    OHM XA1J2-17 
+:       FF  00203        PASS  >946.5M    OHM J4-4 
+:       CC  00203                             J4-4 
+:                  02516 PASS   2.652     OHM XA1J2-67 
+:       SS  02516        PASS  >949.6M    OHM XA1J2-67 
+:       FF  02112        PASS  >948.9M    OHM XA1J1-75 
+:       CC  02112                             XA1J1-75 
+:                  03011 PASS   2.277     OHM XA2J1-125 
+:       SS  03011        PASS  >926.6M    OHM XA2J1-125 
+:       FF  02113        PASS  >924.5M    OHM XA1J1-73 
+:       CC  02113                             XA1J1-73 
+:                  03038 PASS   2.233     OHM XA2J1-122 
+:       SS  03038        PASS  >944.6M    OHM XA2J1-122 
+:       FF  02036        PASS  >943.3M    OHM XA1J1-28 
+:       CC  02036                             XA1J1-28 
+:                  03111 PASS   2.275     OHM XA2J1-175 
+:       SS  03111        PASS  >949.6M    OHM XA2J1-175 
+:       FF  02344        PASS  >946.3M    OHM XA1J1-160 
+:       CC  02344                             XA1J1-160 
+:                  02844 PASS   2.109     OHM XA2J1-12 
+:       SS  02844        PASS  >942.2M    OHM XA2J1-12 
+:       FF  02319        PASS  >941.9M    OHM XA1J1-159 
+:       CC  02319                             XA1J1-159 
+:                  02819 PASS   2.078     OHM XA2J1-11 
+:       SS  02819        PASS  >947.2M    OHM XA2J1-11 
+:       FF  02243        PASS  >933.8M    OHM XA1J1-112 
+:       CC  02243                             XA1J1-112 
+:                  02918 PASS   2.353     OHM XA2J1-63 
+:       SS  02918        PASS  >947.0M    OHM XA2J1-63 
+:       FF  02331        PASS  >942.6M    OHM XA1J1-186 
+:       CC  02331                             XA1J1-186 
+:                  02805 PASS   2.325     OHM XA2J1-39 
+:       SS  02805        PASS  >946.4M    OHM XA2J1-39 
+:       FF  02306        PASS  >949.9M    OHM XA1J1-185 
+:       CC  02306                             XA1J1-185 
+:                  02831 PASS   2.104     OHM XA2J1-38 
+:       SS  02831        PASS  >922.0M    OHM XA2J1-38 
+:       FF  02013        PASS  >933.3M    OHM XA1J1-23 
+:       CC  02013                             XA1J1-23 
+:                  03113 PASS   2.315     OHM XA2J1-171 
+:       SS  03113        PASS  >946.7M    OHM XA2J1-171 
+:       FF  02137        PASS  >945.7M    OHM XA1J1-76 
+:       CC  02137                             XA1J1-76 
+:                  03036 PASS   2.117     OHM XA2J1-126 
+:       SS  03036        PASS  >948.7M    OHM XA2J1-126 
+:       FF  02139        PASS  >948.0M    OHM XA1J1-72 
+:       CC  02139                             XA1J1-72 
+:                  03013 PASS   2.247     OHM XA2J1-121 
+:       SS  03013        PASS  >937.4M    OHM XA2J1-121 
+:       FF  02244        PASS  >910.5M    OHM XA1J1-110 
+:       CC  02244                             XA1J1-110 
+:                  02919 PASS   2.158     OHM XA2J1-61 
+:       SS  02919        PASS  >946.6M    OHM XA2J1-61 
+:       FF  02318        PASS  >945.8M    OHM XA1J1-161 
+:       CC  02318                             XA1J1-161 
+:                  02818 PASS   2.283     OHM XA2J1-13 
+:       SS  02818        PASS  >950.0M    OHM XA2J1-13 
+:       FF  02345        PASS  >950.1M    OHM XA1J1-158 
+:       CC  02345                             XA1J1-158 
+:                  02845 PASS   2.246     OHM XA2J1-10 
+:       SS  02845        PASS  >913.0M    OHM XA2J1-10 
+:       FF  02230        PASS  >896.7M    OHM XA1J1-138 
+:       CC  02230                             XA1J1-138 
+:                  02931 PASS   2.114     OHM XA2J1-88 
+:       SS  02931        PASS  >945.8M    OHM XA2J1-88 
+:       FF  02231        PASS  >946.8M    OHM XA1J1-136 
+:       CC  02231                             XA1J1-136 
+:                  02932 PASS   2.094     OHM XA2J1-86 
+:       SS  02932        PASS  >945.7M    OHM XA2J1-86 
+:       FF  02305        PASS  >951.1M    OHM XA1J1-187 
+:       CC  02305                             XA1J1-187 
+:                  02830 PASS   2.307     OHM XA2J1-40 
+:       SS  02830        PASS  >906.0M    OHM XA2J1-40 
+:       FF  02332        PASS  >904.2M    OHM XA1J1-184 
+:       CC  02332                             XA1J1-184 
+:                  02806 PASS   2.119     OHM XA2J1-37 
+:       SS  02806        PASS  >947.4M    OHM XA2J1-37 
+:       FF  02010        PASS  >943.6M    OHM XA1J1-29 
+:       CC  02010                             XA1J1-29 
+:                  03136 PASS   2.086     OHM XA2J1-176 
+:       SS  03136        PASS  >945.9M    OHM XA2J1-176 
+:       FF  02039        PASS  >948.6M    OHM XA1J1-22 
+:       CC  02039                             XA1J1-22 
+:                  03139 PASS   2.282     OHM XA2J1-170 
+:       SS  03139        PASS  >925.5M    OHM XA2J1-170 
+:       FF  02111        PASS  >901.8M    OHM XA1J1-77 
+:       CC  02111                             XA1J1-77 
+:                  03010 PASS   2.250     OHM XA2J1-127 
+:       SS  03010        PASS  >945.3M    OHM XA2J1-127 
+:       FF  02011        PASS  >946.1M    OHM XA1J1-27 
+:       CC  02011                             XA1J1-27 
+:                  03137 PASS   2.356     OHM XA2J1-174 
+:       SS  03137        PASS  >944.5M    OHM XA2J1-174 
+:       FF  02217        PASS  >949.0M    OHM XA1J1-113 
+:       CC  02217                             XA1J1-113 
+:                  02943 PASS   2.195     OHM XA2J1-64 
+:       SS  02943        PASS  >945.3M    OHM XA2J1-64 
+:       FF  02219        PASS  >946.4M    OHM XA1J1-109 
+:       CC  02219                             XA1J1-109 
+:                  02945 PASS   2.181     OHM XA2J1-60 
+:       SS  02945        PASS  >943.0M    OHM XA2J1-60 
+:       FF  02343        PASS  >945.4M    OHM XA1J1-162 
+:       CC  02343                             XA1J1-162 
+:                  02843 PASS   2.313     OHM XA2J1-14 
+:       SS  02843        PASS  >944.7M    OHM XA2J1-14 
+:       FF  02218        PASS  >943.9M    OHM XA1J1-111 
+:       CC  02218                             XA1J1-111 
+:                  02944 PASS   2.209     OHM XA2J1-62 
+:       SS  02944        PASS  >944.2M    OHM XA2J1-62 
+:       FF  02204        PASS  >944.8M    OHM XA1J1-139 
+:       CC  02204                             XA1J1-139 
+:                  02905 PASS   2.374     OHM XA2J1-89 
+:       SS  02905        PASS  >943.0M    OHM XA2J1-89 
+:       FF  02206        PASS  >897.3M    OHM XA1J1-135 
+:       CC  02206                             XA1J1-135 
+:                  02907 PASS   2.318     OHM XA2J1-85 
+:       SS  02907        PASS  >946.8M    OHM XA2J1-85 
+:       FF  02330        PASS  >949.5M    OHM XA1J1-188 
+:       CC  02330                             XA1J1-188 
+:                  02804 PASS   2.193     OHM XA2J1-41 
+:       SS  02804        PASS  >946.7M    OHM XA2J1-41 
+:       FF  02205        PASS  >947.1M    OHM XA1J1-137 
+:       CC  02205                             XA1J1-137 
+:                  02906 PASS   2.503     OHM XA2J1-87 
+:       SS  02906        PASS  >913.7M    OHM XA2J1-87 
+:       CV  00212                             J4-13 
+:                  02025 PASS   2.075     OHM XA1J1-50 
+:       CV  02025                             XA1J1-50 
+:                  02312 PASS   2.249     OHM XA1J1-173 
+:       CV  02312                             XA1J1-173 
+:                  03232 PASS   2.138     OHM XA2J2-36 
+:       CV  03232                             XA2J2-36 
+:                  03231 PASS   1.791     OHM XA2J2-38 
+:       CV  03231                             XA2J2-38 
+:                  03206 PASS   1.914     OHM XA2J2-37 
+:       CV  03206                             XA2J2-37 
+:                  03205 PASS   2.168     OHM XA2J2-39 
+:       CV  03205                             XA2J2-39 
+:                  03230 PASS   2.097     OHM XA2J2-40 
+:       CV  03230                             XA2J2-40 
+:                  03204 PASS   1.948     OHM XA2J2-41 
+:       CV  03204                             XA2J2-41 
+:                  03229 PASS   1.829     OHM XA2J2-42 
+:       CV  03229                             XA2J2-42 
+:                  03228 PASS   1.981     OHM XA2J2-44 
+:       CV  03228                             XA2J2-44 
+:                  03201 PASS   2.284     OHM XA2J2-47 
+:       CV  03201                             XA2J2-47 
+:                  03225 PASS   2.136     OHM XA2J2-50 
+:       CV  03225                             XA2J2-50 
+:                  03333 PASS (!¸Ÿƒ∞∫8o≈ß£U^cÔvŒL<>ÍõmçÚ ≠ˇÄú¸T4FË∏ã%êQ6í#£Vpˆè∏ºŸãÇB ¡	<jä X¯`Ët4.∫¨\çøÜÏ:û°ã—Ω	BìLÄ=÷íbÒuJ∆u'≈è
+êÜwÕk¬gÛn°¥Ë˛v≤~≥"D?3Âµ™¡bø≠Ñ8õ¶XAÊ∫dÔ‚J≥cÖÀˇ¶ó_,-w!mﬂœ÷4ø7ñÔB≤ÀΩ©I§Nö\/ÚT∂9xë£~Ä;€&‰ıˆDL®’°Ò÷)√˚$æúpASS   2.009     OHM XA2J2-92 
+:       CV  03329                             XA2J2-92 
+:                  03302 PASS   2.047     OHM XA2J2-95 
+:       CV  03302                             XA2J2-95 
+:                  03326 PASS   2.151     OHM XA2J2-98 
+:       CV  03326                             XA2J2-98 
+:                  03407 PASS   2.328     OHM XA2J2-133 
+:       CV  03407                             XA2J2-133 
+:                  03403 PASS   2.529     OHM XA2J2-141 
+:       CV  03403                             XA2J2-141 
+:                  03428 PASS   2.528     OHM XA2J2-142 
+:       CV  03428                             XA2J2-142 
+:                  03402 PASS   2.368     OHM XA2J2-143 
+:       CV  03402                             XA2J2-143 
+:                  03427 PASS   2.234     OHM XA2J2-144 
+:       CV  03427                             XA2J2-144 
+:                  03401 PASS   2.466     OHM XA2J2-145 
+:       CV  03401                             XA2J2-145 
+:                  03426 PASS   2.518     OHM XA2J2-146 
+:       CV  03426                             XA2J2-146 
+:                  03400 PASS   2.329     OHM XA2J2-147 
+:       CV  03400                             XA2J2-147 
+:                  03425 PASS   2.219     OHM XA2J2-148 
+:       CV  03425                             XA2J2-148 
+:                  03508 PASS   2.317     OHM XA2J2-181 
+:       CC  03508                             XA2J2-181 
+:                  03504 PASS   2.326     OHM XA2J2-189 
+:       FF  00224        PASS  >946.1M    OHM J4-25 
+:       CC  00224                             J4-25 
+:                  03233 PASS   2.239     OHM XA2J2-34 
+:       SS  03233        PASS  >949.3M    OHM XA2J2-34 
+:       FF  00408        PASS   836.6M    OHM J5-M 
+:       CV  00408                             J5-M 
+:                  00409 PASS   2.019     OHM J5-T 
+:       CV  00409                             J5-T 
+:                  03406 PASS   2.273     OHM XA2J2-135 
+:       CV  03406                             XA2J2-135 
+:                  03431 PASS   2.163     OHM XA2J2-136 
+:       CV  03431                             XA2J2-136 
+:                  03507 PASS   2.318     OHM XA2J2-183 
+:       CC  03507                             XA2J2-183 
+:                  03532 PASS   2.637     OHM XA2J2-184 
+:       SS  03532        PASS  >947.8M    OHM XA2J2-184 
+:       FF  00405        PASS  >646.4M    OHM J5-J 
+:       CV  00405                             J5-J 
+:                  00406 PASS   2.168     OHM J5-K 
+:       CV  00406                             J5-K 
+:                  03430 PASS   2.229     OHM XA2J2-138 
+:       CV  03430                             XA2J2-138 
+:                  03404 PASS   2.403     OHM XA2J2-139 
+:       CV  03404                             XA2J2-139 
+:                  03531 PASS   2.182     OHM XA2J2-186 
+:       CC  03531                             XA2J2-186 
+:                  03505 PASS   2.467     OHM XA2J2-187 
+:       SS  03531        PASS  >946.9M    OHM XA2J2-186 
+:       CV  00515                             J8-B 
+:                  02625 PASS   2.043     OHM XA1J2-148 
+:       CC  02625                             XA1J2-148 
+:                  02726 PASS   2.375     OHM XA1J2-196 
+:       CV  00517                             J8-D 
+:                  02408 PASS   2.781     OHM XA1J2-33 
+:       CC  02408                             XA1J2-33 
+:                  02509 PASS   2.251     OHM XA1J2-81 
+:       CV  00520                             J8-G 
+:                  02630 PASS   2.022     OHM XA1J2-138 
+:       CC  02630                             XA1J2-138 
+:                  02731 PASS   2.114     OHM XA1J2-186 
+:       CV  00522                             J8-J 
+:                  02406 PASS   2.051     OHM XA1J2-37 
+:       CC  02406                             XA1J2-37 
+:                  02507 PASS   2.231     OHM XA1J2-85 
+:       CV  00524                             J8-L 
+:                  02632 PASS   2.113     OHM XA1J2-134 
+:       CC  02632                             XA1J2-134 
+:                  02733 PASS   2.101     OHM XA1J2-182 
+:       CV  00526                             J8-N 
+:                  02410 PASS   1.911     OHM XA1J2-29 
+:       CC  02410                             XA1J2-29 
+:                  02511 PASS   2.179     OHM XA1J2-77 
+:       CV  00529                             J8-S 
+:                  02633 PASS   1.919     OHM XA1J2-132 
+:       CC  02633                             XA1J2-132 
+:                  02734 PASS   2.176     OHM XA1J2-180 
+:       CV  00531                             J8-U 
+:                  02411 PASS   2.070     OHM XA1J2-27 
+:       CC  02411                             XA1J2-27 
+:                  02512 PASS   2.235     OHM XA1J2-75 
+:       CV  00006                             J9-B 
+:                  02636 PASS   2.077     OHM XA1J2-126 
+:       CC  02636                             XA1J2-126 
+:                  02737 PASS   2.127     OHM XA1J2-174 
+:       CV  00007                             J9-C 
+:                  02412 PASS   2.141     OHM XA1J2-25 
+:       CC  02412                             XA1J2-25 
+:                  02538 PASS   2.118     OHM XA1J2-74 
+:       CV  00008                             J9-D 
+:                  02639 PASS   2.179     OHM XA1J2-120 
+:       CC  02639                             XA1J2-120 
+:                  02714 PASS   2.283     OHM XA1J2-169 
+:       CV  00009                             J9-G 
+:                  02413 PASS   2.143     OHM XA1J2-23 
+:       CC  02413                             XA1J2-23 
+:                  02539 PASS   2.220     OHM XA1J2-72 
+:       CV  00010                             J9-J 
+:                  02640 PASS   2.110     OHM XA1J2-118 
+:       CC  02640                             XA1J2-118 
+:                  02715 PASS   2.251     OHM XA1J2-167 
+:       CV  00011                             J9-L 
+:                  02414 PASS   2.284     OHM XA1J2-21 
+:       CC  02414                             XA1J2-21 
+:                  02540 PASS   2.213     OHM XA1J2-70 
+:       CV  00012                             J9-N 
+:                  02638 PASS   2.097     OHM XA1J2-122 
+:       CC  02638                             XA1J2-122 
+:                  02713 PASS   2.274     OHM XA1J2-171 
+:       CV  00013                             J9-S 
+:                  02409 PASS   2.203     OHM XA1J2-31 
+:       CC  02409                             XA1J2-31 
+:                  02510 PASS   2.065     OHM XA1J2-79 
+:       CV  00014                             J9-T 
+:                  02635 PASS   2.121     OHM XA1J2-128 
+:       CC  02635                             XA1J2-128 
+:                  02736 PASS   2.115     OHM XA1J2-176 
+:       CV  00015                             J9-U 
+:                  02407 PASS   2.186     OHM XA1J2-35 
+:       CC  02407                             XA1J2-35 
+:                  02508 PASS   2.240     OHM XA1J2-83 
+:       CV  00107                             J10-B 
+:                  02631 PASS   2.100     OHM XA1J2-136 
+:       CC  02631                             XA1J2-136 
+:                  02732 PASS   2.215     OHM XA1J2-184 
+:       CV  00108                             J10-C 
+:                  02405 PASS   2.306     OHM XA1J2-39 
+:       CC  02405                             XA1J2-39 
+:                  02506 PASS   2.312     OHM XA1J2-87 
+:       CV  00109                             J10-D 
+:                  02629 PASS   2.057     OHM XA1J2-140 
+:       CC  02629                             XA1J2-140 
+:                  02730 PASS   2.120     OHM XA1J2-188 
+:       CV  00110                             J10-F 
+:                  02403 PASS   2.188     OHM XA1J2-43 
+:       CC  02403                             XA1J2-43 
+:                  02504 PASS   2.285     OHM XA1J2-91 
+:       CV  00111                             J10-G 
+:                  02627 PASS   2.225     OHM XA1J2-144 
+:       CC  02627                             XA1J2-144 
+:                  02728 PASS   2.297     OHM XA1J2-192 
+:       CV  00112                             J10-J 
+:                  02402 PASS   2.058     OHM XA1J2-45 
+:       CC  02402                             XA1J2-45 
+:                  02503 PASS   2.297     OHM XA1J2-93 
+:       CV  00113                             J10-L 
+:                  02400 PASS   2.281     OHM XA1J2-49 
+:       CC  02400                             XA1J2-49 
+:                  02501 PASS   2.337     OHM XA1J2-97 
+:       CV  00114                             J10-N 
+:                  02626 PASS   2.190     OHM XA1J2-146 
+:       CC  02626                             XA1J2-146 
+:                  02727 PASS   2.231     OHM XA1J2-194 
+:       CV  00115                             J10-P 
+:                  02401 PASS   2.323     OHM XA1J2-47 
+:       CC  02401                             XA1J2-47 
+:                  02502 PASS   2.422     OHM XA1J2-95 
+:       CV  00116                             J10-S 
+:                  02628 PASS   2.345     OHM XA1J2-142 
+:       CC  02628                             XA1J2-142 
+:                  02729 PASS   2.237     OHM XA1J2-190 
+:       CV  00117                             J10-T 
+:                  02404 PASS   2.013     OHM XA1J2-41 
+:       CC  02404                             XA1J2-41 
+:                  02505 PASS   2.302     OHM XA1J2-89 
+:       CV  00118                             J10-U 
+:                  02634 PASS   2.233     OHM XA1J2-130 
+:       CC  02634                             XA1J2-130 
+:                  02735 PASS   2.179     OHM XA1J2-178 
+:       FF  02119        PASS  >947.9M    OHM XA1J1-61 
+:       CC  02119                             XA1J1-61 
+:                  03044 PASS   2.188     OHM XA2J1-110 
+:       SS  03044        PASS  >947.1M    OHM XA2J1-110 
+:       FF  02012        PASS  >946.5M    OHM XA1J1-25 
+:       CC  02012                             XA1J1-25 
+:                  02812 PASS   2.342     OHM XA2J1-25 
+:       SS  02812        PASS  >947.5M    OHM XA2J1-25 
+:       FF  02119        PASS  >946.2M    OHM XA1J1-61 
+:       CC  02119                             XA1J1-61 
+:                  03044 PASS   2.212     OHM XA2J1-110 
+:       SS  03044        PASS  >945.7M    OHM XA2J1-110 
+:       FF  02324        PASS  >948.2M    OHM XA1J1-149 
+:       CC  02324                             XA1J1-149 
+:                  02824 PASS   2.108     OHM XA2J1-1 
+:       SS  02824        PASS  >947.0M    OHM XA2J1-1 
+:       FF  00228        PASS  >946.5M    OHM J4-29 
+:       CC  00228                             J4-29 
+:                  03235 PASS   2.311     OHM XA2J2-30 
+:       SS  03235        PASS  >922.9M    OHM XA2J2-30 
+:       FF  00407        PASS  >902.6M    OHM J5-L 
+:       CC  00407                             J5-L 
+:                  02437 PASS   2.299     OHM XA1J2-26 
+:       SS  02437        PASS  >948.2M    OHM XA1J2-26 
+:       FF  00404        PASS  >945.3M    OHM J5-A 
+:       CC  00404                             J5-A 
+:                  02637 PASS   2.203     OHM XA1J2-124 
+:       SS  02637        PASS  >946.8M    OHM XA1J2-124 
+:       FF  00227        PASS  >944.9M    OHM J4-28 
+:       CC  00227                             J4-28 
+:                  03209 PASS   2.347     OHM XA2J2-31 
+:       SS  03209        PASS  >918.0M    OHM XA2J2-31 
+:       CC  00209                             J4-10 
+:                  03510 PASS   2.428     OHM XA2J2-177 
+:       FF  00216        PASS  >944.9M    OHM J4-17 
+:       CC  00216                             J4-17 
+:                  03236 PASS   2.250     OHM XA2J2-28 
+:       SS  03236        PASS  >945.0M    OHM XA2J2-28 
+:       FF  02047        PASS  >946.1M    OHM XA1J1-6 
+:       CV  02047                             XA1J1-6 
+:                  02122 PASS   2.456     OHM XA1J1-55 
+:       CV  02122                             XA1J1-55 
+:                  03047 PASS   2.414     OHM XA2J1-104 
+:       CC  03047                             XA2J1-104 
+:                  03147 PASS   2.435     OHM XA2J1-154 
+:       SS  03147        PASS  >946.5M    OHM XA2J1-154 
+:       FF  02020        PASS   484.3M    OHM XA1J1-9 
+:       CV  02020                             XA1J1-9 
+:                  02048 PASS   2.510     OHM XA1J1-4 
+:       CV  02048                             XA1J1-4 
+:                  02029 PASS   2.290     OHM XA1J1-42 
+:       CV  02029                             XA1J1-42 
+:                  02123 PASS   2.249     OHM XA1J1-53 
+:       CV  02123                             XA1J1-53 
+:                  02146 PASS   2.224     OHM XA1J1-58 
+:       CV  02146                             XA1J1-58 
+:                  02104 PASS   2.595     OHM XA1J1-91 
+:       CV  02104                             XA1J1-91 
+:                  03048 PASS   2.214     OHM XA2J1-102 
+:       CV  03048                             XA2J1-102 
+:                  03020 PASS   2.112     OHM XA2J1-107 
+:       CV  03020                             XA2J1-107 
+:                  03003 PASS   2.393     OHM XA2J1-141 
+:       CV  03003                             XA2J1-141 
+:                  03148 PASS   2.337     OHM XA2J1-152 
+:       CV  03148                             XA2J1-152 
+:                  03120 PASS   2.165     OHM XA2J1-157 
+:       CC  03120                             XA2J1-157 
+:                  03104 PASS   2.314     OHM XA2J1-189 
+:       SS  03148        PASS   395.6M    OHM XA2J1-152 
+:       CC  00234                             J4-35 
+:                  03211 PASS   2.438     OHM XA2J2-27 
+:       FF  02003        PASS   552.9M    OHM XA1J1-43 
+:       CV  02003                             XA1J1-43 
+:                  02022 PASS   2.617     OHM XA1J1-5 
+:       CV  02022                             XA1J1-5 
+:                  02045 PASS   2.346     OHM XA1J1-10 
+:       CV  02045                             XA1J1-10 
+:                  02148 PASS   2.277     OHM XA1J1-54 
+:       CV  02148                             XA1J1-54 
+:                  02120 PASS   2.307     OHM XA1J1-59 
+:       CV  02120                             XA1J1-59 
+:                  02129 PASS   2.390     OHM XA1J1-92 
+:       CV  02129                             XA1J1-92 
+:                  03022 PASS   2.247     OHM XA2J1-103 
+:       CV  03022                             XA2J1-103 
+:                  03045 PASS   2.200     OHM XA2J1-108 
+:       CV  03045                             XA2J1-108 
+:                  03028 PASS   2.337     OHM XA2J1-142 
+:       CV  03028                             XA2J1-142 
+:                  03122 PASS   2.368     OHM XA2J1-153 
+:       CV  03122                             XA2J1-153 
+:                  03145 PASS   2.274     OHM XA2J1-158 
+:       CC  03145                             XA2J1-158 
+:                  03129 PASS   2.225     OHM XA2J1-190 
+:       SS  03145        PASS   431.8M    OHM XA2J1-158 
+:       CC  00208                             J4-9 
+:                  03535 PASS   2.454     OHM XA2J2-178 
+:       FF  00210        PASS  >948.8M    OHM J4-11 
+:       CC  00210                             J4-11 
+:                  03536 PASS   2.314     OHM XA2J2-176 
+:       SS  03536        PASS  >947.4M    OHM XA2J2-176 
+:       FF  00211        PASS  >945.2M    OHM J4-12 
+:       CC  00211                             J4-12 
+:                  03511 PASS   2.719     OHM XA2J2-175 
+:       SS  03511        PASS  >951.5M    OHM XA2J2-175 
+:       FF  00602        PASS   145.7M    OHM J7-SMC 
+:       CV  00602                             J7-SMC 
+:                  00634 PASS   1.786     OHM J7-X 
+:       CV  00634                             J7-X 
+:                  00604 PASS   2.082    $¿ Yg4Ó√&E£PwÄÙÙf”∞X+GAM#àò ˛ÆM≠9’ˇ⁄ﬁìºtˇÛL0∫î—!Ω÷ﬁqıélßä„ÚËH+u^
+πt` ¢$(4¬≥õ\{I0%µQ-ı÷…Jh¶©Âía>ÉÎ(ñ,îr-¶pUÉÔÎÉ∞0rLOw›dv°äV F 8ºUÈ0Ω‰	°¥ó¢._}.ŒàõH$3à}*&Ø;≤D —˘ìﬁ7˜j®¢ˇdu◊ò#Ä=+
+b.WKù] áÖ”¥∂9¿A|Üo1òIï¢Lù<˝ p¨?©®/è J7-V 
+:       CV  00632                             J7-V 
+:                  00636 PASS   2.166     OHM J7-Z 
+:       CV  00636                             J7-Z 
+:                  02424 PASS   1.842     OHM XA1J2-1 
+:       CV  02424                             XA1J2-1 
+:                  02449 PASS   2.219     OHM XA1J2-2 
+:       CV  02449                             XA1J2-2 
+:                  02423 PASS   2.172     OHM XA1J2-3 
+:       CV  02423                             XA1J2-3 
+:                  02448 PASS   2.424     OHM XA1J2-4 
+:       CV  02448                             XA1J2-4 
+:                  02447 PASS   2.198     OHM XA1J2-6 
+:       CV  02447                             XA1J2-6 
+:                  02422 PASS   2.341     OHM XA1J2-5 
+:       CV  02422                             XA1J2-5 
+:                  02421 PASS   2.121     OHM XA1J2-7 
+:       CV  02421                             XA1J2-7 
+:                  02446 PASS   2.193     OHM XA1J2-8 
+:       CV  02446                             XA1J2-8 
+:                  02524 PASS   2.077     OHM XA1J2-51 
+:       CV  02524                             XA1J2-51 
+:                  02549 PASS   2.303     OHM XA1J2-52 
+:       CV  02549                             XA1J2-52 
+:                  02548 PASS   2.302     OHM XA1J2-54 
+:       CV  02548                             XA1J2-54 
+:                  02522 PASS   2.176     OHM XA1J2-55 
+:       CV  02522                             XA1J2-55 
+:                  02547 PASS   2.419     OHM XA1J2-56 
+:       CV  02547                             XA1J2-56 
+:                  02521 PASS   2.332     OHM XA1J2-57 
+:       CV  02521                             XA1J2-57 
+:                  02649 PASS   2.326     OHM XA1J2-100 
+:       CV  02649                             XA1J2-100 
+:                  02623 PASS   2.324     OHM XA1J2-101 
+:       CV  02623                             XA1J2-101 
+:                  02648 PASS   2.174     OHM XA1J2-102 
+:       CV  02648                             XA1J2-102 
+:                  02622 PASS   2.254     OHM XA1J2-103 
+:       CV  02622                             XA1J2-103 
+:                  02621 PASS   2.272     OHM XA1J2-105 
+:       CV  02621                             XA1J2-105 
+:                  02646 PASS   2.195     OHM XA1J2-106 
+:       CV  02646                             XA1J2-106 
+:                  02724 PASS   2.265     OHM XA1J2-149 
+:       CV  02724                             XA1J2-149 
+:                  02749 PASS   2.340     OHM XA1J2-150 
+:       CV  02749                             XA1J2-150 
+:                  02748 PASS   2.329     OHM XA1J2-152 
+:       CV  02748                             XA1J2-152 
+:                  02722 PASS   2.230     OHM XA1J2-153 
+:       CV  02722                             XA1J2-153 
+:                  02747 PASS   2.439     OHM XA1J2-154 
+:       CC  02747                             XA1J2-154 
+:                  02721 PASS   2.348     OHM XA1J2-155 
+:       SS  02749        PASS   174.1M    OHM XA1J2-150 
+:       FF  00328        PASS  >950.6M    OHM J3-11 
+:       CC  00328                             J3-11 
+:                  03503 PASS   2.673     OHM XA2J2-191 
+:       SS  03503        PASS  >947.4M    OHM XA2J2-191 
+:       FF  00326        PASS  >946.7M    OHM J3-9 
+:       CC  00326                             J3-9 
+:                  03526 PASS   2.442     OHM XA2J2-196 
+:       SS  03526        PASS  >946.7M    OHM XA2J2-196 
+:       FF  00324        PASS  >950.4M    OHM J3-7 
+:       CC  00324                             J3-7 
+:                  03501 PASS   2.570     OHM XA2J2-195 
+:       SS  03501        PASS  >912.7M    OHM XA2J2-195 
+:       FF  00322        PASS  >937.6M    OHM J3-5 
+:       CC  00322                             J3-5 
+:                  03527 PASS   2.401     OHM XA2J2-194 
+:       SS  03527        PASS  >947.1M    OHM XA2J2-194 
+:       FF  00320        PASS  >947.7M    OHM J3-3 
+:       CC  00320                             J3-3 
+:                  03502 PASS   2.445     OHM XA2J2-193 
+:       SS  03502        PASS  >951.2M    OHM XA2J2-193 
+:       FF  00318        PASS  >945.8M    OHM J3-1 
+:       CC  00318                             J3-1 
+:                  03528 PASS   2.573     OHM XA2J2-192 
+:       SS  03528        PASS  >946.9M    OHM XA2J2-192 
+:       CV  00319                             J3-2 
+:                  00321 PASS   1.804     OHM J3-4 
+:       CV  00321                             J3-4 
+:                  00323 PASS   1.793     OHM J3-6 
+:       CV  00323                             J3-6 
+:                  00325 PASS   1.838     OHM J3-8 
+:       CV  00325                             J3-8 
+:                  00327 PASS   1.864     OHM J3-10 
+:       CV  00327                             J3-10 
+:                  00329 PASS   1.792     OHM J3-12 
+:       CV  00329                             J3-12 
+:                  00213 PASS   1.837     OHM J4-14 
+:       CV  00213                             J4-14 
+:                  00615 PASS   1.922     OHM J7-B 
+:       CV  00615                             J7-B 
+:                  00617 PASS   1.755     OHM J7-D 
+:       CV  00617                             J7-D 
+:                  00620 PASS   1.768     OHM J7-G 
+:       CV  00620                             J7-G 
+:                  00626 PASS   2.170     OHM J7-N 
+:       CV  00626                             J7-N 
+:                  00629 PASS   1.745     OHM J7-S 
+:       CV  00629                             J7-S 
+:                  00631 PASS   1.628     OHM J7-U 
+:       CV  00631                             J7-U 
+:                  02024 PASS   1.913     OHM XA1J1-1 
+:       CV  02024                             XA1J1-1 
+:                  02038 PASS   3.121     OHM XA1J1-24 
+:       CV  02038                             XA1J1-24 
+:                  02037 PASS   2.203     OHM XA1J1-26 
+:       CV  02037                             XA1J1-26 
+:                  02000 PASS   2.275     OHM XA1J1-49 
+:       CV  02000                             XA1J1-49 
+:                  02138 PASS   2.217     OHM XA1J1-74 
+:       CV  02138                             XA1J1-74 
+:                  02126 PASS   2.351     OHM XA1J1-98 
+:       CV  02126                             XA1J1-98 
+:                  02249 PASS   2.493     OHM XA1J1-100 
+:       CV  02249                             XA1J1-100 
+:                  02237 PASS   2.519     OHM XA1J1-124 
+:       CV  02237                             XA1J1-124 
+:                  02225 PASS   2.321     OHM XA1J1-148 
+:       CV  02225                             XA1J1-148 
+:                  02445 PASS   2.241     OHM XA1J2-10 
+:       CV  02445                             XA1J2-10 
+:                  02419 PASS   2.106     OHM XA1J2-11 
+:       CV  02419                             XA1J2-11 
+:                  02444 PASS   3.254     OHM XA1J2-12 
+:       CV  02444                             XA1J2-12 
+:                  02418 PASS   2.374     OHM XA1J2-13 
+:       CV  02418                             XA1J2-13 
+:                  02443 PASS   2.201     OHM XA1J2-14 
+:       CV  02443                             XA1J2-14 
+:                  02417 PASS   2.081     OHM XA1J2-15 
+:       CV  02417                             XA1J2-15 
+:                  02442 PASS   2.011     OHM XA1J2-16 
+:       CV  02442                             XA1J2-16 
+:                  02520 PASS   2.158     OHM XA1J2-59 
+:       CV  02520                             XA1J2-59 
+:                  02545 PASS   2.259     OHM XA1J2-60 
+:       CV  02545                             XA1J2-60 
+:                  02519 PASS   2.201     OHM XA1J2-61 
+:       CV  02519                             XA1J2-61 
+:                  02544 PASS   2.069     OHM XA1J2-62 
+:       CV  02544                             XA1J2-62 
+:                  02543 PASS   2.246     OHM XA1J2-64 
+:       CV  02543                             XA1J2-64 
+:                  02517 PASS   2.182     OHM XA1J2-65 
+:       CV  02517                             XA1J2-65 
+:                  02542 PASS   2.201     OHM XA1J2-66 
+:       CV  02542                             XA1J2-66 
+:                  02645 PASS   2.227     OHM XA1J2-108 
+:       CV  02645                             XA1J2-108 
+:                  02644 PASS   2.282     OHM XA1J2-110 
+:       CV  02644                             XA1J2-110 
+:                  02618 PASS   2.272     OHM XA1J2-111 
+:       CV  02618                             XA1J2-111 
+:                  02643 PASS   2.355     OHM XA1J2-112 
+:       CV  02643                             XA1J2-112 
+:                  02617 PASS   2.227     OHM XA1J2-113 
+:       CV  02617                             XA1J2-113 
+:                  02720 PASS   2.202     OHM XA1J2-157 
+:       CV  02720                             XA1J2-157 
+:                  02745 PASS   2.295     OHM XA1J2-158 
+:       CV  02745                             XA1J2-158 
+:                  02719 PASS   2.243     OHM XA1J2-159 
+:       CV  02719                             XA1J2-159 
+:                  02744 PASS   2.635     OHM XA1J2-160 
+:       CV  02744                             XA1J2-160 
+:                  02743 PASS   2.258     OHM XA1J2-162 
+:       CV  02743                             XA1J2-162 
+:                  02717 PASS   2.209     OHM XA1J2-163 
+:       CV  02717                             XA1J2-163 
+:                  02742 PASS   2.253     OHM XA1J2-164 
+:       CV  02742                             XA1J2-164 
+:                  02924 PASS   2.031     OHM XA2J1-51 
+:       CV  02924                             XA2J1-51 
+:                  03024 PASS   2.008     OHM XA2J1-99 
+:       CV  03024                             XA2J1-99 
+:                  03012 PASS   2.091     OHM XA2J1-123 
+:       CV  03012                             XA2J1-123 
+:                  03037 PASS   2.040     OHM XA2J1-124 
+:       CV  03037                             XA2J1-124 
+:                  03025 PASS   2.045     OHM XA2J1-148 
+:       CV  03025                             XA2J1-148 
+:                  03138 PASS   2.298     OHM XA2J1-172 
+:       CV  03138                             XA2J1-172 
+:                  03112 PASS   2.400     OHM XA2J1-173 
+:       CV  03112                             XA2J1-173 
+:                  03126 PASS   2.177     OHM XA2J1-196 
+:       CV  03126                             XA2J1-196 
+:                  03212 PASS   2.063     OHM XA2J2-25 
+:       CV  03212                             XA2J2-25 
+:                  03207 PASS   2.004     OHM XA2J2-35 
+:       CV  03207                             XA2J2-35 
+:                  03203 PASS   2.200     OHM XA2J2-43 
+:       CV  03203                             XA2J2-43 
+:                  03338 PASS   2.211     OHM XA2J2-74 
+:       CV  03338                             XA2J2-74 
+:                  03312 PASS   2.086     OHM XA2J2-75 
+:       CV  03312                             XA2J2-75 
+:                  03337 PASS   2.058     OHM XA2J2-76 
+:       CV  03337                             XA2J2-76 
+:                  03336 PASS   2.022     OHM XA2J2-78 
+:       CV  03336                             XA2J2-78 
+:                  03310 PASS   1.952     OHM XA2J2-79 
+:       CV  03310                             XA2J2-79 
+:                  03335 PASS   2.014     OHM XA2J2-80 
+:       CV  03335                             XA2J2-80 
+:                  03309 PASS   2.168     OHM XA2J2-81 
+:       CV  03309                             XA2J2-81 
+:                  03334 PASS   2.107     OHM XA2J2-82 
+:       CV  03334                             XA2J2-82 
+:                  03308 PASS   2.153     OHM XA2J2-83 
+:       CV  03308                             XA2J2-83 
+:                  03308 PASS   1.005     OHM XA2J2-83 
+:       CV  03308                             XA2J2-83 
+:                  03412 PASS   2.164     OHM XA2J2-123 
+:       CV  03412                             XA2J2-123 
+:                  03411 PASS   2.340     OHM XA2J2-125 
+:       CV  03411                             XA2J2-125 
+:                  03436 PASS   2.306     OHM XA2J2-126 
+:       CV  03436                             XA2J2-126 
+:                  03435 PASS   2.126     OHM XA2J2-128 
+:       CV  03435                             XA2J2-128 
+:                  03409 PASS   2.293     OHM XA2J2-129 
+:       CV  03409                             XA2J2-129 
+:                  03434 PASS   2.233     OHM XA2J2-130 
+:       CV  03434                             XA2J2-130 
+:                  03408 PASS   2.275     OHM XA2J2-131 
+:       CV  03408                             XA2J2-131 
+:                  03433 PASS   2.191     OHM XA2J2-132 
+:       CV  03433                             XA2J2-132 
+:                  03538 PASS   2.278     OHM XA2J2-172 
+:       CV  03538                             XA2J2-172 
+:                  03534 PASS   2.318     OHM XA2J2-180 
+:       CC  03534                             XA2J2-180 
+:                  03529 PASS   2.247     OHM XA2J2-190 
+:       CC  00222                             J4-23 
+:                  02616 PASS   2.603     OHM XA1J2-115 
+:       FF  00205        PASS  >946.6M    OHM J4-6 
+:       CC  00205                             J4-6 
+:                  02716 PASS   2.699     OHM XA1J2-165 
+:       SS  02716        PASS  >914.6M    OHM XA1J2-165 
+:       FF  00316        PASS  >910.3M    OHM J6-T 
+:       CC  00316                             J6-T 
+:                  02441 PASS   2.315     OHM XA1J2-18 
+:       SS  02441        PASS  >950.4M    OHM XA1J2-18 
+:       FF  00314        PASS  >950.8M    OHM J6-R 
+:       CC  00314                             J6-R 
+:                  02615 PASS   2.291     OHM XA1J2-117 
+:       SS  02615        PASS  >947.5M    OHM XA1J2-117 
+:       FF  00302        PASS  >944.3M    OHM J6-C 
+:       CC  00302                             J6-C 
+:                  02741 PASS   2.335     OHM XA1J2-166 
+:       SS  02741        PASS  >917.6M    OHM XA1J2-166 
+:       FF  00313        PASS  >946.5M    OHM J6-P 
+:       CC  00313                             J6-P 
+:                  02641 PASS   2.361     OHM XA1J2-116 
+:       SS  02641        PASS  >946.9M    OHM XA1J2-116 
+:       FF  00311        PASS  >949.6M    OHM J6-M 
+:       CC  00311                             J6-M 
+:                  02541 PASS   2.444     OHM XA1J2-68 
+:       SS  02541        PASS  >949.1M    OHM XA1J2-68 
+:       FF  00309        PASS  >948.0M    OHM J6-K 
+:       CC  00309                             J6-K 
+:                  02415 PASS   2.277     OHM XA1J2-19 
+:       SS  02415        PASS  >946.9M    OHM XA1J2-19 
+:       CC  00236                             J4-37 
+:                  03210 PASS   2.148     OHM XA2J2-29 
+:       FF  02006        PASS  >947.9M    OHM XA1J1-37 
+:       CC  02006                             XA1J1-37 
+:                  03007 PASS   2.266     OHM XA2J1-133 
+:       SS  03007        PASS  >948.9M    OHM XA2J1-133 
+:       FF  02133        PASS  >949.4M    OHM XA1J1-84 
+:       CC  02133                             XA1J1-84 
+:                  03032 PASS   2.150     OHM XA2J1-134 
+:       SS  03032        PASS  >930.5M    OHM XA2J1-134 
+:       FF  02107        PASS  >908.0M    OHM XA1J1-85 
+:       CC  02107                             XA1J1-85 
+:                  03006 PASS   2.288     OHM XA2J1-135 
+:       SS  03006        PASS  >946.7M    OHM XA2J1-135 
+:       FF  02213        PASS  >944.8M    OHM XA1J1-121 
+:       CC  02213                             XA1J1-121 
+:                  02939 PASS   2.266     OHM XA2J1-72 
+:       SS  02939        PASS  >947.0M    OHM XA2J1-72 
+:       FF  02314      ‰[Nı_lƒ\w”8M·iˇ0¯·Ã3Al±ˆ–≈"#ÆÒøº™cr±i)&Zyõº§È‡(˚7ÃK?©`B´ºo˜È¥ﬁÿˇÃ˜úã¥úÁüØU∫∞ø¨LQ€#+≠°úÒ˘˙1≥∞ÌŒ˜Ô‰å™~´Å⁄VúCéüVJ4åçà©øıˇÂ&◊|˚5ò˜©|Ç$Â5s„R˜ç>3hëA†û5%IHügå ü˝√ &«W…?ÏÁàyö"‚ÖxÉ6[å˚?wsKÀöÎW∫Y˛n˚„fe∆ÇçN„ª”        PASS  >945.6M    OHM XA1J1-170 
+:       CC  02339                             XA1J1-170 
+:                  02839 PASS   2.224     OHM XA2J1-22 
+:       SS  02839        PASS  >944.5M    OHM XA2J1-22 
+:       FF  02200        PASS  >939.6M    OHM XA1J1-147 
+:       CC  02200                             XA1J1-147 
+:                  02901 PASS   2.392     OHM XA2J1-97 
+:       SS  02901        PASS  >946.5M    OHM XA2J1-97 
+:       FF  02301        PASS  >950.0M    OHM XA1J1-195 
+:       CC  02301                             XA1J1-195 
+:                  02826 PASS   2.422     OHM XA2J1-48 
+:       SS  02826        PASS  >948.1M    OHM XA2J1-48 
+:       FF  02032        PASS  >945.7M    OHM XA1J1-36 
+:       CC  02032                             XA1J1-36 
+:                  03107 PASS   2.248     OHM XA2J1-183 
+:       SS  03107        PASS  >936.2M    OHM XA2J1-183 
+:       FF  02031        PASS  >902.3M    OHM XA1J1-38 
+:       CC  02031                             XA1J1-38 
+:                  03106 PASS   2.184     OHM XA2J1-185 
+:       SS  03106        PASS  >948.0M    OHM XA2J1-185 
+:       FF  02108        PASS  >946.8M    OHM XA1J1-83 
+:       CC  02108                             XA1J1-83 
+:                  03132 PASS   2.481     OHM XA2J1-184 
+:       SS  03132        PASS  >947.0M    OHM XA2J1-184 
+:       FF  02239        PASS  >948.2M    OHM XA1J1-120 
+:       CC  02239                             XA1J1-120 
+:                  02914 PASS   2.237     OHM XA2J1-71 
+:       SS  02914        PASS  >917.1M    OHM XA2J1-71 
+:       FF  02238        PASS  >900.1M    OHM XA1J1-122 
+:       CC  02238                             XA1J1-122 
+:                  02913 PASS   2.229     OHM XA2J1-73 
+:       SS  02913        PASS  >943.5M    OHM XA2J1-73 
+:       FF  02340        PASS  >945.0M    OHM XA1J1-168 
+:       CC  02340                             XA1J1-168 
+:                  02840 PASS   2.274     OHM XA2J1-20 
+:       SS  02840        PASS  >946.6M    OHM XA2J1-20 
+:       FF  02326        PASS  >946.6M    OHM XA1J1-196 
+:       CC  02326                             XA1J1-196 
+:                  02800 PASS   2.231     OHM XA2J1-49 
+:       SS  02800        PASS  >913.2M    OHM XA2J1-49 
+:       FF  02226        PASS  >916.0M    OHM XA1J1-146 
+:       CC  02226                             XA1J1-146 
+:                  02927 PASS   2.223     OHM XA2J1-96 
+:       SS  02927        PASS  >946.6M    OHM XA2J1-96 
+:       FF  02101        PASS  >950.6M    OHM XA1J1-97 
+:       CC  02101                             XA1J1-97 
+:                  03000 PASS   2.402     OHM XA2J1-147 
+:       SS  03000        PASS  >947.1M    OHM XA2J1-147 
+:       FF  02327        PASS  >949.6M    OHM XA1J1-194 
+:       CC  02327                             XA1J1-194 
+:                  02801 PASS   2.392     OHM XA2J1-47 
+:       SS  02801        PASS  >909.9M    OHM XA2J1-47 
+:       FF  02132        PASS  >912.3M    OHM XA1J1-86 
+:       CC  02132                             XA1J1-86 
+:                  03031 PASS   2.031     OHM XA2J1-136 
+:       SS  03031        PASS  >948.0M    OHM XA2J1-136 
+:       FF  02007        PASS  >951.6M    OHM XA1J1-35 
+:       CC  02007                             XA1J1-35 
+:                  03133 PASS   2.295     OHM XA2J1-182 
+:       SS  03133        PASS  >948.3M    OHM XA2J1-182 
+:       FF  02005        PASS  >944.6M    OHM XA1J1-39 
+:       CC  02005                             XA1J1-39 
+:                  03131 PASS   2.307     OHM XA2J1-186 
+:       SS  03131        PASS  >912.8M    OHM XA2J1-186 
+:       FF  02106        PASS  >901.6M    OHM XA1J1-87 
+:       CC  02106                             XA1J1-87 
+:                  03005 PASS   2.384     OHM XA2J1-137 
+:       SS  03005        PASS  >943.7M    OHM XA2J1-137 
+:       FF  02313        PASS  >945.5M    OHM XA1J1-171 
+:       CC  02313                             XA1J1-171 
+:                  02813 PASS   2.250     OHM XA2J1-23 
+:       SS  02813        PASS  >945.1M    OHM XA2J1-23 
+:       FF  02214        PASS  >948.0M    OHM XA1J1-119 
+:       CC  02214                             XA1J1-119 
+:                  02940 PASS   2.232     OHM XA2J1-70 
+:       SS  02940        PASS  >943.8M    OHM XA2J1-70 
+:       FF  02212        PASS  >945.5M    OHM XA1J1-123 
+:       CC  02212                             XA1J1-123 
+:                  02938 PASS   2.144     OHM XA2J1-74 
+:       SS  02938        PASS  >946.9M    OHM XA2J1-74 
+:       FF  02338        PASS  >945.5M    OHM XA1J1-172 
+:       CC  02338                             XA1J1-172 
+:                  02838 PASS   2.151     OHM XA2J1-24 
+:       SS  02838        PASS  >946.3M    OHM XA2J1-24 
+:       FF  02026        PASS  >947.0M    OHM XA1J1-48 
+:       CC  02026                             XA1J1-48 
+:                  03101 PASS   2.510     OHM XA2J1-195 
+:       SS  03101        PASS  >949.7M    OHM XA2J1-195 
+:       FF  02201        PASS  >947.0M    OHM XA1J1-145 
+:       CC  02201                             XA1J1-145 
+:                  02902 PASS   2.519     OHM XA2J1-95 
+:       SS  02902        PASS  >929.8M    OHM XA2J1-95 
+:       FF  02001        PASS  >946.6M    OHM XA1J1-47 
+:       CC  02001                             XA1J1-47 
+:                  03127 PASS   2.446     OHM XA2J1-194 
+:       SS  03127        PASS  >945.8M    OHM XA2J1-194 
+:       FF  02127        PASS  >947.5M    OHM XA1J1-96 
+:       CC  02127                             XA1J1-96 
+:                  03026 PASS   2.219     OHM XA2J1-146 
+:       SS  03026        PASS  >949.5M    OHM XA2J1-146 
+:       FF  02002        PASS   477.4M    OHM XA1J1-45 
+:       CV  02002                             XA1J1-45 
+:                  02046 PASS   2.415     OHM XA1J1-8 
+:       CV  02046                             XA1J1-8 
+:                  02004 PASS   2.776     OHM XA1J1-41 
+:       CV  02004                             XA1J1-41 
+:                  02121 PASS   2.334     OHM XA1J1-57 
+:       CV  02121                             XA1J1-57 
+:                  02128 PASS   2.532     OHM XA1J1-94 
+:       CV  02128                             XA1J1-94 
+:                  03046 PASS   2.390     OHM XA2J1-106 
+:       CV  03046                             XA2J1-106 
+:                  03029 PASS   2.117     OHM XA2J1-140 
+:       CV  03029                             XA2J1-140 
+:                  03027 PASS   2.005     OHM XA2J1-144 
+:       CV  03027                             XA2J1-144 
+:                  03146 PASS   2.294     OHM XA2J1-156 
+:       CV  03146                             XA2J1-156 
+:                  03130 PASS   2.238     OHM XA2J1-188 
+:       CC  03130                             XA2J1-188 
+:                  03128 PASS   2.337     OHM XA2J1-192 
+:       SS  03146        PASS   603.6M    OHM XA2J1-156 
+:       CC  00214                             J4-15 
+:                  03537 PASS   2.483     OHM XA2J2-174 
+:       FF  00225        PASS  >945.6M    OHM J4-26 
+:       CC  00225                             J4-26 
+:                  03208 PASS   2.320     OHM XA2J2-33 
+:       SS  03208        PASS  >947.6M    OHM XA2J2-33 
+:       FF  02034        PASS  >947.3M    OHM XA1J1-32 
+:       CC  02034                             XA1J1-32 
+:                  03109 PASS   2.322     OHM XA2J1-179 
+:       SS  03109        PASS  >945.7M    OHM XA2J1-179 
+:       FF  02110        PASS  >946.3M    OHM XA1J1-79 
+:       CC  02110                             XA1J1-79 
+:                  03009 PASS   2.186     OHM XA2J1-129 
+:       SS  03009        PASS  >942.8M    OHM XA2J1-129 
+:       FF  02135        PASS  >947.1M    OHM XA1J1-80 
+:       CC  02135                             XA1J1-80 
+:                  03034 PASS   2.160     OHM XA2J1-130 
+:       SS  03034        PASS  >946.5M    OHM XA2J1-130 
+:       FF  02241        PASS  >935.7M    OHM XA1J1-116 
+:       CC  02241                             XA1J1-116 
+:                  02916 PASS   2.342     OHM XA2J1-67 
+:       SS  02916        PASS  >945.6M    OHM XA2J1-67 
+:       FF  02342        PASS  >945.7M    OHM XA1J1-164 
+:       CC  02342                             XA1J1-164 
+:                  02842 PASS   2.166     OHM XA2J1-16 
+:       SS  02842        PASS  >946.9M    OHM XA2J1-16 
+:       FF  02316        PASS  >949.4M    OHM XA1J1-165 
+:       CC  02316                             XA1J1-165 
+:                  02816 PASS   2.330     OHM XA2J1-17 
+:       SS  02816        PASS  >927.0M    OHM XA2J1-17 
+:       FF  02228        PASS  >920.1M    OHM XA1J1-142 
+:       CC  02228                             XA1J1-142 
+:                  02929 PASS   2.225     OHM XA2J1-92 
+:       SS  02929        PASS  >949.0M    OHM XA2J1-92 
+:       FF  02329        PASS  >947.7M    OHM XA1J1-190 
+:       CC  02329                             XA1J1-190 
+:                  02803 PASS   2.290     OHM XA2J1-43 
+:       SS  02803        PASS  >945.1M    OHM XA2J1-43 
+:       FF  02009        PASS  >945.7M    OHM XA1J1-31 
+:       CC  02009                             XA1J1-31 
+:                  03135 PASS   2.207     OHM XA2J1-178 
+:       SS  03135        PASS  >929.9M    OHM XA2J1-178 
+:       FF  02008        PASS  >912.9M    OHM XA1J1-33 
+:       CC  02008                             XA1J1-33 
+:                  03134 PASS   2.202     OHM XA2J1-180 
+:       SS  03134        PASS  >948.2M    OHM XA2J1-180 
+:       FF  02136        PASS  >945.0M    OHM XA1J1-78 
+:       CC  02136                             XA1J1-78 
+:                  03035 PASS   2.083     OHM XA2J1-128 
+:       SS  03035        PASS  >948.3M    OHM XA2J1-128 
+:       FF  02216        PASS  >949.8M    OHM XA1J1-115 
+:       CC  02216                             XA1J1-115 
+:                  02942 PASS   2.272     OHM XA2J1-66 
+:       SS  02942        PASS  >917.9M    OHM XA2J1-66 
+:       FF  02215        PASS  >915.9M    OHM XA1J1-117 
+:       CC  02215                             XA1J1-117 
+:                  02941 PASS   2.261     OHM XA2J1-68 
+:       SS  02941        PASS  >949.5M    OHM XA2J1-68 
+:       FF  02317        PASS  >946.6M    OHM XA1J1-163 
+:       CC  02317                             XA1J1-163 
+:                  02817 PASS   2.033     OHM XA2J1-15 
+:       SS  02817        PASS  >948.7M    OHM XA2J1-15 
+:       FF  02303        PASS  >950.5M    OHM XA1J1-191 
+:       CC  02303                             XA1J1-191 
+:                  02828 PASS   2.449     OHM XA2J1-44 
+:       SS  02828        PASS  >931.8M    OHM XA2J1-44 
+:       FF  02203        PASS  >904.7M    OHM XA1J1-141 
+:       CC  02203                             XA1J1-141 
+:                  02904 PASS   2.415     OHM XA2J1-91 
+:       SS  02904        PASS  >947.0M    OHM XA2J1-91 
+:       FF  02202        PASS  >951.8M    OHM XA1J1-143 
+:       CC  02202                             XA1J1-143 
+:                  02903 PASS   2.371     OHM XA2J1-93 
+:       SS  02903        PASS  >948.3M    OHM XA2J1-93 
+:       FF  02304        PASS  >946.3M    OHM XA1J1-189 
+:       CC  02304                             XA1J1-189 
+:                  02829 PASS   2.052     OHM XA2J1-42 
+:       SS  02829        PASS  >903.3M    OHM XA2J1-42 
+:       FF  02109        PASS  >866.6M    OHM XA1J1-81 
+:       CC  02109                             XA1J1-81 
+:                  03008 PASS   2.238     OHM XA2J1-131 
+:       SS  03008        PASS  >949.2M    OHM XA2J1-131 
+:       FF  02035        PASS  >947.8M    OHM XA1J1-30 
+:       CC  02035                             XA1J1-30 
+:                  03110 PASS   2.115     OHM XA2J1-177 
+:       SS  03110        PASS  >946.7M    OHM XA2J1-177 
+:       FF  02033        PASS  >950.3M    OHM XA1J1-34 
+:       CC  02033                             XA1J1-34 
+:                  03108 PASS   2.272     OHM XA2J1-181 
+:       SS  03108        PASS  >897.7M    OHM XA2J1-181 
+:       FF  02134        PASS  >935.9M    OHM XA1J1-82 
+:       CC  02134                             XA1J1-82 
+:                  03033 PASS   2.167     OHM XA2J1-132 
+:       SS  03033        PASS  >946.3M    OHM XA2J1-132 
+:       FF  02341        PASS  >950.8M    OHM XA1J1-166 
+:       CC  02341                             XA1J1-166 
+:                  02841 PASS   2.291     OHM XA2J1-18 
+:       SS  02841        PASS  >950.3M    OHM XA2J1-18 
+:       FF  02242        PASS  >945.7M    OHM XA1J1-114 
+:       CC  02242                             XA1J1-114 
+:                  02917 PASS   2.115     OHM XA2J1-65 
+:       SS  02917        PASS  >908.2M    OHM XA2J1-65 
+:       FF  02240        PASS  >923.9M    OHM XA1J1-118 
+:       CC  02240                             XA1J1-118 
+:                  02915 PASS   2.245     OHM XA2J1-69 
+:       SS  02915        PASS  >948.8M    OHM XA2J1-69 
+:       FF  02315        PASS  >947.4M    OHM XA1J1-167 
+:       CC  02315                             XA1J1-167 
+:                  02815 PASS   2.186     OHM XA2J1-19 
+:       SS  02815        PASS  >948.4M    OHM XA2J1-19 
+:       FF  02328        PASS  >951.7M    OHM XA1J1-192 
+:       CC  02328                             XA1J1-192 
+:                  02802 PASS   2.362     OHM XA2J1-45 
+:       SS  02802        PASS  >913.6M    OHM XA2J1-45 
+:       FF  02229        PASS  >908.3M    OHM XA1J1-140 
+:       CC  02229                             XA1J1-140 
+:                  02930 PASS   2.108     OHM XA2J1-90 
+:       SS  02930        PASS  >944.7M    OHM XA2J1-90 
+:       FF  02227        PASS  >945.8M    OHM XA1J1-144 
+:       CC  02227                             XA1J1-144 
+:                  02928 PASS   2.307     OHM XA2J1-94 
+:       SS  02928        PASS  >943.8M    OHM XA2J1-94 
+:       FF  02302        PASS  >945.4M    OHM XA1J1-193 
+:       CC  02302                             XA1J1-193 
+:                  02827 PASS   2.183     OHM XA2J1-46 
+:       SS  02827        PASS  >909.2M    OHM XA2J1-46 
+:       FF  02021        PASS   358.2M    OHM XA1J1-7 
+:       CV  02021                             XA1J1-7 
+:                  02030 PASS   2.389     OHM XA1J1-40 
+:       CV  02030                             XA1J1-40 
+:                  02027 PASS   2.233     OHM XA1J1-46 
+:       CV  02027                             XA1J1-46 
+:                  02147 PASS   2.562     OHM XA1J1-56 
+:       CV  02147                             XA1J1-56 
+:                  02105 PASS   2.808     OHM XA1J1-89 
+:       CV  02105                             XA1J1-89 
+:                  02102 PASS   2.424     OHM XA1J1-95 
+:       CV  02102                             XA1J1-95 
+:                  03021 PASS   2.261     OHM XA2J1-105 
+:       CV  03021                             XA2J1-105 
+:                  03004 PASS   2.167     OHM XA2J1-139 
+:       CV  03004                             XA2J1-139 
+:                  03001 PASS   2.277     OHM XA2J1-145 
+:       CV  03001                             XA2J1-145 
+:                  03121 PASS   2.385     OHM XA2J1-155 
+:       CV  03121                             XA2J1-155 
+:                  03105 PASS   2.451     OHM XA2J1-187 
+:       CC  03105                             XA2J1-187 
+:                  03102 PASS   2.335     OHM XA2J1-193 
+:       SS  03121        PASS   548.8M    OHM XA2J1-155 
+:       FF  02144        PASS  >946.9M    OHM XA1J1-62 
+:       CC  02144                             XA1J1-62 
+:                  03018 PASS   2.249     OHM XA2J1-111 
+:       SS  03018        PASS  >945.7M    OHM XA2J1-111 
+:       FF  02044        PASS  >939.4M    OHM XA1J1-12 
+:       CC  02044                             XA1J1-12 
+:                  03144 PASS   2.186     OHM XA2J1-160 
+:       SS  03144        PASS  >945.3M    OHM XA2J1-160 
+:       FF  02143        PASS  >945.0M    OHM XA1J1-64 
+:       CC  02143                 ÑTnB„C|tr—…öËiòç¡Qi»ÆM5úlÍ  ∏|Dhx‡Cºp6ØqE@±ó)‘T¬p«2c≥f+À°ƒÒ:J_0 ¬çÅp˚!ÒvïìNÁîZÿ˙·*Ìã'c`tek›zàÁ√tœMeñRéŸ]5¢‹ñJ∫/P÷Àr'?_<•ÊÔâRgxö^&–c|aÇ5ìY09ˆ(ô€‡∫Q⁄πÁ‡	79è)DtQ7JiòwŒ»˚è˛#…e–◊9`d/¡.Ü	çÜè∆~Ü∆∆£}ÕºÔí                  XA1J1-51 
+:                  03049 PASS   2.309     OHM XA2J1-100 
+:       SS  03049        PASS  >919.8M    OHM XA2J1-100 
+:       FF  02149        PASS  >909.2M    OHM XA1J1-52 
+:       CC  02149                             XA1J1-52 
+:                  03023 PASS   2.282     OHM XA2J1-101 
+:       SS  03023        PASS  >947.8M    OHM XA2J1-101 
+:       FF  02349        PASS  >945.1M    OHM XA1J1-150 
+:       CC  02349                             XA1J1-150 
+:                  02849 PASS   2.432     OHM XA2J1-2 
+:       SS  02849        PASS  >943.3M    OHM XA2J1-2 
+:       FF  02337        PASS  >946.6M    OHM XA1J1-174 
+:       CC  02337                             XA1J1-174 
+:                  02811 PASS   2.291     OHM XA2J1-27 
+:       SS  02811        PASS  >935.5M    OHM XA2J1-27 
+:       FF  02211        PASS  >937.4M    OHM XA1J1-125 
+:       CC  02211                             XA1J1-125 
+:                  02912 PASS   2.343     OHM XA2J1-75 
+:       SS  02912        PASS  >948.0M    OHM XA2J1-75 
+:       FF  02142        PASS  >944.6M    OHM XA1J1-66 
+:       CC  02142                             XA1J1-66 
+:                  03016 PASS   2.208     OHM XA2J1-115 
+:       SS  03016        PASS  >947.6M    OHM XA2J1-115 
+:       FF  02043        PASS  >950.9M    OHM XA1J1-14 
+:       CC  02043                             XA1J1-14 
+:                  03143 PASS   2.402     OHM XA2J1-162 
+:       SS  03143        PASS  >946.2M    OHM XA2J1-162 
+:       FF  02042        PASS  >949.8M    OHM XA1J1-16 
+:       CC  02042                             XA1J1-16 
+:                  03142 PASS   2.190     OHM XA2J1-164 
+:       SS  03142        PASS  >941.5M    OHM XA2J1-164 
+:       FF  02348        PASS  >908.6M    OHM XA1J1-152 
+:       CC  02348                             XA1J1-152 
+:                  02848 PASS   2.084     OHM XA2J1-4 
+:       SS  02848        PASS  >947.7M    OHM XA2J1-4 
+:       FF  02223        PASS  >946.1M    OHM XA1J1-101 
+:       CC  02223                             XA1J1-101 
+:                  02949 PASS   2.288     OHM XA2J1-52 
+:       SS  02949        PASS  >946.9M    OHM XA2J1-52 
+:       FF  02222        PASS  >947.1M    OHM XA1J1-103 
+:       CC  02222                             XA1J1-103 
+:                  02948 PASS   2.224     OHM XA2J1-54 
+:       SS  02948        PASS  >908.9M    OHM XA2J1-54 
+:       FF  02336        PASS  >855.7M    OHM XA1J1-176 
+:       CC  02336                             XA1J1-176 
+:                  02810 PASS   2.027     OHM XA2J1-29 
+:       SS  02810        PASS  >946.1M    OHM XA2J1-29 
+:       FF  02335        PASS  >947.4M    OHM XA1J1-178 
+:       CC  02335                             XA1J1-178 
+:                  02809 PASS   2.235     OHM XA2J1-31 
+:       SS  02809        PASS  >947.3M    OHM XA2J1-31 
+:       FF  02210        PASS  >945.8M    OHM XA1J1-127 
+:       CC  02210                             XA1J1-127 
+:                  02911 PASS   2.292     OHM XA2J1-77 
+:       SS  02911        PASS  >893.7M    OHM XA2J1-77 
+:       FF  02209        PASS  >909.0M    OHM XA1J1-129 
+:       CC  02209                             XA1J1-129 
+:                  02910 PASS   2.136     OHM XA2J1-79 
+:       SS  02910        PASS  >947.1M    OHM XA2J1-79 
+:       FF  02118        PASS  >944.8M    OHM XA1J1-63 
+:       CC  02118                             XA1J1-63 
+:                  03043 PASS   2.319     OHM XA2J1-112 
+:       SS  03043        PASS  >948.2M    OHM XA2J1-112 
+:       FF  02117        PASS  >949.1M    OHM XA1J1-65 
+:       CC  02117                             XA1J1-65 
+:                  03042 PASS   2.090     OHM XA2J1-114 
+:       SS  03042        PASS  >922.2M    OHM XA2J1-114 
+:       FF  02018        PASS  >904.7M    OHM XA1J1-13 
+:       CC  02018                             XA1J1-13 
+:                  03118 PASS   2.333     OHM XA2J1-161 
+:       SS  03118        PASS  >946.6M    OHM XA2J1-161 
+:       FF  02017        PASS  >951.7M    OHM XA1J1-15 
+:       CC  02017                             XA1J1-15 
+:                  03117 PASS   2.110     OHM XA2J1-163 
+:       SS  03117        PASS  >948.9M    OHM XA2J1-163 
+:       FF  02023        PASS  >950.9M    OHM XA1J1-3 
+:       CC  02023                             XA1J1-3 
+:                  03123 PASS   2.125     OHM XA2J1-151 
+:       SS  03123        PASS  >898.9M    OHM XA2J1-151 
+:       FF  02323        PASS  >889.2M    OHM XA1J1-151 
+:       CC  02323                             XA1J1-151 
+:                  02823 PASS   2.057     OHM XA2J1-3 
+:       SS  02823        PASS  >949.1M    OHM XA2J1-3 
+:       FF  02049        PASS  >945.8M    OHM XA1J1-2 
+:       CC  02049                             XA1J1-2 
+:                  03149 PASS   2.527     OHM XA2J1-150 
+:       SS  03149        PASS  >946.4M    OHM XA2J1-150 
+:       FF  02248        PASS  >944.9M    OHM XA1J1-102 
+:       CC  02248                             XA1J1-102 
+:                  02923 PASS   2.102     OHM XA2J1-53 
+:       SS  02923        PASS  >905.6M    OHM XA2J1-53 
+:       FF  02311        PASS  >903.3M    OHM XA1J1-175 
+:       CC  02311                             XA1J1-175 
+:                  02836 PASS   2.297     OHM XA2J1-28 
+:       SS  02836        PASS  >946.1M    OHM XA2J1-28 
+:       FF  02310        PASS  >944.4M    OHM XA1J1-177 
+:       CC  02310                             XA1J1-177 
+:                  02835 PASS   2.059     OHM XA2J1-30 
+:       SS  02835        PASS  >950.0M    OHM XA2J1-30 
+:       FF  02236        PASS  >948.9M    OHM XA1J1-126 
+:       CC  02236                             XA1J1-126 
+:                  02937 PASS   2.109     OHM XA2J1-76 
+:       SS  02937        PASS  >945.7M    OHM XA2J1-76 
+:       FF  02235        PASS  >916.8M    OHM XA1J1-128 
+:       CC  02235                             XA1J1-128 
+:                  02936 PASS   2.105     OHM XA2J1-78 
+:       SS  02936        PASS  >946.3M    OHM XA2J1-78 
+:       CC  00215                             J4-16 
+:                  03512 PASS   2.541     OHM XA2J2-173 
+:       FF  00226        PASS  >946.3M    OHM J4-27 
+:       CC  00226                             J4-27 
+:                  03234 PASS   2.319     OHM XA2J2-32 
+:       SS  03234        PASS  >922.9M    OHM XA2J2-32 
+:       FF  02016        PASS  >906.7M    OHM XA1J1-17 
+:       CC  02016                             XA1J1-17 
+:                  03116 PASS   2.337     OHM XA2J1-165 
+:       SS  03116        PASS  >947.1M    OHM XA2J1-165 
+:       FF  02114        PASS  >947.7M    OHM XA1J1-71 
+:       CC  02114                             XA1J1-71 
+:                  03039 PASS   2.229     OHM XA2J1-120 
+:       SS  03039        PASS  >950.0M    OHM XA2J1-120 
+:       FF  02116        PASS  >950.3M    OHM XA1J1-67 
+:       CC  02116                             XA1J1-67 
+:                  03041 PASS   2.274     OHM XA2J1-116 
+:       SS  03041        PASS  >890.6M    OHM XA2J1-116 
+:       FF  02247        PASS  >888.8M    OHM XA1J1-104 
+:       CC  02247                             XA1J1-104 
+:                  02922 PASS   2.516     OHM XA2J1-55 
+:       SS  02922        PASS  >944.6M    OHM XA2J1-55 
+:       FF  02320        PASS  >948.4M    OHM XA1J1-157 
+:       CC  02320                             XA1J1-157 
+:                  02820 PASS   2.237     OHM XA2J1-9 
+:       SS  02820        PASS  >945.5M    OHM XA2J1-9 
+:       FF  02322        PASS  >945.8M    OHM XA1J1-153 
+:       CC  02322                             XA1J1-153 
+:                  02822 PASS   2.312     OHM XA2J1-5 
+:       SS  02822        PASS  >898.2M    OHM XA2J1-5 
+:       FF  02234        PASS  >910.2M    OHM XA1J1-130 
+:       CC  02234                             XA1J1-130 
+:                  02935 PASS   2.189     OHM XA2J1-80 
+:       SS  02935        PASS  >947.5M    OHM XA2J1-80 
+:       FF  02307        PASS  >947.2M    OHM XA1J1-183 
+:       CC  02307                             XA1J1-183 
+:                  02832 PASS   2.237     OHM XA2J1-36 
+:       SS  02832        PASS  >949.1M    OHM XA2J1-36 
+:       FF  02014        PASS  >947.9M    OHM XA1J1-21 
+:       CC  02014                             XA1J1-21 
+:                  03114 PASS   2.289     OHM XA2J1-169 
+:       SS  03114        PASS  >917.6M    OHM XA2J1-169 
+:       FF  02041        PASS  >901.3M    OHM XA1J1-18 
+:       CC  02041                             XA1J1-18 
+:                  03141 PASS   2.363     OHM XA2J1-166 
+:       SS  03141        PASS  >950.9M    OHM XA2J1-166 
+:       FF  02140        PASS  >948.7M    OHM XA1J1-70 
+:       CC  02140                             XA1J1-70 
+:                  03014 PASS   2.330     OHM XA2J1-119 
+:       SS  03014        PASS  >948.9M    OHM XA2J1-119 
+:       FF  02245        PASS  >946.4M    OHM XA1J1-108 
+:       CC  02245                             XA1J1-108 
+:                  02920 PASS   2.304     OHM XA2J1-59 
+:       SS  02920        PASS  >921.3M    OHM XA2J1-59 
+:       FF  02221        PASS  >920.7M    OHM XA1J1-105 
+:       CC  02221                             XA1J1-105 
+:                  02947 PASS   2.331     OHM XA2J1-56 
+:       SS  02947        PASS  >946.6M    OHM XA2J1-56 
+:       FF  02346        PASS  >946.3M    OHM XA1J1-156 
+:       CC  02346                             XA1J1-156 
+:                  02846 PASS   2.171     OHM XA2J1-8 
+:       SS  02846        PASS  >946.8M    OHM XA2J1-8 
+:       FF  02309        PASS  >950.1M    OHM XA1J1-179 
+:       CC  02309                             XA1J1-179 
+:                  02834 PASS   2.175     OHM XA2J1-32 
+:       SS  02834        PASS  >921.9M    OHM XA2J1-32 
+:       FF  02232        PASS  >929.3M    OHM XA1J1-134 
+:       CC  02232                             XA1J1-134 
+:                  02933 PASS   2.080     OHM XA2J1-84 
+:       SS  02933        PASS  >950.3M    OHM XA2J1-84 
+:       FF  02208        PASS  >946.4M    OHM XA1J1-131 
+:       CC  02208                             XA1J1-131 
+:                  02909 PASS   2.315     OHM XA2J1-81 
+:       SS  02909        PASS  >944.9M    OHM XA2J1-81 
+:       FF  02333        PASS  >945.5M    OHM XA1J1-182 
+:       CC  02333                             XA1J1-182 
+:                  02807 PASS   2.244     OHM XA2J1-35 
+:       SS  02807        PASS  >936.8M    OHM XA2J1-35 
+:       FF  02141        PASS  >937.6M    OHM XA1J1-68 
+:       CC  02141                             XA1J1-68 
+:                  03015 PASS   2.284     OHM XA2J1-117 
+:       SS  03015        PASS  >947.1M    OHM XA2J1-117 
+:       FF  02040        PASS  >948.1M    OHM XA1J1-20 
+:       CC  02040                             XA1J1-20 
+:                  03140 PASS   2.328     OHM XA2J1-168 
+:       SS  03140        PASS  >950.0M    OHM XA2J1-168 
+:       FF  02015        PASS  >948.7M    OHM XA1J1-19 
+:       CC  02015                             XA1J1-19 
+:                  03115 PASS   2.275     OHM XA2J1-167 
+:       SS  03115        PASS  >944.5M    OHM XA2J1-167 
+:       FF  02115        PASS  >949.0M    OHM XA1J1-69 
+:       CC  02115                             XA1J1-69 
+:                  03040 PASS   2.249     OHM XA2J1-118 
+:       SS  03040        PASS  >943.4M    OHM XA2J1-118 
+:       FF  02347        PASS  >946.4M    OHM XA1J1-154 
+:       CC  02347                             XA1J1-154 
+:                  02847 PASS   2.471     OHM XA2J1-6 
+:       SS  02847        PASS  >945.0M    OHM XA2J1-6 
+:       FF  02220        PASS  >948.8M    OHM XA1J1-107 
+:       CC  02220                             XA1J1-107 
+:                  02946 PASS   2.279     OHM XA2J1-58 
+:       SS  02946        PASS  >945.8M    OHM XA2J1-58 
+:       FF  02246        PASS  >945.0M    OHM XA1J1-106 
+:       CC  02246                             XA1J1-106 
+:                  02921 PASS   2.213     OHM XA2J1-57 
+:       SS  02921        PASS  >940.9M    OHM XA2J1-57 
+:       FF  02321        PASS  >941.2M    OHM XA1J1-155 
+:       CC  02321                             XA1J1-155 
+:                  02821 PASS   2.128     OHM XA2J1-7 
+:       SS  02821        PASS  >944.4M    OHM XA2J1-7 
+:       FF  02334        PASS  >948.6M    OHM XA1J1-180 
+:       CC  02334                             XA1J1-180 
+:                  02808 PASS   2.238     OHM XA2J1-33 
+:       SS  02808        PASS  >943.8M    OHM XA2J1-33 
+:       FF  02207        PASS  >950.8M    OHM XA1J1-133 
+:       CC  02207                             XA1J1-133 
+:                  02908 PASS   2.317     OHM XA2J1-83 
+:       SS  02908        PASS  >906.7M    OHM XA2J1-83 
+:       FF  02233        PASS  >913.8M    OHM XA1J1-132 
+:       CC  02233                             XA1J1-132 
+:                  02934 PASS   2.163     OHM XA2J1-82 
+:       SS  02934        PASS  >947.4M    OHM XA2J1-82 
+:       FF  02308        PASS  >951.1M    OHM XA1J1-181 
+:       CC  02308                             XA1J1-181 
+:                  02833 PASS   2.155     OHM XA2J1-34 
+:       SS  02833        PASS  >948.9M    OHM XA2J1-34 
+:       FF  02019        PASS   775.3M    OHM XA1J1-11 
+:       CV  02019                             XA1J1-11 
+:                  02028 PASS   2.366     OHM XA1J1-44 
+:       CV  02028                             XA1J1-44 
+:                  02145 PASS   2.451     OHM XA1J1-60 
+:       CV  02145                             XA1J1-60 
+:                  02103 PASS   2.556     OHM XA1J1-93 
+:       CV  02103                             XA1J1-93 
+:                  03019 PASS   2.327     OHM XA2J1-109 
+:       CV  03019                             XA2J1-109 
+:                  03002 PASS   2.082     OHM XA2J1-143 
+:       CV  03002                             XA2J1-143 
+:                  03119 PASS   2.123     OHM XA2J1-159 
+:       CC  03119                             XA2J1-159 
+:                  03103 PASS   2.320     OHM XA2J1-191 
+:       SS  03119        PASS   626.7M    OHM XA2J1-159 
+:       FF  00401        PASS  >946.5M    OHM J1-B 
+:       CV  00401                             J1-B 
+:                  03226 PASS   2.568     OHM XA2J2-48 
+:       CC  03226                             XA2J2-48 
+:                  03327 PASS   2.063     OHM XA2J2-96 
+:       SS  03327        PASS  >890.4M    OHM XA2J2-96 
+:       FF  00400        PASS  >884.8M    OHM J1-A 
+:       CV  00400                             J1-A 
+:                  03200 PASS   2.223     OHM XA2J2-49 
+:       CC  03200                             XA2J2-49 
+:                  03301 PASS   2.242     OHM XA2J2-97 
+:       SS  03301        PASS  >874.0M    OHM XA2J2-97 
+:       FF  00403        PASS  >837.2M    OHM J2-B 
+:       CV  00403                             J2-B 
+:                  03202 PASS   2.458     OHM XA2J2-45 
+:       CC  03202                             XA2J2-45 
+:                  03303 PASS   2.212     OHM XA2J2-93 
+:       SS  03303        PASS  >893.5M    OHM XA2J2-93 
+:       FF  00402        PASS  >876.0M    OHM J2-A 
+:       CV  00402                             J2-A 
+:                  03227 PASS   2.252     OHM XA2J2-46 
+:       CC  03227                             XA2J2-46 
+:                  03328 PASS   2.115     OHM XA2J2-94 
+:       SS  03328        PASS  >948.2M    OHM XA2J2-94 
+:       FF  00532        PASS   72.31M    OHM J8-V 
+:       CC  00532                             J8-V 
+:                  00535 PASS   2.514     OHM J8-Y 
+:       SS  00535        PASS   126.2M    OHM J8-Y 
+:       FF  00533        PASS   73.41M    OHM J8-W 
+:       CC  00533                             J8-W 
+:                  00534 PASS   2.587     OHM J8-X 
+:       SS  00534        PASS   109.8M    OHM J8-X 
+:       FF  00536        PASS   70.14M    OHM J8-Z 
+:       CV  00536                             J8-Z 
+:                  02430 PASS   3.083     OHM XA1J2-40 
+:       CC  02430                         èÔ¬"8rt≈V1Æƒ“ﬂW÷IEÇå¡ëtç˝Í®ç∞e’¥¿Ul_∑t≤¨ŒÓΩ◊∂»Ú@G 5£˘ñ/
+‹ó'™‹'æ‰h«\ƒ›ﬂÕåqTBt64_q+®œÏπŸü“Q∫Mst8!ˆÿü∑Ÿ%¡U…\⁄ }Ïi¨ôáO(Û¿¬'Fÿ†˚ê,h«2 ≠MIàˆ4BPB »U 763.7M    OHM J8-SMA 
+:       CC  00500                             J8-SMA 
+:                  00511 PASS   2.695     OHM J8-SMP 
+:       SS  00511        PASS   74.23M    OHM J8-SMP 
+:       FF  00501        PASS   753.1M    OHM J8-SMB 
+:       CV  00501                             J8-SMB 
+:                  02432 PASS   3.339     OHM XA1J2-36 
+:       CC  02432                             XA1J2-36 
+:                  02533 PASS   2.009     OHM XA1J2-84 
+:       SS  02533        PASS   71.16M    OHM XA1J2-84 
+:       FF  00502        PASS   487.9M    OHM J8-SMC 
+:       CV  00502                             J8-SMC 
+:                  02610 PASS   3.365     OHM XA1J2-127 
+:       CC  02610                             XA1J2-127 
+:                  02711 PASS   2.296     OHM XA1J2-175 
+:       SS  02711        PASS   582.6M    OHM XA1J2-175 
+:       FF  00504        PASS   583.8M    OHM J8-SME 
+:       CV  00504                             J8-SME 
+:                  02433 PASS   3.108     OHM XA1J2-34 
+:       CC  02433                             XA1J2-34 
+:                  02534 PASS   2.099     OHM XA1J2-82 
+:       SS  02534        PASS   70.73M    OHM XA1J2-82 
+:       FF  00505        PASS   514.2M    OHM J8-SMF 
+:       CC  00505                             J8-SMF 
+:                  00506 PASS   2.862     OHM J8-SMG 
+:       SS  00506        PASS   79.79M    OHM J8-SMG 
+:       FF  00016        PASS   82.50M    OHM J9-V 
+:       CV  00016                             J9-V 
+:                  02436 PASS   3.266     OHM XA1J2-28 
+:       CC  02436                             XA1J2-28 
+:                  02537 PASS   2.045     OHM XA1J2-76 
+:       SS  02537        PASS   120.3M    OHM XA1J2-76 
+:       FF  00017        PASS   79.41M    OHM J9-W 
+:       CV  00017                             J9-W 
+:                  02612 PASS   3.247     OHM XA1J2-123 
+:       CC  02612                             XA1J2-123 
+:                  02738 PASS   2.169     OHM XA1J2-172 
+:       SS  02738        PASS  >743.4M    OHM XA1J2-172 
+:       FF  00018        PASS   82.87M    OHM J9-X 
+:       CV  00018                             J9-X 
+:                  02439 PASS   3.361     OHM XA1J2-22 
+:       CC  02439                             XA1J2-22 
+:                  02514 PASS   2.175     OHM XA1J2-71 
+:       SS  02514        PASS   117.6M    OHM XA1J2-71 
+:       FF  00019        PASS   82.49M    OHM J9-Z 
+:       CV  00019                             J9-Z 
+:                  02613 PASS   3.326     OHM XA1J2-121 
+:       CC  02613                             XA1J2-121 
+:                  02739 PASS   2.293     OHM XA1J2-170 
+:       SS  02739        PASS  >948.2M    OHM XA1J2-170 
+:       FF  00000        PASS  >946.8M    OHM J9-SMA 
+:       CV  00000                             J9-SMA 
+:                  02440 PASS   3.293     OHM XA1J2-20 
+:       CC  02440                             XA1J2-20 
+:                  02515 PASS   2.203     OHM XA1J2-69 
+:       SS  02515        PASS   73.03M    OHM XA1J2-69 
+:       FF  00001        PASS  >947.3M    OHM J9-SMB 
+:       CV  00001                             J9-SMB 
+:                  02614 PASS   3.558     OHM XA1J2-119 
+:       CC  02614                             XA1J2-119 
+:                  02740 PASS   2.241     OHM XA1J2-168 
+:       SS  02740        PASS  >947.0M    OHM XA1J2-168 
+:       FF  00002        PASS  >888.6M    OHM J9-SMC 
+:       CV  00002                             J9-SMC 
+:                  02438 PASS   3.280     OHM XA1J2-24 
+:       CC  02438                             XA1J2-24 
+:                  02513 PASS   2.165     OHM XA1J2-73 
+:       SS  02513        PASS   75.25M    OHM XA1J2-73 
+:       FF  00003        PASS  >871.8M    OHM J9-SME 
+:       CV  00003                             J9-SME 
+:                  02609 PASS   3.556     OHM XA1J2-129 
+:       CC  02609                             XA1J2-129 
+:                  02710 PASS   2.492     OHM XA1J2-177 
+:       SS  02710        PASS   613.9M    OHM XA1J2-177 
+:       FF  00004        PASS  >834.9M    OHM J9-SMF 
+:       CV  00004                             J9-SMF 
+:                  02435 PASS   3.192     OHM XA1J2-30 
+:       CC  02435                             XA1J2-30 
+:                  02536 PASS   2.022     OHM XA1J2-78 
+:       SS  02536        PASS   66.21M    OHM XA1J2-78 
+:       FF  00005        PASS  >813.7M    OHM J9-SMG 
+:       CV  00005                             J9-SMG 
+:                  02607 PASS   3.550     OHM XA1J2-133 
+:       CC  02607                             XA1J2-133 
+:                  02708 PASS   2.340     OHM XA1J2-181 
+:       SS  02708        PASS   553.6M    OHM XA1J2-181 
+:       FF  00119        PASS   79.56M    OHM J10-V 
+:       CV  00119                             J10-V 
+:                  02431 PASS   3.152     OHM XA1J2-38 
+:       CC  02431                             XA1J2-38 
+:                  02532 PASS   2.324     OHM XA1J2-86 
+:       SS  02532        PASS   115.3M    OHM XA1J2-86 
+:       FF  00120        PASS   76.86M    OHM J10-W 
+:       CV  00120                             J10-W 
+:                  02605 PASS   3.571     OHM XA1J2-137 
+:       CC  02605                             XA1J2-137 
+:                  02706 PASS   2.395     OHM XA1J2-185 
+:       SS  02706        PASS  >934.5M    OHM XA1J2-185 
+:       FF  00121        PASS   81.18M    OHM J10-X 
+:       CV  00121                             J10-X 
+:                  02429 PASS   3.170     OHM XA1J2-42 
+:       CC  02429                             XA1J2-42 
+:                  02530 PASS   2.057     OHM XA1J2-90 
+:       SS  02530        PASS   129.5M    OHM XA1J2-90 
+:       FF  00122        PASS   85.14M    OHM J10-Y 
+:       CV  00122                             J10-Y 
+:                  02603 PASS   3.566     OHM XA1J2-141 
+:       CC  02603                             XA1J2-141 
+:                  02704 PASS   2.394     OHM XA1J2-189 
+:       SS  02704        PASS  >855.7M    OHM XA1J2-189 
+:       FF  00123        PASS   86.35M    OHM J10-Z 
+:       CV  00123                             J10-Z 
+:                  02427 PASS   3.191     OHM XA1J2-46 
+:       CC  02427                             XA1J2-46 
+:                  02528 PASS   2.416     OHM XA1J2-94 
+:       SS  02528        PASS   119.4M    OHM XA1J2-94 
+:       FF  00100        PASS  >947.5M    OHM J10-SMA 
+:       CV  00100                             J10-SMA 
+:                  02602 PASS   3.306     OHM XA1J2-143 
+:       CC  02602                             XA1J2-143 
+:                  02703 PASS   2.416     OHM XA1J2-191 
+:       SS  02703        PASS   606.0M    OHM XA1J2-191 
+:       FF  00101        PASS  >741.2M    OHM J10-SMB 
+:       CV  00101                             J10-SMB 
+:                  02600 PASS   3.558     OHM XA1J2-147 
+:       CC  02600                             XA1J2-147 
+:                  02701 PASS   2.472     OHM XA1J2-195 
+:       SS  02701        PASS   580.3M    OHM XA1J2-195 
+:       FF  00102        PASS  >883.5M    OHM J10-SMC 
+:       CV  00102                             J10-SMC 
+:                  02426 PASS   3.303     OHM XA1J2-48 
+:       CC  02426                             XA1J2-48 
+:                  02527 PASS   2.163     OHM XA1J2-96 
+:       SS  02527        PASS   67.29M    OHM XA1J2-96 
+:       FF  00103        PASS  >801.4M    OHM J10-SMD 
+:       CV  00103                             J10-SMD 
+:                  02601 PASS   3.712     OHM XA1J2-145 
+:       CC  02601                             XA1J2-145 
+:                  02702 PASS   2.468     OHM XA1J2-193 
+:       SS  02702        PASS  >907.0M    OHM XA1J2-193 
+:       FF  00104        PASS  >871.3M    OHM J10-SME 
+:       CV  00104                             J10-SME 
+:                  02428 PASS   3.341     OHM XA1J2-44 
+:       CC  02428                             XA1J2-44 
+:                  02529 PASS   2.172     OHM XA1J2-92 
+:       SS  02529        PASS   118.7M    OHM XA1J2-92 
+:       FF  00105        PASS  >946.7M    OHM J10-SMF 
+:       CV  00105                             J10-SMF 
+:                  02604 PASS   3.434     OHM XA1J2-139 
+:       CC  02604                             XA1J2-139 
+:                  02705 PASS   2.402     OHM XA1J2-187 
+:       SS  02705        PASS   932.8M    OHM XA1J2-187 
+:       FF  00106        PASS   603.7M    OHM J10-SMG 
+:       CV  00106                             J10-SMG 
+:                  02434 PASS   3.226     OHM XA1J2-32 
+:       CC  02434                             XA1J2-32 
+:                  02535 PASS   2.092     OHM XA1J2-80 
+:       SS  02535        PASS   72.71M    OHM XA1J2-80 
+:       FF  00509        PASS   933.7M    OHM J8-SMM 
+:       CV  00509                             J8-SMM 
+:                  02425 PASS   2.351     OHM XA1J2-50 
+:       CC  02425                             XA1J2-50 
+:                  02526 PASS   2.176     OHM XA1J2-98 
+:       SS  02526        PASS   75.09M    OHM XA1J2-98 
+:       FF  00508        PASS   423.0M    OHM J8-SMK 
+:       CV  00508                             J8-SMK 
+:                  02608 PASS   2.481     OHM XA1J2-131 
+:       CC  02608                             XA1J2-131 
+:                  02709 PASS   2.324     OHM XA1J2-179 
+:       SS  02709        PASS   458.6M    OHM XA1J2-179 
+:       FF  00510        PASS   155.1M    OHM J8-SMN 
+:       CV  00510                             J8-SMN 
+:                  02606 PASS   2.444     OHM XA1J2-135 
+:       CC  02606                             XA1J2-135 
+:                  02707 PASS   2.307     OHM XA1J2-183 
+:       SS  02707        PASS   553.6M    OHM XA1J2-183 
+:       FF  00512        PASS   152.2M    OHM J8-SMQ 
+:       CV  00512                             J8-SMQ 
+:                  02611 PASS   2.540     OHM XA1J2-125 
+:       CC  02611                             XA1J2-125 
+:                  02712 PASS   2.566     OHM XA1J2-173 
+:       SS  02712        PASS  >660.4M    OHM XA1J2-173 
+; E SMU       0.100A    1.550K     1.750K   00.500S    00.200T 
+:       EE  00217                             J4-18 
+:                  00213 PASS   1.649K    OHM J4-14 
+:       EE  00233                             J4-34 
+:                  00213 PASS   1.649K    OHM J4-14 
+; E SMU       0.100A    1.900K     2.100K   00.500S    00.200T 
+:       EE  00229                             J4-30 
+:                  00213 PASS   1.998K    OHM J4-14 
+; E SMU       0.100A    16.60K     19.00K   00.500S    00.200T 
+:       EE  00223                             J4-24 
+:                  00213 PASS   17.71K    OHM J4-14 
+; E SMU       0.100A    19.00K     21.00K   00.500S    00.200T 
+:       EE  00235                             J4-36 
+:                  00213 PASS   19.92K    OHM J4-14 
+:       EE  00232                             J4-33 
+:                  00213 PASS   19.94K    OHM J4-14 
+:       EE  00206                             J4-7 
+:                  00213 PASS   20.07K    OHM J4-14 
+; T SMU       30V       1.000M              00.200S    00.050T 
+:       TT  00202        PASS  >944.3M    OHM J4-3 
+:       TT  00204        PASS  >947.5M    OHM J4-5 
+:       TT  00219        PASS  >945.7M    OHM J4-20 
+:       TT  00221        PASS  >948.6M    OHM J4-22 
+:       TT  00230        PASS  >945.4M    OHM J4-31 
+:       TT  00231        PASS  >946.1M    OHM J4-32 
+:       TT  00412        PASS  >952.1M    OHM J5-B 
+:       TT  00413        PASS  >950.3M    OHM J5-C 
+:       TT  00414        PASS  >947.5M    OHM J5-D 
+:       TT  00415        PASS  >949.7M    OHM J5-E 
+:       TT  00416        PASS  >947.4M    OHM J5-F 
+:       TT  00417        PASS  >946.6M    OHM J5-G 
+:       TT  00418        PASS  >942.2M    OHM J5-H 
+:       TT  00420        PASS  >944.2M    OHM J5-P 
+:       TT  00421        PASS  >948.8M    OHM J5-R 
+:       TT  00422        PASS  >950.6M    OHM J5-S 
+:       TT  00423        PASS  >946.6M    OHM J5-U 
+:       TT  00514        PASS  >947.0M    OHM J8-A 
+:       TT  00516        PASS  >947.8M    OHM J8-C 
+:       TT  00518        PASS  >948.1M    OHM J8-E 
+:       TT  00519        PASS  >943.6M    OHM J8-F 
+:       TT  00521        PASS  >947.8M    OHM J8-H 
+:       TT  00523        PASS  >945.6M    OHM J8-K 
+:       TT  00525        PASS  >948.7M    OHM J8-M 
+:       TT  00527        PASS  >948.3M    OHM J8-P 
+:       TT  00528        PASS  >946.1M    OHM J8-R 
+:       TT  00530        PASS  >948.4M    OHM J8-T 
+:       TT  00503        PASS  >947.9M    OHM J8-SMD 
+:       TT  00507        PASS  >944.4M    OHM J8-SMH 
+:       TT  00513        PASS  >945.9M    OHM J8-SMR 
+:       TT  00028        PASS  >949.0M    OHM J9-A 
+:       TT  00029        PASS  >944.8M    OHM J9-E 
+:       TT  00030        PASS  >949.4M    OHM J9-F 
+:       TT  00031        PASS  >943.9M    OHM J9-H 
+:       TT  00032        PASS  >945.5M    OHM J9-K 
+:       TT  00033        PASS  >948.0M    OHM J9-M 
+:       TT  00034        PASS  >946.0M    OHM J9-P 
+:       TT  00035        PASS  >948.4M    OHM J9-R 
+:       TT  00021        PASS  >947.7M    OHM J9-SMH 
+:       TT  00022        PASS  >949.1M    OHM J9-SMK 
+:       TT  00023        PASS  >947.2M    OHM J9-SMM 
+:       TT  00024        PASS  >944.0M    OHM J9-SMN 
+:       TT  00044        PASS  >946.5M    OHM J9-SMP 
+:       TT  00026        PASS  >947.4M    OHM J9-SMQ 
+:       TT  00027        PASS  >945.1M    OHM J9-SMR 
+:       TT  00131        PASS  >939.0M    OHM J10-A 
+:       TT  00132        PASS  >946.2M    OHM J10-E 
+:       TT  00133        PASS  >948.1M    OHM J10-H 
+:       TT  00134        PASS  >945.7M    OHM J10-K 
+:       TT  00135        PASS  >945.5M    OHM J10-M 
+:       TT  00124        PASS  >948.2M    OHM J10-SMH 
+:       TT  00125        PASS  >948.1M    OHM J10-SMK 
+:       TT  00126        PASS  >946.4M    OHM J10-SMM 
+:       TT  00127        PASS  >945.6M    OHM J10-SMN 
+:       TT  00128        PASS  >946.8M    OHM J10-SMP 
+:       TT  00129        PASS  >932.8M    OHM J10-SMQ 
+:       TT  00130        PASS  >944.3M    OHM J10-SMR 
+:       TT  00614        PASS  >950.0M    OHM J7-A 
+:       TT  00616        PASS  >945.6M    OHM J7-C 
+:       TT  00618        PASS  >945.7M    OHM J7-E 
+:       TT  00619        PASS  >945.5M    OHM J7-F 
+:       TT  00621        PASS  >949.2M    OHM J7-H 
+:       TT  00622        PASS  >945.1M    OHM J7-J 
+:       TT  00623        PASS  >948.8M    OHM J7-K 
+:       TT  00624        PASS  >947.5M    OHM J7-L 
+:       TT  00625        PASS  >946.4M    OHM J7-M 
+:       TT  00627        PASS  >947.4M    OHM J7-P 
+:       TT  00628        PASS  >946.1M    OHM J7-R 
+:       TT  00630        PASS  >948.9M    OHM J7-T 
+:       TT  00633        PASS  >947.1M    OHM J7-W 
+:       TT  00635        PASS  >949.2M    OHM J7-Y 
+:       TT  00600        PASS  >944.4M    OHM J7-SMA 
+:       TT  00601        PASS  >946.4M    OHM J7-SMB 
+:       TT  00603        PASS  >944.9M    OHM J7-SMD 
+:       TT  00605        PASS  >946.5M    OHM J7-SMF 
+:       TT  00607        PASS  >946.7M    OHM J7-SMH 
+:       TT  00609        PASS  >931.5M    OHM J7-SMM 
+:       TT  00610        PASS  >929.2M    OHM J7-SMN 
+:       TT  00611        PASS  >944.1M    OHM J7-SMP 
+:       TT  00612        PASS  >947.6M    OHM J7-SMQ 
+:       TT  00613        PASS  >949.1M    OHM J7-SMR 
+:       TT  00300        PASS  >947.7M    OHM J6-A 
+:       TT  00301        PASS  >944.4M    OHM J6-B 
+:       TT  00303        PASS  >949.2M    OHM J6-D 
+:       TT  00304        PASS  >949.7M    OHM J6-E 
+:       TT  00305        PASS  >946.1M    OHM J6-F 
+:       TT  00306        PASS  >939.5M    OHM J6-G 
+:       TT  00307        PASS  >945.6M    OHM J6-H 
+:       TT  00308        PASS  >943.9M    OHM J6-J 
+:       TT  00310        PASS  >952.1M    OHM J6-L 
+:       TT  00312        PASS  >945.6M    OHM J6-N 
+:       TT  00315        PASS  >946.6M    OHM J6-S 
+:       TT  00317        PASS  >946.5M    OHM J6-U 
+:       TT  02131        PASS  >951.8M    OHM XA1J1-88 
+:       TT  02420        PASS  >946.8M    OHM XA1J2-9 
+:       TT  02546        PASS  >946.1M    OHM XA1J2-58 
+:       TT  02620        PASS  >946.5M    OHM XA1J2-107 
+:       TT  02746        PASS  >929.2M    OHM XA1J2-156 
+:       TT  02837        PASS  >943.6M    OHM XA2J1-26 
+:       TT  02825        PASS  >943.8M    OHM XA2J1-50 
+:       TT  03030        PASS  >946.7M    OHM XA2J1-138 
+:       TT  03224        PASS  >947.2M    OHM XA2J2-1 
+:       TT  03249        PASS  >946.3M    OHM XA2J2-2 
+:       TT  03223        PASS  >944.9M    OHM XA2J2-3 
+:       TT  03248        PASS  >946.6M    OHM XA2J2-4 
+:       TT  03222        PASS  >947.0M    OHM XA2J2-5 
+:       TT  03247        PASS  >946.2M    OHM XA2J2-6 
+:       TT  03221        PASS  >949.2M    OHM XA2J2-7 
+:       TT  03246        PASS  >929.9M    OHM XA2J2-8 
+:       TT  03220        PASS  >947.6M    OHM XA2J2-9 
+:       TT  03245        PASS  >950.0M    OHM XA2J2-10 
+:       TT  03219        PASS  >946.0M    OHM XA2J2-11 
+:       TT  03244        PASS  >950.5M    OHM XA2J2-12 
+:       TT  03218        PASS  >945.9M    OHM XA2J2-13 
+:       TT  03243        PASS  >947.0M    OHM XA2J2-14 
+:       TT  03217        PASS  >947.5M    OHM XA2J2-15 
+:       TT  03242        PASS  >951.9M    OHM XA2J2-16 
+:       TT  03216        PASS  >949.3M    OHM XA2J2-17 
+:       TT  03241        PASS  >944.9M    OHM XA2J2-18 
+:       TT  03215        PASS  >937.7M    OHM XA2J2-19 
+:       TT  03240        PASS  >943.5M    OHM XA2J2-20 
+:       TT  03214        PASS  >946.4M    OHM XA2J2-21 
+:       TT  03239        PASS  >947.3M    OHM XA2J2-22 
+:       TT  03213        PASS  >949.0M    OHM XA2J2-23 
+:       TT  03238        PASS  >949.3M    OHM XA2J2-24 
+:       TT  03237        PASS  >945.9M    OHM XA2J2-26 
+:       TT  03324        PASS  >950.0M    OHM XA2J2-51 
+:       TT  03349        PASS  >947.4M    OHM XA2J2-52 
+:       TT  03323        PASS  >946.8M    OHM XA2J2-53 
+:       TT  03348        PASS  >927.7M    OHM XA2J2-54 
+:       TT  03322        PASS  >949.4M    OHM XA2J2-55 
+:       TT  03347        PASS  >949.1M    OHM XA2J2-56 
+:       TT  03321        PASS  >948.6M    OHM XA2J2-57 
+:       TT  03346        PASS  >949.2M    OHM XA2J2-58 
+:       TT  03320        PASS  >948.0M    OHM XA2J2-59 
+:       TT  03345        PASS  >948.7M    OHM XA2J2-60 
+:       TT  03319        PASS  >946.9M    OHM XA2J2-61 
+:       TT  03344        PASS  >950.8M    OHM XA2J2-62 
+:       TT  03318        PASS  >947.9M    OHM XA2J2-63 
+:       TT  03343        PASS  >945.3M    OHM XA2J2-64 
+:       TT  03317        PASS  >935.5M    OHM XA2J2-65 
+:       TT  03342        PASS  >947.3M    OHM XA2J2-66 
+:       TT  03316        PASS  >944.8M    OHM XA2J2-67 
+:       TT  03341        PASS  >950.3M    OHM XA2J2-68 
+:       TT  03315        PASS  >947.5M    OHM XA2J2-69 
+:       TT  03340        PASS  >947.3M    OHM XA2J2-70 
+:       TT  03314        PASS  >943.3M    OHM XA2J2-71 
+:       TT  03339        PASS  >947.5M    OHM XA2J2-72 
+:       TT  03313        PASS  >946.4M    OHM XA2J2-73 
+:       TT  03307        PASS  >946.4M    OHM XA2J2-85 
+:       TT  03332        PASS  >942.5M    OHM XA2J2-86 
+:       TT  03306        PASS  >921.0M    OHM XA2J2-87 
+:       TT  03331        PASS  >947.4M    OHM XA2J2-88 
+:       TT  03305        PASS  >945.0M    OHM XA2J2-89 
+:       TT  03330        PASS  >949.8M    OHM XA2J2-90 
+:       TT  03424        PASS  >952.1M    OHM XA2J2-99 
+:       TT  03449        PASS  >945.5M    OHM XA2J2-100 
+:       TT  03423        PASS  >946.7M    OHM XA2J2-101 
+:       TT  03448        PASS  >945.2M    OHM XA2J2-102 
+:       TT  03422        PASS  >947.2M    OHM XA2J2-103 
+:       TT  03447        PASS  >947.6M    OHM XA2J2-104 
+:       TT  03421        PASS  >930.5M    OHM XA2J2-105 
+:       TT  03446        PASS  >948.5M    OHM XA2J2-106 
+:       TT  03420        PASS  >943.1M    OHM XA2J2-107 
+:       TT  03445        PASS  >947.0M    OHM XA2J2-108 
+:       TT  03419        PASS  >943.8M    OHM XA2J2-109 
+:       TT  03444        PASS  >946.8M    OHM XA2J2-110 
+:       TT  03418        PASS  >948.1M    OHM XA2J2-111 
+:       TT  03443        PASS  >950.7M    OHM XA2J2-112 
+:       TT  03417        PASS  >950.2M    OHM XA2J2-113 
+:       TT  03442        PASS  >947.0M    OHM XA2J2-114 
+:       TT  03416        PASS  >945.3M    OHM XA2J2-115 
+:       TT  03441        PASS  >949.3M    OHM XA2J2-116 
+:       TT  03415        PASS  >948.0M    OHM XA2J2-117 
+:       TT  03440        PASS  >946.8M    OHM XA2J2-118 
+:       TT  03414        PASS  >944.9M    OHM XA2J2-119 
+:       TT  03439        PASS  >947.5M    OHM XA2J2-120 
+:       TT  03413        PASS  >951.5M    OHM XA2J2-121 
+:       TT  03438        PASS  >947.4M    OHM XA2J2-122 
+:       TT  03437        PASS  >951.6M    OHM XA2J2-124 
+:       TT  03432        PASS  >945.8M    OHM XA2J2-134 
+:       TT  03405        PASS  >946.8M    OHM XA2J2-137 
+:       TT  03429        PASS  >947.8M    OHM XA2J2-140 
+:       TT  03524        PASS  >944.3M    OHM XA2J2-149 
+:       TT  03549        PASS  >946.9M    OHM XA2J2-150 
+:       TT  03523        PASS  >950.4M    OHM XA2J2-151 
+:       TT  03548        PASS  >948.6M    OHM XA2J2-152 
+:       TT  03522        PASS  >949.3M    OHM XA2J2-153 
+:       TT  03547        PASS  >949.3M    OHM XA2J2-154 
+:       TT  03521        PASS  >948.0M    OHM XA2J2-155 
+:       TT  03546        PASS  >947.1M    OHM XA2J2-156 
+:       TT  03520        PASS  >946.8M    OHM XA2J2-157 
+:       TT  03545        PASS  >946.0M    OHM XA2J2-158 
+:       TT  03519        PASS  >941.5M    OHM XA2J2-159 
+:       TT  03544        PASS  >932.9M    OHM XA2J2-160 
+:       TT  03518        PASS  >943.9M    OHM XA2J2-161 
+:       TT  03543        PASS  >947.9M    OHM XA2J2-162 
+:       TT  03517        PASS  >947.2M    OHM XA2J2-163 
+:       TT  03542        PASS  >950.0M    OHM XA2J2-164 
+:       TT  03516        PASS  >946.3M    OHM XA2J2-165 
+:       TT  03541        PASS  >950.8M    OHM XA2J2-166 
+:       TT  03515        PASS  >946.8M    OHM XA2J2-167 
+:       TT  03540        PASS  >946.6M    OHM XA2J2-168 
+:       TT  03514        PASS  >945.7M    OHM XA2J2-169 
+:       TT  03539        PASS  >949.0M    OHM XA2J2-170 
+:       TT  03513        PASS  >921.2M    OHM XA2J2-171 
+:       TT  03533        PASS  >948.9M    OHM XA2J2-182 
+:       TT  03506        PASS  >948.4M    OHM XA2J2-185 
+:       TT  03530        PASS  >946.2M    OHM XA2J2-188 
+; IF 'CHASSIS' = "NO" SKP CHASSISPRNT 
+! DRP,ALL 
+   
+   
+                       ***** END OF TEST ***** 
+   
+; TIM 
+  
+04 OCT 16  10:15:07 
+   
+   
+; ESD DSK 

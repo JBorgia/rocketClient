@@ -1,0 +1,29 @@
+<h4>Support Staff</h4>
+<table class="table table-stripped">
+  <thead>
+    <tr>
+      <td>
+        <p>First Name</p>
+      </td>
+      <td>
+        <p>Last Name</p>
+      </td>
+      <td>
+        <p>Phone</p>
+      </td>
+      <td>
+        <p>Email</p>
+      </td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of supportUsers">
+      <td>{{user.firstName}}</td>
+      <td>{{user.lastName}}</td>
+      <td>{{user.phone}}</td>
+      <td>
+        <a href="mailto:{{user.email}}?subject=Need Support">{{user.email}}</a>
+      </td>
+    </tr>
+  </tbody>
+</table>

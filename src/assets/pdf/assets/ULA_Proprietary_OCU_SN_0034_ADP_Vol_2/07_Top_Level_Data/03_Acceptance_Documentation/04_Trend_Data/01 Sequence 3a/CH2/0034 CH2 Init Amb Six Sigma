@@ -1,0 +1,62 @@
+                   VARIABLE                            LO     HI
+ NO                  NAME                    TWARN/%  LIMIT  LIMIT     VALUE     AVERAGE       STD_DEV         mu - 3*sig      mu + 3*sig    UNITS    SIG OUT      FILE     LINE
+==== ======================================= =======  =====  =====  ==========  ==========  ===============  ==============  ==============  =====  ===========  ========  ======
+   1 Pyro_Out                                    -1%   -0.5    0.5     -0.0049     -0.0001    0.00161267428     -0.00489454      0.00478150  VDC    -3.00338283  file 47    22656
+   2 Pyro_Out                                    -1%   -0.5    0.5     -0.0049      0.0003    0.00155494364     -0.00439744      0.00493222  VDC    -3.32320167  file 47    22861
+   3 Pyro_Out                                    -1%   -0.5    0.5     -0.0073      0.0001    0.00169995135     -0.00501942      0.00518029  VDC    -4.34155646  file 47    22934
+   4 Pyro_Out                                    -1%   -0.5    0.5     -0.0049      0.0003    0.00164408920     -0.00461705      0.00524748  VDC    -3.17210123  file 47    23040
+   5 Pyro_Out                                    -1%   -0.5    0.5     -0.0049      0.0006    0.00174948683     -0.00466803      0.00582890  VDC    -3.13259562  file 47    23139
+   6 Pyro_Out                                    -1%   -0.5    0.5     -0.0049      0.0009    0.00178065773     -0.00439632      0.00628763  VDC    -3.28286119  file 47    23179
+   7 Pyro_Out                                    -1%   -0.5    0.5     -0.0037      0.0005    0.00136580747     -0.00359960      0.00459525  VDC    -3.07351231  file 47    23212
+   8 Pyro_Out                                    -1%   -0.5    0.5     -0.0061      0.0003    0.00105159884     -0.00281567      0.00349393  VDC    -6.12318139  file 47    23278
+   9 Pyro_Out                                    -1%   -0.5    0.5     -0.0049      0.0003    0.00166097200     -0.00466552      0.00530031  VDC    -3.14116752  file 47    23457
+  10 P_Bat_Sig_Out                                0%   -0.5    0.5      0.0001      0.0000    0.00000000000      0.00000000      0.00000000  VDC            N/A  file 47    24135
+  11 Pyro_Cmd1_Out                                0%   -0.5    0.5      0.0003      0.0002    0.00002469091      0.00013245      0.00028059  VDC    3.785938897  file 47    24916
+file 1: SN 0008 CH2.Txt
+file 2: SN 0004 CH1.Txt
+file 3: SN 0004 CH2.Txt
+file 4: SN 0005 CH1.Txt
+file 5: SN 0005 CH2.Txt
+file 6: SN 0006 CH1.Txt
+file 7: SN 0006 CH2.Txt
+file 8: SN 0007 CH1.Txt
+file 9: SN 0009 CH1.Txt
+file 10: SN 0007 CH2.Txt
+file 11: SN 0009 CH2.Txt
+file 12: SN 0012 CH1.Txt
+file 13: SN 0012 CH2.Txt
+file 14: SN 0013 CH1.Txt
+file 15: SN 0013 CH2.Txt
+file 16: SN 0014 CH1.Txt
+file 17: SN 0014 CH2.Txt
+file 18: SN 0015 CH1.Txt
+file 19: SN 0015 CH2.Txt
+file 20: SN 0017 CH1.Txt
+file 21: SN 0017 CH2.Txt
+file 22: SN 0018 CH1.Txt
+file 23: SN 0018 CH2.Txt
+file 24: SN 0024 CH1.Txt
+file 25: SN 0024 CH2.Txt
+file 26: SN 0025 CH1.Txt
+file 27: SN 0025 CH2.Txt
+file 28: SN 0026 CH1.Txt
+file 29: SN 0026 CH2.Txt
+file 30: SN 0028 CH1.Txt
+file 31: SN 0028 CH2.Txt
+file 32: SN 0029 CH1.Txt
+file 33: SN 0029 CH2.Txt
+file 34: SN 0031 CH1.Txt
+file 35: SN 0031 CH2.Txt
+file 36: SN 0019 CH1.Txt
+file 37: SN 0010 CH1.Txt
+file 38: SN 0019 CH2.Txt
+file 39: SN 0008 CH1.Txt
+file 40: SN 0010 CH2.Txt
+file 41: SN 0021 CH1.Txt
+file 42: SN 0021 CH2.Txt
+file 43: SN 0030 CH1.Txt
+file 44: SN 0030 CH2.Txt
+file 45: 0032 CH1 TS1 Init Amb Func 091416.Txt
+file 46: 0032 CH2 TS1 Init Amb Func 091416.Txt
+file 47: \\ohcincefs01\Space_Test\Acceptance_Data_Packages\Controls\Data Packs\OCU\SN0034\07_Top_Level_Data\03_Acceptance_Documentation\04_Trend_Data\01 Sequence 3a\CH2\0034 CH2 TS2 Init Amb Func.Txt
+

@@ -1,0 +1,64 @@
+                   VARIABLE                            LO     HI
+ NO                  NAME                    TWARN/%  LIMIT  LIMIT     VALUE     AVERAGE       STD_DEV         mu - 3*sig      mu + 3*sig    UNITS    SIG OUT      FILE     LINE
+==== ======================================= =======  =====  =====  ==========  ==========  ===============  ==============  ==============  =====  ===========  ========  ======
+   1 Pyro_Cmd1_Out                                0%   -0.5    0.5      0.0003      0.0002    0.00002039311      0.00014317      0.00026553  VDC    4.690415759  file 47     7099
+   2 Pyro_Bat_In1                               -15%     28     32     29.7070     29.6846    0.00727925588     29.66276875     29.70644429  VDC    3.076341679  file 47    11324
+   3 Pyro_Bat_In1                               -15%     28     32     29.7034     29.6826    0.00657520727     29.66292003     29.70237127  VDC    3.156455297  file 47    16506
+   4 Pyro_Bat_In1                               -15%     28     32     29.7070     29.6856    0.00709680331     29.66432916     29.70690998  VDC    3.012685268  file 47    16519
+   5 Pyro_Out                                    -1%   -0.5    0.5     -0.0061      0.0003    0.00170258477     -0.00479688      0.00541862  VDC    -3.76537467  file 47    22795
+   6 Pyro_Out                                    -1%   -0.5    0.5     -0.0037      0.0004    0.00130373355     -0.00354816      0.00427424  VDC    -3.11646768  file 47    23000
+   7 Pyro_Out                                    -1%   -0.5    0.5     -0.0037      0.0005    0.00134564515     -0.00348694      0.00458694  VDC    -3.15833635  file 47    23073
+   8 Pyro_Out                                    -1%   -0.5    0.5     -0.0049      0.0005    0.00136580747     -0.00359960      0.00459525  VDC    -3.95211344  file 47    23212
+   9 Pyro_Out                                    -1%   -0.5    0.5     -0.0049      0.0003    0.00105159884     -0.00281567      0.00349393  VDC    -4.98206183  file 47    23278
+  10 Pyro_Out                                    -1%   -0.5    0.5     -0.0037      0.0005    0.00118888997     -0.00307102      0.00406232  VDC    -3.52905002  file 47    23490
+  11 P_Bat_Sig_Out                                0%   -0.5    0.5      0.0001      0.0000    0.00000000000      0.00000000      0.00000000  VDC            N/A  file 47    24135
+  12 Pyro_Cmd1_Out                                0%   -0.5    0.5      0.0003      0.0002    0.00002469091      0.00013245      0.00028059  VDC    3.785938897  file 47    24916
+  13 Pyro_Cmd7_Out                                0%   -0.5    0.5      0.0003      0.0002    0.00002817713      0.00012416      0.00029323  VDC    3.240370349  file 47    28038
+file 1: SN 0008 CH2.Txt
+file 2: SN 0004 CH1.Txt
+file 3: SN 0004 CH2.Txt
+file 4: SN 0005 CH1.Txt
+file 5: SN 0005 CH2.Txt
+file 6: SN 0006 CH1.Txt
+file 7: SN 0006 CH2.Txt
+file 8: SN 0007 CH1.Txt
+file 9: SN 0009 CH1.Txt
+file 10: SN 0007 CH2.Txt
+file 11: SN 0009 CH2.Txt
+file 12: SN 0012 CH1.Txt
+file 13: SN 0012 CH2.Txt
+file 14: SN 0013 CH1.Txt
+file 15: SN 0013 CH2.Txt
+file 16: SN 0014 CH1.Txt
+file 17: SN 0014 CH2.Txt
+file 18: SN 0015 CH1.Txt
+file 19: SN 0015 CH2.Txt
+file 20: SN 0017 CH1.Txt
+file 21: SN 0017 CH2.Txt
+file 22: SN 0018 CH1.Txt
+file 23: SN 0018 CH2.Txt
+file 24: SN 0024 CH1.Txt
+file 25: SN 0024 CH2.Txt
+file 26: SN 0025 CH1.Txt
+file 27: SN 0025 CH2.Txt
+file 28: SN 0026 CH1.Txt
+file 29: SN 0026 CH2.Txt
+file 30: SN 0028 CH1.Txt
+file 31: SN 0028 CH2.Txt
+file 32: SN 0029 CH1.Txt
+file 33: SN 0029 CH2.Txt
+file 34: SN 0031 CH1.Txt
+file 35: SN 0031 CH2.Txt
+file 36: SN 0019 CH1.Txt
+file 37: SN 0010 CH1.Txt
+file 38: SN 0019 CH2.Txt
+file 39: SN 0008 CH1.Txt
+file 40: SN 0010 CH2.Txt
+file 41: SN 0021 CH1.Txt
+file 42: SN 0021 CH2.Txt
+file 43: SN 0030 CH1.Txt
+file 44: SN 0030 CH2.Txt
+file 45: 0032 CH1 TS1 Init Amb Func 091416.Txt
+file 46: 0032 CH2 TS1 Init Amb Func 091416.Txt
+file 47: \\ohcincefs01\Space_Test\Acceptance_Data_Packages\Controls\Data Packs\OCU\SN0034\07_Top_Level_Data\03_Acceptance_Documentation\04_Trend_Data\03 Sequence 7a\CH2\0034 CH2 TS2 Post Vibe Amb Func 101116.Txt
+
