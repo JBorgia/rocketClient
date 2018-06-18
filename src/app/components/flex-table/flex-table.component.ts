@@ -7,7 +7,7 @@ import { PaginationService } from '../../../app/services/pagination.service';
   styleUrls: ['./flex-table.component.scss'],
 })
 
-export class TableComponent implements OnInit {
+export class FlexTableComponent implements OnInit {
   @Input() tabledata: Array<any> = [];
   @Output() outEvent: EventEmitter<{ type: string, data: string | Array<any> }>;
   // Array of all items

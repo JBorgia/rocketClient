@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { LoginService } from '@services/login.service';
 import { AuthenticationAPI } from '@services/api/authenticationAPI.service';
 
-import { AuthGuard } from '@services/auth_guard.service';
+import { AuthGuard } from '@guards/auth.guard';
 import { UserService } from '@services/user.service';
 
 import { HttpClient, HttpParams } from '@angular/common/http';

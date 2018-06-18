@@ -26,6 +26,9 @@
       "@components/*": [
         "app/components/*"
       ],
+      "@guards/*": [
+        "app/router/guards/*"
+      ],
       "@models/*": [
         "app/models/*"
       ],

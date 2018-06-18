@@ -1,5 +1,5 @@
 
-import { Pipe, PipeTransform } from '@angular/core';
+import { NgModule, Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({ name: 'orderBy' })
 export class OrderrByPipe implements PipeTransform {
@@ -18,3 +18,13 @@ export class OrderrByPipe implements PipeTransform {
     }
 }
 
+
+@NgModule({
+    exports: [
+        OrderrByPipe,
+    ],
+    declarations: [
+        OrderrByPipe,
+    ],
+  })
+  export class OrderrByPipeModule { }

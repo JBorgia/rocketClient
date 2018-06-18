@@ -1,5 +1,5 @@
 import { AfterViewChecked, ChangeDetectorRef, Component, OnInit, AfterViewInit } from '@angular/core';
-import { AuthGuard } from './services/auth_guard.service';
+import { AuthGuard } from './router/guards/auth.guard';
 import { UserService } from './services/user.service';
 
 import { HttpClient, HttpParams } from '@angular/common/http';

@@ -1,4 +1,4 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import { NgModule, Pipe, PipeTransform } from '@angular/core';
 import 'rxjs/add/operator/filter';
 
 
@@ -22,3 +22,15 @@ export class SearchPipe implements PipeTransform {
         }
     }
 }
+
+
+
+@NgModule({
+    exports: [
+        SearchPipe,
+    ],
+    declarations: [
+        SearchPipe,
+    ],
+  })
+  export class SearchPipeModule { }

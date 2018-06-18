@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-import { TableComponent } from './flex-table.component';
+import { FlexTableComponent } from './flex-table.component';
 import { FilterPipe, OrderPipe } from './flex-table.pipes';
 
 @NgModule({
   declarations: [
-    TableComponent,
+    FlexTableComponent,
     FilterPipe,
     OrderPipe
   ],
@@ -16,8 +16,8 @@ import { FilterPipe, OrderPipe } from './flex-table.pipes';
     FormsModule
   ],
   exports: [
-    TableComponent,
+    FlexTableComponent,
     FormsModule
   ]
 })
-export class DataTableModule { }
+export class FlexTableModule { }

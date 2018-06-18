@@ -5,7 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { LandingComponent } from './landing.component';
 
-const ROUTES = [{ path: 'landing', component: LandingComponent }];
+const ROUTES = [{ path: '', component: LandingComponent }];
 
 @NgModule({
   imports: [
