@@ -7,8 +7,16 @@ import { OrderrByPipeModule } from '@pipes/orderBy.pipe';
 import { SearchPipeModule } from '@pipes/category.pipe';
 
 import { ReviewsComponent } from './reviews.component';
+import { ReviewDetailsComponent } from './review-details/review-details.component';
+import { UsersComponent } from '@app/pages/reviews/review-details/users/users.component';
+import { UserSupportComponent } from '@app/pages/reviews/review-details/user-support/user-support.component';
 
-const ROUTES = [{ path: '', component: ReviewsComponent }];
+import { FlexTableModule } from '@components/flex-table/flex-table.module';
+
+const ROUTES = [
+  { path: '', component: ReviewsComponent },
+  { path: 'review-details', component: ReviewDetailsComponent },
+];
 
 @NgModule({
   imports: [
@@ -18,12 +26,19 @@ const ROUTES = [{ path: '', component: ReviewsComponent }];
     ReactiveFormsModule,
     OrderrByPipeModule,
     SearchPipeModule,
+    FlexTableModule,
   ],
   exports: [
-    ReviewsComponent
+    ReviewsComponent,
+    ReviewDetailsComponent,
+    UsersComponent,
+    UserSupportComponent,
   ],
   declarations: [
     ReviewsComponent,
+    ReviewDetailsComponent,
+    UsersComponent,
+    UserSupportComponent,
   ],
 })
 export class ReviewsModule { }

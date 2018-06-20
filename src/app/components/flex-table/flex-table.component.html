@@ -1,72 +1,40 @@
-<div class="app-flex-table">
-  <table>
-    <thead>
-      <tr>
-        <th *ngFor="let head of headerData" [class.sorted]="order === head">
-          <div class="" (click)="reverse = !reverse; order = head">
-            <span class="header content"> {{ head }} </span>
-            <i class="icon" *ngIf="head === order">
-              <svg *ngIf="reverse" version="1.1" x="0px" y="0px" viewBox="0 0 240.835 240.835" style="enable-background:new 0 0 240.835 240.835;"
-                xml:space="preserve" width="10px" height="10px">
-                <path fill="#fff" d="M129.007,57.819c-4.68-4.68-12.499-4.68-17.191,0L3.555,165.803c-4.74,4.74-4.74,12.427,0,17.155   c4.74,4.74,12.439,4.74,17.179,0l99.683-99.406l99.671,99.418c4.752,4.74,12.439,4.74,17.191,0c4.74-4.74,4.74-12.427,0-17.155   L129.007,57.819z"
-                />
-              </svg>
-              <svg *ngIf="!reverse" version="1.1" x="0px" y="0px" viewBox="0 0 240.811 240.811" style="enable-background:new 0 0 240.811 240.811;"
-                xml:space="preserve" width="10px" height="10px">
-                <path fill="#fff" id="Expand_More" d="M220.088,57.667l-99.671,99.695L20.746,57.655c-4.752-4.752-12.439-4.752-17.191,0   c-4.74,4.752-4.74,12.451,0,17.203l108.261,108.297l0,0l0,0c4.74,4.752,12.439,4.752,17.179,0L237.256,74.859   c4.74-4.752,4.74-12.463,0-17.215C232.528,52.915,224.828,52.915,220.088,57.667z"
-                />
-              </svg>
-            </i>
-          </div>
+<table>
+  <thead class="thead">
+    <tr>
+      <th *ngFor="let head of headerData" [class.sorted]="order === head">
+        <div class="" (click)="reverse = !reverse; order = head">
+          <span class="content"> {{ head }} </span>
+          <i class="icon" *ngIf="head === order">
+            <svg *ngIf="reverse" version="1.1" x="0px" y="0px" viewBox="0 0 240.835 240.835" style="enable-background:new 0 0 240.835 240.835;"
+              xml:space="preserve" width="10px" height="10px">
+              <path fill="#fff" d="M129.007,57.819c-4.68-4.68-12.499-4.68-17.191,0L3.555,165.803c-4.74,4.74-4.74,12.427,0,17.155   c4.74,4.74,12.439,4.74,17.179,0l99.683-99.406l99.671,99.418c4.752,4.74,12.439,4.74,17.191,0c4.74-4.74,4.74-12.427,0-17.155   L129.007,57.819z"
+              />
+            </svg>
+            <svg *ngIf="!reverse" version="1.1" x="0px" y="0px" viewBox="0 0 240.811 240.811" style="enable-background:new 0 0 240.811 240.811;"
+              xml:space="preserve" width="10px" height="10px">
+              <path fill="#fff" id="Expand_More" d="M220.088,57.667l-99.671,99.695L20.746,57.655c-4.752-4.752-12.439-4.752-17.191,0   c-4.74,4.752-4.74,12.451,0,17.203l108.261,108.297l0,0l0,0c4.74,4.752,12.439,4.752,17.179,0L237.256,74.859   c4.74-4.752,4.74-12.463,0-17.215C232.528,52.915,224.828,52.915,220.088,57.667z"
+              />
+            </svg>
+          </i>
+        </div>
 
-          <div class="inner-addon right-addon">
-            <i class="icon" (click)="deleteFilter(head)">
-              <svg width="17" height="13" viewBox="0 0 36 36" version="1.1">
-                <path fill="#b5b5b5" d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM16 29c-7.18 0-13-5.82-13-13s5.82-13 13-13 13 5.82 13 13-5.82 13-13 13z"></path>
-                <path fill="#b5b5b5" d="M21 8l-5 5-5-5-3 3 5 5-5 5 3 3 5-5 5 5 3-3-5-5 5-5z"></path>
-              </svg>
-            </i>
-            <input class="input" type="text" [(ngModel)]="filter[head]">
-          </div>
-        </th>
-      </tr>
-    </thead>
-    <tbody class="body">
-      <tr *ngFor="let d of pagedItems | filterBy: filter | orderBy: order : reverse ">
-        <td *ngFor="let column of headerData " (dblclick)="editValue($event, d, column)" [class.sorted]="order === column">
-          <input class="table input" type="text" value="{{ d[column] || '' }}" disabled>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <!-- Pagination -->
-  <nav aria-label="Page navigation example">
-    <!-- Logic for First, Previous, Next, and Last Links -->
-    <!-- List of pages -->
-    <ul *ngIf="pagination.pages && pagination.pages.length" class="pagination">
-      <li class="page-item">
-        <a class="page-link" (click)="setPage(1)" [class.disabled]="pagination.currentPage === 1">
-          First
-        </a>
-      </li>
-      <li class="page-item">
-        <a class="page-link" (click)="setPage(pagination.currentPage - 1)" [class.disabled]="pagination.currentPage === 1">
-          Previous
-        </a>
-      </li>
-      <li class="page-item" *ngFor="let page of pagination.pages">
-        <a class="page-link" [class.is-current]="pagination.currentPage === page" aria-label="Goto page 1" (click)="setPage(page)">{{ page }}</a>
-      </li>
-      <li class="page-item">
-        <a class="page-link" (click)="setPage(pagination.currentPage + 1)" [class.disabled]="pagination.currentPage === pagination.totalPages">
-          Next
-        </a>
-      </li>
-      <li class="page-item">
-        <a class="page-link" (click)="setPage(pagination.totalPages)" [class.disabled]="pagination.currentPage === pagination.totalPages">
-          Last
-        </a>
-      </li>
-    </ul>
-  </nav>
-</div>
+        <div class="inner-addon right-addon">
+          <i class="icon" (click)="deleteFilter(head)">
+            <svg width="17" height="13" viewBox="0 0 36 36" version="1.1">
+              <path fill="#b5b5b5" d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM16 29c-7.18 0-13-5.82-13-13s5.82-13 13-13 13 5.82 13 13-5.82 13-13 13z"></path>
+              <path fill="#b5b5b5" d="M21 8l-5 5-5-5-3 3 5 5-5 5 3 3 5-5 5 5 3-3-5-5 5-5z"></path>
+            </svg>
+          </i>
+          <input type="text" [(ngModel)]="filter[head]">
+        </div>
+      </th>
+    </tr>
+  </thead>
+  <tbody class="tbody">
+    <tr *ngFor="let d of allItems | async | filterBy: filter | orderBy: order : reverse ">
+      <td *ngFor="let column of headerData " (dblclick)="editValue($event, d, column)" [class.sorted]="order === column">
+        <input type="text" value="{{ d[column] || '' }}" disabled>
+      </td>
+    </tr>
+  </tbody>
+</table>

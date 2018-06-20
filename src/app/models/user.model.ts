@@ -1,5 +1,5 @@
 export class User {
-    userid: number;
+    userid: string;
     username?: string;
     firstName: string;
     lastName: string;
@@ -8,5 +8,17 @@ export class User {
     supplierName: string;
     supplierCode: string;
     team: string;
-    role: string;
+    roleName: string;
 }
+
+
+// 	private String orgName;
+// 	private String isActive;
+// @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+// private Date createdOn;
+// 	private String createdBy;
+// 	private Date lastUpdatedOn;
+// 	private String lastUpdatedBy;
+// 	private String userType;
+// 	private String supplierName;
+// 	private String supplierCode;

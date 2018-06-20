@@ -1,6 +1,6 @@
 <div class=" container-fluid  card">
   <div>
-    <h3 > Whiteboard</h3>
+    <h3> Whiteboard</h3>
     <!-- rather than have multiple tables typed out, build a resuable virtual scroll component (if data load time and browser performance requires it) that allows for unlimited data to be displayed in a scrollable field -->
     <table class="table table-striped">
       <thead>
@@ -22,27 +22,27 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let whiteBoard of whiteBoards">
-          <td>{{whiteBoard.id}}</td>
-          <td>{{whiteBoard.initiator}}</td>
-          <td>{{whiteBoard.document}}</td>
-          <td>{{whiteBoard.issues}}</td>
-          <td>{{whiteBoard.action}}</td>
-          <td>{{whiteBoard.assignToo}}</td>
+        <tr *ngFor="let whiteboard of whiteboards">
+          <td>{{whiteboard.id}}</td>
+          <td>{{whiteboard.initiator}}</td>
+          <td>{{whiteboard.document}}</td>
+          <td>{{whiteboard.issues}}</td>
+          <td>{{whiteboard.action}}</td>
+          <td>{{whiteboard.assignToo}}</td>
           <td>
             <select class="form-control">
               <option>Open</option>
               <option>Closed</option>
             </select>
           </td>
-          <td>{{whiteBoard.response}}</td>
+          <td>{{whiteboard.response}}</td>
           <td></td>
-          <td>{{whiteBoard.openDate}}</td>
-          <td>{{whiteBoard.closedDate}}</td>
-          <td>{{whiteBoard.ridIssue}}</td>
-          <td>{{whiteBoard.closedComment}}</td>
-          <td>{{whiteBoard.closedBy}}</td>
-          
+          <td>{{whiteboard.openDate}}</td>
+          <td>{{whiteboard.closedDate}}</td>
+          <td>{{whiteboard.ridIssue}}</td>
+          <td>{{whiteboard.closedComment}}</td>
+          <td>{{whiteboard.closedBy}}</td>
+
 
         </tr>
       </tbody>

@@ -16,18 +16,14 @@ import { AuthGuard } from '@guards/auth.guard';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-import { AdminComponent } from '@pages/admin/admin.component';
+import { AdminModule } from '@pages/admin/admin.module';
 import { DashboardModule } from '@pages/dashboard/dashboard.module';
 import { LandingModule } from '@pages/landing/landing.module';
 import { LoginModule } from '@pages/login/login.module';
-import { MissionStatusComponent } from '@pages/reports/mission-status/mission-status.component';
 import { ReportsModule } from '@pages/reports/reports.module';
-import { ReviewStatusComponent } from '@pages/reports/review-status/review-status.component';
 import { RidReportComponent } from '@pages/reports/rid-report/rid-report.component';
 import { SupplierReviewStatusComponent } from '@pages/reports/supplier-review-status/supplier-review-status.component';
-import { ReviewDetailsModule } from '@pages/review-details/review-details.module';
 import { ReviewsModule } from '@pages/reviews/reviews.module';
-import { TestComponent } from '@pages/test/test.component';
 import { WhiteboardComponent } from '@pages/whiteboard/whiteboard.component';
 
 import { AdminService } from '@services/admin.service';
@@ -45,20 +41,17 @@ import { UserService } from '@app/services/user.service';
 
 @NgModule({
   declarations: [
-    AdminComponent,
     AppComponent,
     DropdownComponent,
     FooterComponent,
     HeaderComponent,
-    MissionStatusComponent,
-    ReviewStatusComponent,
     RidReportComponent,
     SupplierReviewStatusComponent,
-    TestComponent,
     ToastComponent,
     WhiteboardComponent,
   ],
   imports: [
+    // external imports:
     BrowserModule,
     FormsModule,
     HttpClientModule,
@@ -67,11 +60,13 @@ import { UserService } from '@app/services/user.service';
     ReactiveFormsModule,
     RouterModule,
     RoutingModule,
+
+    // site modules:
+    AdminModule,
     LoginModule,
     LandingModule,
     DashboardModule,
     ReportsModule,
-    ReviewDetailsModule,
     ReviewsModule,
   ],
   providers: [

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 import { UserService } from '@services/user.service';
 
 @Component({
@@ -8,12 +8,19 @@ import { UserService } from '@services/user.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  location_local: Location;
 
   constructor(
-    private router: Router,
-    public auth: UserService, ) { }
+    private location: Location,
+    public auth: UserService, ) {
+    this.location_local = location;
+  }
 
   ngOnInit() {
   }
 
+  showNav(): boolean {
+    console.log('run showNav')
+    return this.location_local.isCurrentPathEqualTo('/landing');
+  }
 }

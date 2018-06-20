@@ -13,6 +13,7 @@ export interface UserInStorage {
     displayName: string;
     token: string;
     jwt: string;
+    employeeId?: number;
 }
 
 export interface LoginInfoInStorage {
@@ -99,6 +100,14 @@ export class UserAPI {
         const userObj: UserInStorage = this.getUserInfo();
         if (userObj !== null) {
             return userObj.jwt;
+        }
+        return null;
+    }
+
+    getEmployeeId(): number | null {
+        const userObj: UserInStorage = this.getUserInfo();
+        if (userObj !== null) {
+            return userObj.employeeId;
         }
         return null;
     }

@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { FlexTableModule } from '@components/flex-table/flex-table.module';
+import { CardComponent } from '@components/card//card.component';
 
 import { DashboardComponent } from './dashboard.component';
 
@@ -17,9 +18,13 @@ const ROUTES = [{ path: '', component: DashboardComponent }];
         ReactiveFormsModule,
         FlexTableModule,
     ],
-    exports: [DashboardComponent],
+    exports: [
+        DashboardComponent,
+        CardComponent,
+    ],
     declarations: [
         DashboardComponent,
+        CardComponent,
     ],
 })
 export class DashboardModule { }

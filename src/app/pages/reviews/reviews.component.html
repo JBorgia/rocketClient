@@ -1,84 +1,10 @@
-<div class="container-fluid">
-  <div class="col-md-12 card">
-    <div class="row">
-      <div class="col-md-6">
-
-      </div>
-      <div class="col-md-6"></div>
+<div flex class="flex-container">
+  <div class="flex-item">
+    <div class="card">
+      <h3 class="card-title">Reviews
+      </h3>
+      <hr>
+      <app-flex-table [tabledata]="reviewData" (outEvent)="tableEvents($event)"></app-flex-table>
     </div>
-
-    <table class="table">
-      <thead>
-        <tr>
-          <th class="pointer">
-            <p (click)="sort('review')">
-              Supplier
-              <!-- <span [hidden]="column != 'review' && isDesc" class="fa fa-caret-down"></span>
-              <span [hidden]="column == 'review' && isDesc" class="fa fa-caret-up"></span> -->
-              <!-- <i class="fa" [ngClass]="{'fa-sort': column != 'review', 
-                        'fa-sort-asc': (column == 'review' && !isDesc), 
-                        'fa-sort-desc': (column == 'review' && isDesc) }" aria-hidden="true"> </i> -->
-              </p>
-
-            <input class="form-control" type="text" #reviewFilter (keyup)="0" />
-
-          </th>
-          <th class="pointer">
-            <p (click)="sort('progress')">
-              Part Number
-              <i class="fa" [ngClass]="{'fa-sort': column != 'CategoryName', 'fa-sort-asc': (column == 'CategoryName' && isDesc), 'fa-sort-desc': (column == 'CategoryName' && !isDesc) }"
-                aria-hidden="true"> </i> </p>
-          </th>
-          <th class="pointer">
-            <p (click)="sort('opened')">
-              Serial Number
-              <i class="fa" [ngClass]="{'fa-sort': column != 'CategoryName', 'fa-sort-asc': (column == 'CategoryName' && isDesc), 'fa-sort-desc': (column == 'CategoryName' && !isDesc) }"
-                aria-hidden="true"> </i> </p>
-            <input class="form-control" type="text" #serialFilter (keyup)="0" />
-          </th>
-          <th class="pointer">
-            <p (click)="sort('status')">
-              Status
-              <i class="fa" [ngClass]="{'fa-sort': column != 'CategoryName', 'fa-sort-asc': (column == 'CategoryName' && isDesc), 'fa-sort-desc': (column == 'CategoryName' && !isDesc) }"
-                aria-hidden="true"> </i> </p>
-            <input class="form-control" type="text" #openFilter (keyup)="0" />
-          </th>
-          <th class="pointer">
-            <p (click)="sort('closed')">Type
-              <i class="fa" [ngClass]="{'fa-sort': column != 'CategoryName', 'fa-sort-asc': (column == 'CategoryName' && isDesc), 'fa-sort-desc': (column == 'CategoryName' && !isDesc) }"
-                aria-hidden="true"> </i> </p>
-            <input class="form-control" type="text" #closedFilter (keyup)="0" />
-
-          </th>
-          <th class="pointer">
-            <p (click)="sort('mission')">Mission
-              <i class="fa" [ngClass]="{'fa-sort': column != 'DescriptionName', 'fa-sort-asc': (column == 'DescriptionName' && isDesc), 'fa-sort-desc': (column == 'Description' && !isDesc) }"
-                aria-hidden="true"> </i></p>
-            <input class="form-control" type="text" #missionFilter (keyup)="0" />
-
-          </th>
-          <th class="pointer">
-            <p (click)="sort('location')">Location
-              <i class="fa" [ngClass]="{'fa-sort': column != 'DescriptionName', 'fa-sort-asc': (column == 'DescriptionName' && isDesc), 'fa-sort-desc': (column == 'Description' && !isDesc) }"
-                aria-hidden="true"> </i></p>
-            <input class="form-control" type="text" #locationFilter (keyup)="0" />
-
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let review of reviews | searchPipe : openFilter.value | searchPipe : serialFilter.value |  searchPipe : reviewFilter.value |  searchPipe : closedFilter.value |  searchPipe : missionFilter.value | searchPipe : locationFilter.value | orderBy: {property: column, direction: direction}">
-          <td><a routerLink="/review-detail">{{review.review}}</a></td>
-          <td>{{review.partNum}}</td>
-          <td>{{review.serialNum}}</td>
-          <td>{{review.status}}</td>
-          <td>{{review.type}}</td>
-          <td>{{review.mission}}</td>
-          <td>{{review.location}}</td>
-        </tr>
-      </tbody>
-
-    </table>
   </div>
-
 </div>

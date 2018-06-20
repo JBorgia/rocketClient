@@ -9,7 +9,7 @@ import { Review, Whiteboard } from '@models/test.model';
   styleUrls: ['./Whiteboard.component.scss']
 })
 export class WhiteboardComponent implements OnInit {
-  Whiteboards: Array<any>;
+  whiteboards: Array<any>;
 
   constructor(
     private whiteboardAPI: WhiteboardAPI
@@ -17,8 +17,8 @@ export class WhiteboardComponent implements OnInit {
 
   ngOnInit() {
     this.whiteboardAPI.getAllWhiteboard().subscribe(data => {
-      this.Whiteboards = data;
-      console.log(this.Whiteboards, 'here');
+      this.whiteboards = data;
+      console.log(this.whiteboards, 'here');
 
     });
   }

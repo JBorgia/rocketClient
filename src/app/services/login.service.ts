@@ -6,7 +6,8 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
 import 'rxjs/add/observable/of';
-import { UserService, LoginInfoInStorage } from '@services/user.service';
+import { LoginInfoInStorage } from '@services/api/userAPI.service';
+import { UserService } from '@services/user.service';
 import { AuthenticationAPI } from '@services/api/authenticationAPI.service';
 
 export interface LoginRequestParam {
@@ -50,7 +51,8 @@ export class LoginService {
                             'email': jsonResp.principal.email,
                             'displayName': jsonResp.name,
                             'token': jsonResp.details.sessionId,
-                            'jwt': jsonResp.principal.jwt
+                            'jwt': jsonResp.principal.jwt,
+                            'employeeId': jsonResp.principal.employeeId,
                         }
                     };
                     // store username and jwt token in session storage to keep user logged in between page refreshes

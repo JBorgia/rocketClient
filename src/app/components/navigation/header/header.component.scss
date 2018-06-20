@@ -1,7 +1,7 @@
 @import '../../../../styles/theme/palette';
 
 .navbar {
-  background-color: $primary-blue;
+  background-color: $ULA_BLUE;
   height: 70px;
   padding: 0;
   li a {
@@ -20,7 +20,7 @@
 
 .navbar li a:hover {
   color: $white;
-  background-color: $primary-blue;
+  background-color: $accent-yellow;
 }
 
 img {
@@ -30,6 +30,6 @@ img {
 
 .banner {
   background-color: $white;
-  color: $primary-blue;
+  color: $ULA_BLUE;
   font-weight: 500;
 }

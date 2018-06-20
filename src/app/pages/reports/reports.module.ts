@@ -5,8 +5,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 import { ReportsComponent } from './reports.component';
+import { MissionStatusComponent } from './mission-status/mission-status.component';
+import { ReviewStatusComponent } from './review-status/review-status.component';
 
-const ROUTES = [{ path: '', component: ReportsComponent }];
+const ROUTES = [
+  { path: '', component: ReportsComponent },
+  { path: 'mission-status', component: MissionStatusComponent },
+  { path: 'review-status', component: ReviewStatusComponent },
+];
+
 
 @NgModule({
   imports: [
@@ -15,9 +22,15 @@ const ROUTES = [{ path: '', component: ReportsComponent }];
     FormsModule,
     ReactiveFormsModule,
   ],
-  exports: [ReportsComponent],
+  exports: [
+    ReportsComponent,
+    MissionStatusComponent,
+    ReviewStatusComponent
+  ],
   declarations: [
     ReportsComponent,
+    MissionStatusComponent,
+    ReviewStatusComponent
   ],
 })
 export class ReportsModule { }

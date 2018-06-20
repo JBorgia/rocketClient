@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '@services/user.service';
 import { AdminService } from '@services/admin.service';
+import { UserAPI } from '@services/api/userAPI.service'
 
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 
 import { User } from '@models/user.model';
 import { HcmList } from '@models/test.model';
@@ -17,8 +19,10 @@ export class AdminComponent implements OnInit {
   users: User[] = [];
   user = new User();
   hcmLists: HcmList[] = [];
+  modalRef: BsModalRef;
 
   addUserForm: FormGroup;
+  userId = new FormControl('', Validators.required);
   firstName = new FormControl('', Validators.required);
   lastName = new FormControl('', Validators.required);
   email = new FormControl('', Validators.required);
@@ -28,14 +32,18 @@ export class AdminComponent implements OnInit {
   team = new FormControl('', Validators.required);
   roleName = new FormControl('', Validators.required);
 
-  constructor(private userInfoServie: UserService, private adminService: AdminService,
+  constructor(
+    private userServie: UserService,
+    private userAPI: UserAPI,
+    private adminService: AdminService,
     private formBuilder: FormBuilder) { }
 
   ngOnInit() {
-    this.userInfoServie.getAllUsers().subscribe(data => {
+    this.userServie.getAllUsers().subscribe(data => {
       this.users = data;
     });
 
+    console.log('this is employee id', this.userAPI.getEmployeeId());
     this.adminService.getAllHcm().subscribe(data => {
       this.hcmLists = data;
     });
@@ -54,7 +62,7 @@ export class AdminComponent implements OnInit {
   }
 
   saveUser() {
-    this.userInfoServie.saveUser(this.addUserForm.value).subscribe(result => {
+    this.userServie.saveUser(this.addUserForm.value).subscribe(result => {
       this.users.push(result);
     }, error => console.error(error));
   }

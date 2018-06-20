@@ -1,4 +1,4 @@
-<div *ngIf="router.url !== '/landing'">
+<div *ngIf="showNav()">
   <nav class="navbar navbar-expand-lg">
     <a class="navbar-brand" href="https://www.ulalaunch.com/">
       <img src="./assets/images/ULA-logo.png">
@@ -25,8 +25,8 @@
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
             aria-expanded="false"> Reports</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" [routerLink]="review-status">Review Status Report</a>
-            <a class="dropdown-item" [routerLink]="mission-status">Mission Review Status </a>
+            <a class="dropdown-item" routerLink="/reports/review-status">Review Status Report</a>
+            <a class="dropdown-item" routerLink="/reports/mission-status">Mission Review Status </a>
             <a class="dropdown-item" href="#">Supplier Review Status</a>
             <a class="dropdown-item" href="#">Whiteboard/Dialog Report </a>
             <a class="dropdown-item" href="#">End Item Parts Review Status</a>

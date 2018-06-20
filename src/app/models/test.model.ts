@@ -36,8 +36,9 @@ export class ReviewUser  {
     company: string;
     team: string;
     technology: string;
-    role: string;
+    roleName: string;
 }
+
 
 export class HcmList {
     hcmId: number;

@@ -1,12 +1,7 @@
 // dummy (aka test) data is used for test cases
 export const TableData: Array<any> =  [
     {
-        // 'supplier': 'Tavis',
-        'supplier': {
-            'description': 'A little test ',
-            'link_source': 'https://www.google.com',
-            'link_text': 'Visit Google'
-        },
+        'supplier': 'Bob',
         // 'partNumber': '1F12406-507',
         // 'part': 'Tavis Delta-P Transducer',
         // 'serialNumber': '38686',

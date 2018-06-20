@@ -1,43 +1,15 @@
-.card {
-  min-height: 550px;
-  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.14), 0px 2px 2px 0px rgba(0, 0, 0, 0.098), 0px 1px 5px 0px rgba(0, 0, 0, 0.084);
-  padding: 10px;
-  margin: 10px;
-  .card-title{
-    margin: 5px 0 0 0;
-    text-align: center;
-  }
-}
-
-.card p:first-of-type {
-  margin-bottom: 0;
+.ula-card-title {
+  margin: 0;
   text-align: center;
 }
 
-.card h1 {
-  text-align: center;
-  font-family: serif;
-}
-
-h2 {
-  text-align: center;
-  padding: 0;
-}
-
-.table thead th {
-  vertical-align: initial;
-}
-
-.table input {
-  width: 100%;
-}
-
-.table td,
-.table th {
-  max-width: 170px;
+hr {
+  margin-top: 0.5em;
+  margin-bottom: 0.5rem;
 }
 
 .flex-container {
+  padding: 4px;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -56,7 +28,7 @@ h2 {
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
   align-items: flex-start;
-  .flex-item:nth-child(1) {
+  >.flex-item:nth-child(1) {
     -webkit-order: 0;
     -ms-flex-order: 0;
     order: 0;
@@ -66,27 +38,69 @@ h2 {
     -webkit-align-self: auto;
     -ms-flex-item-align: auto;
     align-self: auto;
+    .ula-card {
+      box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, .2);
+      padding: 12px;
+      margin: 4px;
+    }
   }
-  .flex-item:nth-child(2) {
+  >.flex-item:nth-child(2) {
     -webkit-order: 1;
     -ms-flex-order: 1;
     order: 1;
-    -webkit-flex: 1 1 200px;
-    -ms-flex: 1 1 200px;
-    flex: 1 1 200px;
+    -webkit-flex: 1 1 356px;
+    -ms-flex: 1 1 356px;
+    flex: 1 1 356px;
     -webkit-align-self: auto;
     -ms-flex-item-align: auto;
     align-self: auto;
   }
-  .flex-item:nth-child(3) {
-    -webkit-order: 2;
-    -ms-flex-order: 2;
-    order: 2;
-    -webkit-flex: 1 1 auto;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
+}
+
+.nested-container {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  >.flex-item:nth-child(1) {
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 1 1 356px;
+    -ms-flex: 1 1 356px;
+    flex: 1 1 356px;
     -webkit-align-self: auto;
     -ms-flex-item-align: auto;
     align-self: auto;
+  }
+  >.flex-item:nth-child(2) {
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 1 1 356px;
+    -ms-flex: 1 1 356px;
+    flex: 1 1 356px;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+  }
+  .ula-card {
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, .2);
+    padding: 12px;
+    margin: 4px;
   }
 }

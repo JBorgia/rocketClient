@@ -5,11 +5,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { OrderrByPipeModule } from '@pipes/orderBy.pipe';
 
-import { ReviewDetailsComponent } from './review-details.component';
-import { UsersComponent } from './users/users.component';
-import { UserSupportComponent } from './user-support/user-support.component';
+import { AdminComponent } from './admin.component';
 
-const ROUTES = [{ path: '', component: ReviewDetailsComponent }];
+const ROUTES = [{ path: '', component: AdminComponent }];
 
 @NgModule({
   imports: [
@@ -20,12 +18,10 @@ const ROUTES = [{ path: '', component: ReviewDetailsComponent }];
     OrderrByPipeModule,
   ],
   exports: [
-    ReviewDetailsComponent
+    AdminComponent
   ],
   declarations: [
-    ReviewDetailsComponent,
-    UsersComponent,
-    UserSupportComponent,
+    AdminComponent,
   ],
 })
-export class ReviewDetailsModule { }
+export class AdminModule { }

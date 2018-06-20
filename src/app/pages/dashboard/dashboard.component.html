@@ -1,53 +1,26 @@
-<!-- <div class="container-fluid" *ngIf="userInTestTableValue === 'true'"> -->
-  <div flex class="flex-container">
-    <div class="flex-item">
-        <div class="card">
-          <h3 class="card-title">Reviews
-            <span *ngIf="userInfo"> for {{userInfo.displayName}}</span>
+<div flex class="flex-container">
+  <div class="flex-item">
+    <app-card>
+      <h3 title>Reviews
+        <span *ngIf="userInfo"> Assigned to {{userInfo.displayName | titlecase}}</span>
+      </h3>
+      <app-flex-table [tabledata]="reviewData" (outEvent)="tableEvents($event)"></app-flex-table>
+    </app-card>
+  </div>
+  <div class="flex-item">
+    <div class="nested-container">
+      <div class="flex-item">
+        <app-card>
+          <h3 title>Messages
           </h3>
-          <hr>
-          <app-flex-table [tabledata]="reviewData" (outEvent)="tableEvents($event)"></app-flex-table>
-        </div>
-    </div>
-    <div class="flex-item">
-      <!-- no more inline styling. Move to scss style sheets and a singular source of truth for all theming -->
-      <div class="card">
-          <h3 class="card-title">RIDs
+        </app-card>
+      </div>
+      <div class="flex-item">
+        <app-card>
+          <h3 title>RIDs
           </h3>
-        <table class="table" style="margin-top: 10px">
-          <thead>
-            <tr>
-              <th>RID #</th>
-              <th>Review</th>
-              <th>Issue</th>
-              <th>Reporter</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <p>Currently There are no open RID issues</p>
-            </tr>
-          </tbody>
-        </table>
+        </app-card>
       </div>
     </div>
   </div>
-<!-- </div> -->
-
-<!-- <div *ngIf="userInTestTableValue === 'false'">
-  <div class="card">
-    <h3>Hello user, <br> you are currently not authorize to use this application. Please contact the 
-      <a href="mailto:patricia.r.marchbanks@ulalaunch.com?subject=Need Support">admin</a>
-       to gain access. 
-      <br>
-      Thank you 
-      <br>
-      <button><a [routerLink]="'/'"> <button class="dropdown-item"> Log Out </button></a></button>
-            
-  <button type="button" class="button-sm" style="width: 200px; margin-bottom: 20px;" (click)="checkMyAccess()">Check My Access</button>
-            <span *ngIf="userAccessChecked">User is in the test table: {{userInTestTableValue}}</span>
-            <span *ngIf="!userAccessChecked">Not checked yet..</span>
-    </h3>
-  </div>
-</div> -->
+</div>
