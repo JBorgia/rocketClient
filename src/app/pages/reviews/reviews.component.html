@@ -3,7 +3,11 @@
       <app-card isCollapsible="true">
       <h3 title>Reviews
       </h3>
-      <app-flex-table [tabledata]="reviewData" (outEvent)="tableEvents($event)"></app-flex-table>
+      <app-flex-table 
+        [tabledata]="reviewData"
+        [inlineEdit]=false
+        (outEvent)="tableEvents($event)">
+      </app-flex-table>
     </app-card>
   </div>
 </div>

@@ -1,11 +1,13 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
 import { RoutingModule } from '@app/router/routing.module';
 import { WhiteboardAPI } from '@app/services';
+import { UserService } from '@app/services/user.service';
 
 import { DropdownComponent } from '@components/dropdown/dropdown.component';
 import { FooterComponent } from '@components/navigation/footer/footer.component';
@@ -14,31 +16,20 @@ import { ToastComponent } from '@components/toast/toast.component';
 
 import { AuthGuard } from '@guards/auth.guard';
 
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
-import { AdminModule } from '@pages/admin/admin.module';
-import { DashboardModule } from '@pages/dashboard/dashboard.module';
-import { LandingModule } from '@pages/landing/landing.module';
-import { LoginModule } from '@pages/login/login.module';
-import { ReportsModule } from '@pages/reports/reports.module';
-import { RidReportComponent } from '@pages/reports/rid-report/rid-report.component';
-import { SupplierReviewStatusComponent } from '@pages/reports/supplier-review-status/supplier-review-status.component';
-import { ReviewsModule } from '@pages/reviews/reviews.module';
-import { WhiteboardComponent } from '@pages/whiteboard/whiteboard.component';
 
 import { AdminService } from '@services/admin.service';
 import { AuthenticationAPI } from '@services/api/authenticationAPI.service';
 import { ReviewAPI } from '@services/api/reviewAPI.service';
+import { UserAPI } from '@services/api/userAPI.service';
 import { LoginService } from '@services/login.service';
 import { NavbarService } from '@services/navbar.service';
 import { PaginationService } from '@services/pagination.service';
-import { TestService } from '@services/test.service';
-import { UserAPI } from '@services/api/userAPI.service';
 
+// decouple and remove ngx-bootstrap
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
-import { UserService } from '@app/services/user.service';
 
 // import { VirtualScrollModule } from '@components/odvs/virtualScroll.module';
 
@@ -48,30 +39,23 @@ import { UserService } from '@app/services/user.service';
     DropdownComponent,
     FooterComponent,
     HeaderComponent,
-    RidReportComponent,
-    SupplierReviewStatusComponent,
+    // RidReportComponent,
+    // SupplierReviewStatusComponent,
     ToastComponent,
-    WhiteboardComponent,
+    // WhiteboardComponent,
   ],
   imports: [
     // external imports:
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    MatDialogModule,
     ModalModule.forRoot(),
     NgbModule.forRoot(),
     ReactiveFormsModule,
     RouterModule,
     RoutingModule,
     // VirtualScrollModule,
-
-    // site modules:
-    AdminModule,
-    LoginModule,
-    LandingModule,
-    DashboardModule,
-    ReportsModule,
-    ReviewsModule
   ],
   providers: [
     AdminService,
@@ -80,11 +64,10 @@ import { UserService } from '@app/services/user.service';
     LoginService,
     NavbarService,
     PaginationService,
-    WhiteboardAPI,
     ReviewAPI,
     UserAPI,
-    TestService,
-    UserService
+    UserService,
+    WhiteboardAPI,
   ],
   bootstrap: [AppComponent]
 })

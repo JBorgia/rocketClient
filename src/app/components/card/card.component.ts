@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { PlusMinusComponent } from '@app/components/plus-minus/plus-minus.component';
 
 @Component({
   selector: 'app-card',

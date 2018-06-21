@@ -52,7 +52,6 @@ span {
       text-transform: uppercase;
       cursor: pointer;
       background-color: $alto;
-      border-bottom: 1px solid;
       &:hover {
         background-color: $ULA_SKY-BLUE;
         color: $white;
@@ -73,10 +72,11 @@ span {
     .block {
       display: none;
     }
-    content {
+    .content {
       display: flex;
       align-items: center;
-      color: $color_mine_shaft_approx;
+      padding: 0 5px;
+      // color: $color_mine_shaft_approx;
       input {
         display: block;
         &:focus {
@@ -88,6 +88,8 @@ span {
         flex-grow: 1;
         justify-content: flex-end;
         align-items: center;
+      }
+      .head{
       }
     }
   }
@@ -180,10 +182,6 @@ tbody tr {
   width: 100%;
   table-layout: fixed;
   /* even columns width , fix width of table too*/
-}
-
-thead {
-  width: calc( 100% - 1em)/* scrollbar is average 1em/16px width, remove it from thead width */
 }
 
 table {

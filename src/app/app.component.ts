@@ -4,7 +4,6 @@ import { UserService } from './services/user.service';
 
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { Observable, Subject, BehaviorSubject } from 'Rxjs/Rx';
 import { AuthenticationAPI } from './services/api/authenticationAPI.service';
 import { NavbarService } from './services/navbar.service';
 

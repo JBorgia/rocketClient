@@ -1,8 +1,10 @@
+
+import {throwError as observableThrowError,  Observable } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpResponse, HttpRequest, HttpParams } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { Observable } from 'Rxjs/Rx';
-import 'rxjs/add/operator/catch';
+
 import { UserService, LoginInfoInStorage } from '@services/user.service';
 
 @Injectable()
@@ -45,38 +47,44 @@ export class AuthenticationAPI {
     validateUserInTestTable(urlParams: HttpParams, data?: any): Observable<any> {
         const me = this;
         return this.http.get(this.arsServiceBaseUrl + this.arsValidateUserInTestTableEndpoint, { headers: null, params: urlParams })
-            .catch(function (error: any) {
+        .pipe(
+            catchError(error => {
                 console.log('Some error in catch');
                 // if (error.status === 401 || error.status === 403) {
                 //     me.router.navigate(['/home']);
                 // }
-                return Observable.throw(error || 'Server error');
-            });
+                return observableThrowError(error || 'Server error');
+            })
+        );
     }
 
     validateUserInTestTableWithAuth(urlParams: HttpParams, data?: any): Observable<any> {
         const me = this;
         return this.http.post(this.arsServiceBaseUrl + this.arsValidateUserInTestTableWithAuthEndpoint,
             { params: urlParams, withCredentials: true, headers: this.apiGetHeaders() })
-            .catch(function (error: any) {
+            .pipe(
+                catchError(error => {
                 console.log('Some error in catch');
                 // if (error.status === 401 || error.status === 403) {
                 //     me.router.navigate(['/home']);
                 // }
-                return Observable.throw(error || 'Server error');
-            });
+                return observableThrowError(error || 'Server error');
+            })
+        );
     }
 
     authGets(url: string, urlParams: HttpParams, data?: any): Observable<any> {
         const me = this;
         return this.http.get(this.authBaseUrl + this.authEndpoint, { headers: this.authGetHeaders(data), params: urlParams })
-            .catch(function (error: any) {
+        .pipe(
+            catchError(error => {
                 console.log('Some error in catch');
                 if (error.status === 401 || error.status === 403) {
                     me.router.navigate(['/logout']);
                 }
-                return Observable.throw(error || 'Server error');
-            });
+                return observableThrowError(error || 'Server error');
+            })
+        );
     }
 }
 

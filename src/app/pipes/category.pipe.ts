@@ -1,5 +1,5 @@
 import { NgModule, Pipe, PipeTransform } from '@angular/core';
-import 'rxjs/add/operator/filter';
+
 
 
 @Pipe({

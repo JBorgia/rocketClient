@@ -1,8 +1,7 @@
 import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { PaginationService } from '../../../app/services/pagination.service';
 
-import { Observable } from 'rxjs/Observable';
-import { of } from 'rxjs/observable/of';
+import { Observable ,  of } from 'rxjs';
 
 @Component({
   selector: 'app-flex-table',
@@ -10,6 +9,7 @@ import { of } from 'rxjs/observable/of';
   styleUrls: ['./flex-table.component.scss'],
 })
 export class FlexTableComponent implements OnInit {
+  @Input() inlineEdit = true;
   @Input() tabledata: Array<any> = [];
   // isPaginated should be set to default value of number of items per page. 0 as default which disables pagination.
   @Input() pageSize = 0;
@@ -60,7 +60,7 @@ export class FlexTableComponent implements OnInit {
   }
 
   editValue(e: MouseEvent, obj: any, property: string): void {
-    console.log('clicked')
+    if (!this.inlineEdit) { return; }
     if (!this.isEditing || this.isEditing === e.target) {
       if (this.isEditing && this.editedValue !== e.target['value']) {
         obj[property] = this.isEditing['value'];
@@ -73,6 +73,7 @@ export class FlexTableComponent implements OnInit {
   }
 
   openObject(e: MouseEvent, obj: any, property: string): void {
+    if (this.inlineEdit) { return; }
     console.log('MouseEvent: ', e);
     console.log('Object: ', obj);
     console.log('Property: ', property);

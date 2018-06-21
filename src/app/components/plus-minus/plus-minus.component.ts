@@ -16,7 +16,6 @@ export class PlusMinusComponent implements OnInit {
    * `set` function to set whether card is collapsible.  Defaults to `false`
    */
   @Input() set isCollapsed(isCollapsed: boolean) {
-    console.log(isCollapsed);
     this._isCollapsed = isCollapsed;
   }
   /**
