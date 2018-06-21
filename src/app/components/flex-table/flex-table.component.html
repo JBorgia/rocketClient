@@ -32,7 +32,7 @@
   </thead>
   <tbody class="tbody">
     <tr *ngFor="let d of allItems | async | filterBy: filter | orderBy: order : reverse ">
-      <td *ngFor="let column of headerData " (dblclick)="editValue($event, d, column)" [class.sorted]="order === column">
+      <td *ngFor="let column of headerData " (dblclick)="editValue($event, d, column)" (click)="openObject($event, d, column)" [class.sorted]="order === column">
         <input type="text" value="{{ d[column] || '' }}" disabled>
       </td>
     </tr>

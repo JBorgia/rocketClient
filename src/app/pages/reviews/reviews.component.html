@@ -1,10 +1,9 @@
 <div flex class="flex-container">
   <div class="flex-item">
-    <div class="card">
-      <h3 class="card-title">Reviews
+      <app-card isCollapsible="true">
+      <h3 title>Reviews
       </h3>
-      <hr>
       <app-flex-table [tabledata]="reviewData" (outEvent)="tableEvents($event)"></app-flex-table>
-    </div>
+    </app-card>
   </div>
 </div>

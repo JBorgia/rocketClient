@@ -33,11 +33,14 @@ import { LoginService } from '@services/login.service';
 import { NavbarService } from '@services/navbar.service';
 import { PaginationService } from '@services/pagination.service';
 import { TestService } from '@services/test.service';
+import { UserAPI } from '@services/api/userAPI.service';
 
 import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { AppComponent } from './app.component';
 import { UserService } from '@app/services/user.service';
+
+// import { VirtualScrollModule } from '@components/odvs/virtualScroll.module';
 
 @NgModule({
   declarations: [
@@ -60,6 +63,7 @@ import { UserService } from '@app/services/user.service';
     ReactiveFormsModule,
     RouterModule,
     RoutingModule,
+    // VirtualScrollModule,
 
     // site modules:
     AdminModule,
@@ -67,7 +71,7 @@ import { UserService } from '@app/services/user.service';
     LandingModule,
     DashboardModule,
     ReportsModule,
-    ReviewsModule,
+    ReviewsModule
   ],
   providers: [
     AdminService,
@@ -78,9 +82,10 @@ import { UserService } from '@app/services/user.service';
     PaginationService,
     WhiteboardAPI,
     ReviewAPI,
+    UserAPI,
     TestService,
-    UserService,
+    UserService
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

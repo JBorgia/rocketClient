@@ -1,6 +1,6 @@
 <div flex class="flex-container">
   <div class="flex-item">
-    <app-card>
+    <app-card isCollapsible="true">
       <h3 title>Reviews
         <span *ngIf="userInfo"> Assigned to {{userInfo.displayName | titlecase}}</span>
       </h3>
@@ -10,13 +10,13 @@
   <div class="flex-item">
     <div class="nested-container">
       <div class="flex-item">
-        <app-card>
+          <app-card isCollapsible="true">
           <h3 title>Messages
           </h3>
         </app-card>
       </div>
       <div class="flex-item">
-        <app-card>
+          <app-card isCollapsible="true">
           <h3 title>RIDs
           </h3>
         </app-card>

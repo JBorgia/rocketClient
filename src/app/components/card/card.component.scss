@@ -25,4 +25,20 @@
       margin: 0.5em 0;
     }
   }
+  .head {
+    cursor: pointer;
+  }
+  .body {
+    max-height: calc(100vh - 130px);
+    overflow: hidden;
+    transition: max-height 0.6s ease;
+    &.collapsed {
+      max-height: 0px;
+    }
+  }
+  app-plus-minus {
+    position: absolute;
+    top: 20px;
+    right: 32px;
+  }
 }

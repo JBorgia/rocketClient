@@ -72,9 +72,9 @@ export class UserAPI {
     getUserName(): string {
         const userObj: UserInStorage = this.getUserInfo();
         if (userObj !== null) {
+            console.log(userObj.fullName);
             return userObj.fullName;
         }
-        console.log(userObj.fullName);
         return 'no-user';
     }
 

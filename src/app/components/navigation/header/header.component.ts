@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Location } from '@angular/common';
 import { UserService } from '@services/user.service';
+
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-header',
@@ -8,19 +9,14 @@ import { UserService } from '@services/user.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  location_local: Location;
+  isLoggedIn$: Observable<boolean>;
+
 
   constructor(
-    private location: Location,
-    public auth: UserService, ) {
-    this.location_local = location;
-  }
+    private userService: UserService, ) {
+      this.isLoggedIn$ = userService.isLoggedIn();
+    }
 
   ngOnInit() {
-  }
-
-  showNav(): boolean {
-    console.log('run showNav')
-    return this.location_local.isCurrentPathEqualTo('/landing');
   }
 }

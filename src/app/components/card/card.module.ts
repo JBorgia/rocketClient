@@ -1,29 +1,26 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { FlexTableModule } from '@components/flex-table/flex-table.module';
-import { CardModule } from '@components/card/card.module';
 
-import { DashboardComponent } from './dashboard.component';
-
-const ROUTES = [{ path: '', component: DashboardComponent }];
+import { CardComponent } from './card.component';
+import { PlusMinusComponent } from '@components/plus-minus/plus-minus.component';
 
 @NgModule({
     imports: [
         CommonModule,
-        RouterModule.forChild(ROUTES),
         FormsModule,
         ReactiveFormsModule,
         FlexTableModule,
-        CardModule,
     ],
     exports: [
-        DashboardComponent,
+        PlusMinusComponent,
+        CardComponent,
     ],
     declarations: [
-        DashboardComponent,
+        PlusMinusComponent,
+        CardComponent,
     ],
 })
-export class DashboardModule { }
+export class CardModule { }

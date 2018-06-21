@@ -1,5 +1,4 @@
 @import '../../../../styles/theme/palette';
-
 .navbar {
   background-color: $ULA_BLUE;
   height: 70px;
@@ -29,7 +28,11 @@ img {
 }
 
 .banner {
-  background-color: $white;
-  color: $ULA_BLUE;
+  position: absolute;
+  font-size: .5rem;
+  bottom: 2px;
+  left: 15px;
+  text-align: center;
+  color: #fdb100;
   font-weight: 500;
 }

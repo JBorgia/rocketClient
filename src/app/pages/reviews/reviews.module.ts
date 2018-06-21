@@ -11,7 +11,9 @@ import { ReviewDetailsComponent } from './review-details/review-details.componen
 import { UsersComponent } from '@app/pages/reviews/review-details/users/users.component';
 import { UserSupportComponent } from '@app/pages/reviews/review-details/user-support/user-support.component';
 
+import { CardModule } from '@components/card/card.module';
 import { FlexTableModule } from '@components/flex-table/flex-table.module';
+import { PartComponent } from './part/part.component';
 
 const ROUTES = [
   { path: '', component: ReviewsComponent },
@@ -27,6 +29,7 @@ const ROUTES = [
     OrderrByPipeModule,
     SearchPipeModule,
     FlexTableModule,
+    CardModule,
   ],
   exports: [
     ReviewsComponent,
@@ -39,6 +42,7 @@ const ROUTES = [
     ReviewDetailsComponent,
     UsersComponent,
     UserSupportComponent,
+    PartComponent,
   ],
 })
 export class ReviewsModule { }

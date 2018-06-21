@@ -1,4 +1,5 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
+import { Location } from '@angular/common';
 import { PaginationService } from '@services/pagination.service';
 import { WhiteboardAPI, ReviewAPI } from '@services/index';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
@@ -65,6 +66,7 @@ export class ReviewDetailsComponent implements OnInit {
   ridIssue = new FormControl('', Validators.required);
 
   constructor(
+    private location: Location,
     private reviewService: ReviewAPI,
     private whiteboardAPI: WhiteboardAPI,
     private formBuilder: FormBuilder,
@@ -232,6 +234,10 @@ export class ReviewDetailsComponent implements OnInit {
     if (this.Whiteboard.status = 'open') {
       alert('There is currently atleast one active');
     }
+  }
+
+  navigateBack() {
+      this.location.back();
   }
 }
 
