@@ -9,6 +9,7 @@
     &.active {
       background-color: $accent-yellow;
       color: $white;
+      text-shadow: 0px 1px 1px rgba(0, 0, 0, .8);
     }
   }
 }
@@ -20,6 +21,7 @@
 .navbar li a:hover {
   color: $white;
   background-color: $accent-yellow;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, .8);
 }
 
 img {
@@ -29,10 +31,10 @@ img {
 
 .banner {
   position: absolute;
-  font-size: .5rem;
-  bottom: 2px;
-  left: 15px;
+  font-size: .55rem;
+  bottom: 3px;
+  left: 16px;
   text-align: center;
-  color: #fdb100;
+  color: $accent-yellow;
   font-weight: 500;
 }

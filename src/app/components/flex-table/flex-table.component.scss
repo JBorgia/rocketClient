@@ -45,6 +45,8 @@ span {
   thead {
     .sorted {
       background-color: $ULA_SKY-BLUE;
+      color: $white;
+      text-shadow: 0px 1px 1px rgba(0, 0, 0, 1);
     }
     th {
       text-transform: uppercase;
@@ -53,6 +55,8 @@ span {
       border-bottom: 1px solid;
       &:hover {
         background-color: $ULA_SKY-BLUE;
+        color: $white;
+        text-shadow: 0px 1px 1px rgba(0, 0, 0, 1);
       }
     }
     tr {

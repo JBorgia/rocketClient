@@ -60,6 +60,7 @@ export class FlexTableComponent implements OnInit {
   }
 
   editValue(e: MouseEvent, obj: any, property: string): void {
+    console.log('clicked')
     if (!this.isEditing || this.isEditing === e.target) {
       if (this.isEditing && this.editedValue !== e.target['value']) {
         obj[property] = this.isEditing['value'];
