@@ -21,7 +21,7 @@ module.exports = function (grunt) {
                 files: [
                     {
                         expand: true,
-                        cwd: 'src',
+                        cwd: 'dist',
                         src: ['**'],
                         dest: ''
                     }
