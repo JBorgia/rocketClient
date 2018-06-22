@@ -1,8 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatDialogModule } from '@angular/material/dialog';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 
 import { RoutingModule } from '@app/router/routing.module';
@@ -25,6 +24,8 @@ import { LoginService } from '@services/login.service';
 import { NavbarService } from '@services/navbar.service';
 import { PaginationService } from '@services/pagination.service';
 
+import { WhiteboardComponent } from '@pages/whiteboard/whiteboard.component';
+
 // decouple and remove ngx-bootstrap
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -42,14 +43,13 @@ import { AppComponent } from './app.component';
     // RidReportComponent,
     // SupplierReviewStatusComponent,
     ToastComponent,
-    // WhiteboardComponent,
+    WhiteboardComponent,
   ],
   imports: [
     // external imports:
-    BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
-    MatDialogModule,
     ModalModule.forRoot(),
     NgbModule.forRoot(),
     ReactiveFormsModule,

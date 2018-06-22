@@ -1,0 +1,73 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$ula-blue: (
+    50 : #e0e6ed,
+    100 : #b3c1d3,
+    200 : #8097b6,
+    300 : #4d6d98,
+    400 : #264e82,
+    500 : #002f6c,
+    600 : #002a64,
+    700 : #002359,
+    800 : #001d4f,
+    900 : #00123d,
+    A100 : #738cff,
+    A200 : #4062ff,
+    A400 : #0d38ff,
+    A700 : #002bf2,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$ula-gold: (
+    50 : #fff6e0,
+    100 : #fee8b3,
+    200 : #fed880,
+    300 : #fec84d,
+    400 : #fdbd26,
+    500 : #fdb100,
+    600 : #fdaa00,
+    700 : #fca100,
+    800 : #fc9800,
+    900 : #fc8800,
+    A100 : #ffffff,
+    A200 : #fff7ef,
+    A400 : #ffdcbc,
+    A700 : #ffcfa2,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+$ula-app-primary: mat-palette($ula-blue);
+$ula-app-accent:  mat-palette($ula-gold, A200, A100, A400);
+$ula-app-warn:    mat-palette($mat-red);
+$ula-app-theme: mat-light-theme($ula-app-primary, $ula-app-accent, $ula-app-warn);
+@include angular-material-theme($ula-app-theme);

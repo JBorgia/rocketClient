@@ -1,7 +1,10 @@
 import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { PaginationService } from '../../../app/services/pagination.service';
 
-import { Observable ,  of } from 'rxjs';
+import { FlexTableModalComponent } from './flex-table-modal/flex-table-modal.component';
+import { MatDialog } from '@angular/material';
+
+import { Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-flex-table',
@@ -29,11 +32,19 @@ export class FlexTableComponent implements OnInit {
   editedValue: string;
   filter: Object = {};
 
-  constructor(private paginationService: PaginationService) {
+  constructor(public dialog: MatDialog) {
     this.outEvent = new EventEmitter<{
       type: string;
       data: string | Array<any>;
     }>();
+  }
+
+  openDialog() {
+    this.dialog.open(FlexTableModalComponent, {
+      data: {
+        animal: 'panda',
+      },
+    });
   }
 
   ngOnInit(): void {
@@ -60,7 +71,9 @@ export class FlexTableComponent implements OnInit {
   }
 
   editValue(e: MouseEvent, obj: any, property: string): void {
-    if (!this.inlineEdit) { return; }
+    if (!this.inlineEdit) {
+      return;
+    }
     if (!this.isEditing || this.isEditing === e.target) {
       if (this.isEditing && this.editedValue !== e.target['value']) {
         obj[property] = this.isEditing['value'];
@@ -73,7 +86,10 @@ export class FlexTableComponent implements OnInit {
   }
 
   openObject(e: MouseEvent, obj: any, property: string): void {
-    if (this.inlineEdit) { return; }
+    if (this.inlineEdit) {
+      return;
+    }
+    this.openDialog();
     console.log('MouseEvent: ', e);
     console.log('Object: ', obj);
     console.log('Property: ', property);

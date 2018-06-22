@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-// import { WhiteboardComponent } from '@pages/whiteboard/whiteboard.component';
+import { WhiteboardComponent } from '@pages/whiteboard/whiteboard.component';
 
 
 // import { AuthGuard } from '@services/auth_guard.service';
@@ -34,6 +34,7 @@ const routes: Routes = [
         loadChildren: '@pages/admin/admin.module#AdminModule',
         //   canActivate: [CanActivateViaAuthGuard],
     },
+    { path: 'whiteboard', component: WhiteboardComponent },
     { path: '**', redirectTo: '' },
 ];
 
