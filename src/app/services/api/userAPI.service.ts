@@ -31,8 +31,8 @@ export class UserAPI {
 
     constructor(private http: HttpClient) { }
 
-    getAllUsers(): Observable<any> {
-        return this.http.get('http://localhost:8080/arsUsers');
+    getAllUsers(): Observable<User[]> {
+        return this.http.get<User[]>('http://localhost:8080/arsUsers');
     }
 
     saveUser(user: User): Observable<User> {

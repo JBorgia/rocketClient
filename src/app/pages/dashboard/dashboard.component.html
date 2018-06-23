@@ -1,9 +1,9 @@
 <div flex class="flex-container">
   <div class="flex-item">
     <app-card isCollapsible="true">
-      <h3 title>Reviews
+      <div title>Reviews
         <span *ngIf="userInfo"> Assigned to {{userInfo.displayName | titlecase}}</span>
-      </h3>
+      </div>
       <app-flex-table [tabledata]="reviewData" (outEvent)="tableEvents($event)"></app-flex-table>
     </app-card>
   </div>
@@ -11,14 +11,14 @@
     <div class="nested-container">
       <div class="flex-item">
           <app-card isCollapsible="true">
-          <h3 title>Messages
-          </h3>
+          <div title>Messages
+          </div>
         </app-card>
       </div>
       <div class="flex-item">
           <app-card isCollapsible="true">
-          <h3 title>RIDs
-          </h3>
+          <div title>RIDs
+          </div>
         </app-card>
       </div>
     </div>

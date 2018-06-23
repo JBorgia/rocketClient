@@ -1,5 +1,8 @@
 <div class="head" (click)="toggle()">
+  <div  class="title" [ngClass]="isCollapsed">
     <ng-content select="[title]"></ng-content>
+    <ng-content select="[details]"></ng-content>
+  </div>
     <app-plus-minus *ngIf="isCollapsible" [isCollapsed]="isCollapsed"></app-plus-minus>
 </div>
 <hr>

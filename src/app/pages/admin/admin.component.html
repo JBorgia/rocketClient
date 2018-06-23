@@ -35,16 +35,24 @@
     </tr>
   </table>
 </div> -->
+<div flex class="flex-container">
+  <div class="flex-item">
+    <app-card isCollapsible="true">
+      <div title>Users</div>
+      <app-users></app-users>
+    </app-card>
+  </div>
+</div>
 
 <div class="card">
   <div class="container-fluid">
     <div class="card">
-<form action="">
-  <input type="text" class="form-control" placeholder="search name">
-  <button type="submit" class="btn btn-success">Search</button>
-</form>
+      <form action="">
+        <input type="text" class="form-control" placeholder="search name">
+        <button type="submit" class="btn btn-success">Search</button>
+      </form>
 
-<!-- <div>
+      <!-- <div>
   <h1>Search Results</h1>
   <div class="row">
     <div class="col-md-2">
@@ -79,7 +87,7 @@
     </div>
   </div>
     </div> -->
-    
+
 
     </div>
     <div class="card">
@@ -96,8 +104,9 @@
                 <input class="form-control" type="text" name="team" formControlName="team" placeholder="Team">
                 <input class="form-control" type="text" name="roleName" formControlName="roleName" placeholder="Role">
 
-             
-                <button class="btn  btn-primary mr-2" type="submit" (click)="modalRef.hide()"><i class="fa fa-floppy-o"></i> Save</button>
+
+                <button class="btn  btn-primary mr-2" type="submit" (click)="modalRef.hide()">
+                  <i class="fa fa-floppy-o"></i> Save</button>
               </div>
             </div>
           </div>
@@ -151,57 +160,57 @@
 </div>
 
 <div class="card">
-<table>
-  <thead>
-    <tr>
-      <td>part Name</td>
-      <td>SUpplier Code</td>
-      <td>vehicle Program</td>
-      <td>vehicle System</td>
-      <td>Part Name</td>
-      <td>drawing Number</td>
-      <td>supplier Name</td>
-      <td>HCM comment</td>
-      <td>part Active Flag</td>
-      <td>created On</td>
-      <td>created By</td>
-      <td>last Updated On</td>
-      <td>last Updated By</td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let hcmList of hcmLists">
-      <td>
-        {{hcmList.partNo}}
-      </td>
-      <td>
-        {{hcmList.supplierCode}}
-      </td>
-      <td>
-        {{hcmList.vehicleProgram}}
-      </td>
-      <td>
-        {{hcmList.vehicleSystem}}
-      </td>
-      <td>
-        {{hcmList.partName}}
-      </td>
-      <td>
-        {{hcmList.drawingNo}}
-      </td>
-      <td>
-        {{hcmList.supplierName}}
-      </td>
-      <td>
-        {{hcmList.hcmComment}}
-      </td>
-      <td>
-        <!-- {{hcmList.reviewType}} -->
-      </td>
-      <td>
-        {{hcmList.partActiveFlag}}
-      </td>
-      <!-- <td>
+  <table>
+    <thead>
+      <tr>
+        <td>part Name</td>
+        <td>SUpplier Code</td>
+        <td>vehicle Program</td>
+        <td>vehicle System</td>
+        <td>Part Name</td>
+        <td>drawing Number</td>
+        <td>supplier Name</td>
+        <td>HCM comment</td>
+        <td>part Active Flag</td>
+        <td>created On</td>
+        <td>created By</td>
+        <td>last Updated On</td>
+        <td>last Updated By</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let hcmList of hcmLists">
+        <td>
+          {{hcmList.partNo}}
+        </td>
+        <td>
+          {{hcmList.supplierCode}}
+        </td>
+        <td>
+          {{hcmList.vehicleProgram}}
+        </td>
+        <td>
+          {{hcmList.vehicleSystem}}
+        </td>
+        <td>
+          {{hcmList.partName}}
+        </td>
+        <td>
+          {{hcmList.drawingNo}}
+        </td>
+        <td>
+          {{hcmList.supplierName}}
+        </td>
+        <td>
+          {{hcmList.hcmComment}}
+        </td>
+        <td>
+          <!-- {{hcmList.reviewType}} -->
+        </td>
+        <td>
+          {{hcmList.partActiveFlag}}
+        </td>
+        <!-- <td>
         {{hcmList.partActiveStartDate}}
       </td>
       <td>
@@ -213,19 +222,19 @@
       <td>
         {{hcmList.partActiveRangeComments}}
       </td> -->
-      <td>
-        {{hcmList.createdOn}}
-      </td>
-      <td>
-        {{hcmList.createdBy}}
-      </td>
-      <td>
-        {{hcmList.lastUpdatedOn}}
-      </td>
-      <td>
-        {{hcmList.lastUpdatedBy}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+        <td>
+          {{hcmList.createdOn}}
+        </td>
+        <td>
+          {{hcmList.createdBy}}
+        </td>
+        <td>
+          {{hcmList.lastUpdatedOn}}
+        </td>
+        <td>
+          {{hcmList.lastUpdatedBy}}
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>

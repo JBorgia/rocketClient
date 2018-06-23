@@ -17,8 +17,7 @@
       padding: 23px 10px;
       &.active {
         background-color: $accent-yellow;
-        color: $ULA-BLUE;
-        // text-shadow: 0px 1px 1px rgba(0, 0, 0, .8);
+        color: $ULA-BLUE; // text-shadow: 0px 1px 1px rgba(0, 0, 0, .8);
       }
     }
   }
@@ -30,8 +29,7 @@
 
 .navbar li a:hover {
   background-color: $accent-yellow;
-  color: $ULA-BLUE;
-  // text-shadow: 0px 1px 1px rgba(0, 0, 0, .8);
+  color: $ULA-BLUE; // text-shadow: 0px 1px 1px rgba(0, 0, 0, .8);
 }
 
 img {
@@ -41,10 +39,10 @@ img {
 
 .banner {
   position: absolute;
-  font-size: .55rem;
+  font-size: 8px;
   bottom: 3px;
-  left: 16px;
+  left: 20px;
   text-align: center;
-  color: $accent-yellow;
+  color: #fdb100;
   font-weight: 500;
 }
