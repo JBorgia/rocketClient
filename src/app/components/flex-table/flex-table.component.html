@@ -3,7 +3,10 @@
     <tr>
       <th *ngFor="let head of headerData" [class.sorted]="order === head">
         <div class="content" (click)="reverse = !reverse; order = head">
-          <span class="head"> {{ head }} </span>
+          <span *ngIf="useAlt(head); else alt" class="head"> {{ head }} </span>
+          <ng-template #alt>
+            <span class="head"> {{ displayObject[head] }} </span>
+          </ng-template>
           <i class="icon" *ngIf="head === order">
             <svg *ngIf="reverse" version="1.1" x="0px" y="0px" viewBox="0 0 240.835 240.835" style="enable-background:new 0 0 240.835 240.835;"
               xml:space="preserve" width="10px" height="10px">
@@ -31,7 +34,7 @@
     </tr>
   </thead>
   <tbody class="tbody">
-    <tr *ngFor="let d of allItems | async | filterBy: filter | orderBy: order : reverse ">
+    <tr *ngFor="let d of tableData | async | filterBy: filter | orderBy: order : reverse ">
       <td *ngFor="let column of headerData " (dblclick)="editValue($event, d, column); openObject($event, d, column)" [class.sorted]="order === column">
         <input type="text" value="{{ d[column] || '' }}" disabled>
       </td>

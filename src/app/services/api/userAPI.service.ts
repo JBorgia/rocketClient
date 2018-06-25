@@ -5,7 +5,7 @@ import { tap, catchError } from 'rxjs/operators';
 
 import { User } from '@models/user.model';
 
-import { AuthenticationAPI } from '@services/api//authenticationAPI.service'
+import { AuthenticationAPI } from '@services/api//authenticationAPI.service';
 
 
 import { arsServiceBaseUrl } from '@environments/environment';
@@ -133,6 +133,6 @@ export class UserAPI {
         // return an observable with a user-facing error message
         return throwError(
           'Something bad happened; please try again later.');
-      };
+      }
 }
 

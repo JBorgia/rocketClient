@@ -38,6 +38,9 @@
       "@pipes/*": [
         "app/pipes/*"
       ],
+      "@environments/*": [
+        "environments/*"
+      ],
     },
   }
 }

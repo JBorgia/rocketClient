@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { REVIEW_TEST_DATA } from './test-data';
 // import { AuthenticationAPI } from '@services/api-request.service';
+import { Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-reviews',
@@ -9,14 +10,14 @@ import { REVIEW_TEST_DATA } from './test-data';
   styleUrls: ['./reviews.component.scss'],
 })
 export class ReviewsComponent implements OnInit {
-  reviewData: Array<any>;
+  reviewData: Observable<any[]>;
   isDesc = true;
   column = 'CategoryName';
   direction: number;
   constructor() {}
 
   ngOnInit() {
-    this.reviewData = REVIEW_TEST_DATA;
+    this.reviewData = of(REVIEW_TEST_DATA);
     // this.getReviews();
   }
 

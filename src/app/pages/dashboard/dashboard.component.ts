@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 import { AuthenticationAPI } from '@services/api/authenticationAPI.service';
 import { UserService } from '@services/user.service';
 
+import { of } from 'rxjs';
+
 import { TableData } from './dummy-data';
 
 @Component({
@@ -17,7 +19,7 @@ export class DashboardComponent implements OnInit {
     private http: HttpClient,
     public auth: UserService,
     private router: Router,
-    private authenticationAPI: AuthenticationAPI) { this.reviewData = TableData; }
+    private authenticationAPI: AuthenticationAPI) { this.reviewData = of(TableData); }
 
 
   userInfo = this.auth.getUserInfo();

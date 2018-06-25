@@ -1,5 +1,4 @@
 import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
-import { PaginationService } from '../../../app/services/pagination.service';
 
 import { FlexTableModalComponent } from './flex-table-modal/flex-table-modal.component';
 import { MatDialog } from '@angular/material';
@@ -14,18 +13,17 @@ import { tap } from 'rxjs/operators';
 })
 export class FlexTableComponent implements OnInit {
   @Input() inlineEdit = true;
-  @Input() tabledata = of([]);
-  // isPaginated should be set to default value of number of items per page. 0 as default which disables pagination.
-  @Input() pageSize = 0;
+  @Input() arrayObjects: Observable<any>;
+  /**
+   * Set displayObject keyvalue to false to hide the column.
+   * Set a string to override the database keyvalue name.
+   * Set to true to use existing name.
+   * **/
+  @Input() displayObject;
   @Output() outEvent: EventEmitter<{ type: string; data: string | Array<any> }>;
-  // Array of all items
-  allItems: Observable<any>;
 
-  // Pagination object
-  pagination: any = {};
+  tableData: Observable<any>;
 
-  // Paged items
-  pagedItems: any[];
   headerData: string[];
   isEditing: EventTarget;
   reverse: true;
@@ -40,45 +38,33 @@ export class FlexTableComponent implements OnInit {
     }>();
   }
 
-  openDialog() {
+  openDialog(obj: {}) {
     this.dialog.open(FlexTableModalComponent, {
-      data: {
-        animal: 'panda',
-      },
+      data: obj,
     });
   }
 
   ngOnInit(): void {
-    this.tabledata.pipe(
-      tap(val => {
-        console.log('val', val);
-      }),
-    ).subscribe(val => {
-      console.log('val2', val);
-    });
-
-    // this.tabledata.pipe(
-    //   tap(values => {
-    //     this.headerData = this.getUniqueKeys(values);
-    //     this.order = this.headerData[0];
-    //     this.outEvent.emit({ type: 'init', data: 'none' });
-    //     console.log('this is values', values);
-    //     this.allItems = of(values); // Load data into allItems
-    //   }),
-    // )
-
-    // this.headerData = this.getUniqueKeys(this.tabledata);
-
-    // if(this.pageSize !== 0){
-    //   this.setPage(1);        // Initialize to page 1
-    // }
+    this.tableData = this.arrayObjects.pipe(
+      tap((val: any) => {
+        this.headerData = this.getUniqueKeys(val);
+        this.order = this.headerData[0];
+        this.outEvent.emit({ type: 'init', data: 'none' });
+      })
+    );
   }
 
   getUniqueKeys(obj = []): string[] {
-    return obj.reduce((acc, curr) => {
+    return obj.reduce((acc, curr, idx) => {
       Object.keys(curr).forEach(key => {
-        if (acc.indexOf(key) === -1) {
-          acc.push(key);
+        if (this.displayObject) {
+          if (this.displayObject[key] && acc.indexOf(key) === -1) {
+            acc.push(key);
+          }
+        } else {
+          if (acc.indexOf(key) === -1) {
+            acc.push(key);
+          }
         }
       });
       return acc;
@@ -104,7 +90,7 @@ export class FlexTableComponent implements OnInit {
     if (this.inlineEdit) {
       return;
     }
-    this.openDialog();
+    this.openDialog(obj);
     console.log('MouseEvent: ', e);
     console.log('Object: ', obj);
     console.log('Property: ', property);
@@ -117,6 +103,13 @@ export class FlexTableComponent implements OnInit {
     //   this.editedValue = !e.target['disabled'] ? e.target['value'] : undefined;
     //   this.isEditing = !e.target['disabled'] ? e.target : undefined;
     // }
+  }
+
+  useAlt(head): boolean {
+    if (!this.displayObject) {
+      return true;
+    }
+    return typeof this.displayObject[head] !== 'string';
   }
 
   deleteFilter(item: any): void {
