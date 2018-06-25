@@ -1,2 +1,2 @@
-<app-flex-table [tabledata]="registeredUsers" (outEvent)="tableEvents($event)">
+<app-flex-table [tabledata]="registeredUsers | async" (outEvent)="tableEvents($event)">
 </app-flex-table>

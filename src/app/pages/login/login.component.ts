@@ -94,7 +94,7 @@ export class LoginComponent implements OnInit {
       .subscribe(
       data => {
         this.userInTestTableValue = data;
-        console.log(data);
+        // console.log(data);
         this.userAccessChecked = true;
         if (data === true) {
           this.router.navigateByUrl('reviews');

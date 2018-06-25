@@ -10,10 +10,19 @@ import { Observable } from 'rxjs';
 })
 export class UsersComponent implements OnInit {
   registeredUsers: Observable<User[]>;
+  users;
 
-  constructor(private userAPI: UserAPI) {}
-
-  ngOnInit() {
+  constructor(private userAPI: UserAPI) {
     this.registeredUsers = this.userAPI.getAllUsers();
+  }
+  
+  ngOnInit() {
+
+  }
+  
+  tableEvents(value: Event): void {
+    if (value) {
+      console.log(value);
+    }
   }
 }

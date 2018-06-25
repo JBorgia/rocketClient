@@ -72,7 +72,7 @@ export class UserService {
     getUserName(): string {
         const userObj: UserInStorage = this.getUserInfo();
         if (userObj !== null) {
-            console.log(userObj.fullName);
+            // console.log(userObj.fullName);
             return userObj.fullName;
         }
         return 'no-user';
@@ -84,7 +84,7 @@ export class UserService {
         if (userObj !== null) {
             return userObj.email;
         }
-        console.log(userObj.email);
+        // console.log(userObj.email);
         return 'no-user';
     }
 

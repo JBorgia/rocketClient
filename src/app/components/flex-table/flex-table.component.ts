@@ -5,6 +5,7 @@ import { FlexTableModalComponent } from './flex-table-modal/flex-table-modal.com
 import { MatDialog } from '@angular/material';
 
 import { Observable, of } from 'rxjs';
+import { tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-flex-table',
@@ -13,7 +14,7 @@ import { Observable, of } from 'rxjs';
 })
 export class FlexTableComponent implements OnInit {
   @Input() inlineEdit = true;
-  @Input() tabledata: Array<any> = [];
+  @Input() tabledata = of([]);
   // isPaginated should be set to default value of number of items per page. 0 as default which disables pagination.
   @Input() pageSize = 0;
   @Output() outEvent: EventEmitter<{ type: string; data: string | Array<any> }>;
@@ -48,18 +49,32 @@ export class FlexTableComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.headerData = this.getUniqueKeys(this.tabledata);
-    this.order = this.headerData[0];
-    this.outEvent.emit({ type: 'init', data: 'none' });
+    this.tabledata.pipe(
+      tap(val => {
+        console.log('val', val);
+      }),
+    ).subscribe(val => {
+      console.log('val2', val);
+    });
 
-    this.allItems = of(this.tabledata); // Load data into allItems
-    console.log('this is allitems', this.allItems);
+    // this.tabledata.pipe(
+    //   tap(values => {
+    //     this.headerData = this.getUniqueKeys(values);
+    //     this.order = this.headerData[0];
+    //     this.outEvent.emit({ type: 'init', data: 'none' });
+    //     console.log('this is values', values);
+    //     this.allItems = of(values); // Load data into allItems
+    //   }),
+    // )
+
+    // this.headerData = this.getUniqueKeys(this.tabledata);
+
     // if(this.pageSize !== 0){
     //   this.setPage(1);        // Initialize to page 1
     // }
   }
 
-  getUniqueKeys(obj: any): string[] {
+  getUniqueKeys(obj = []): string[] {
     return obj.reduce((acc, curr) => {
       Object.keys(curr).forEach(key => {
         if (acc.indexOf(key) === -1) {
