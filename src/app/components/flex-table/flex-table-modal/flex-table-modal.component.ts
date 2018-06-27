@@ -42,5 +42,4 @@ export class FlexTableModalComponent implements OnInit {
       this.isEditing = !e.target['disabled'] ? e.target : undefined;
     }
   }
-
 }
