@@ -1,0 +1,7 @@
+<div class="data-field" *ngFor="let key of keys">
+  <label>{{ key }}:</label>
+  <div (dblclick)="editValue($event, key)">
+    <input type="text" value="{{ data.obj[key] || '' }}" [attr.disabled]=true (keyup.enter)="editValue($event, key)">
+  </div>
+</div>
+<!-- <h3>EDIT USER</h3> -->
