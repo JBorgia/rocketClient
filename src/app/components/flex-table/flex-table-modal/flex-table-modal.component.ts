@@ -1,45 +1,51 @@
-import { Component, OnInit, Inject, Output, EventEmitter } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Inject,
+  ViewChild,
+  OnDestroy,
+  Input,
+  ComponentFactoryResolver,
+} from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+
+import { ModalDirective } from '../flex-table-modal/modal.directive';
+import { ModalComponent } from './modal.component';
 
 @Component({
   selector: 'app-flex-table-modal',
   templateUrl: './flex-table-modal.component.html',
   styleUrls: ['./flex-table-modal.component.scss'],
 })
-export class FlexTableModalComponent implements OnInit {
-  keys;
-  isEditing: EventTarget;
-  editedValue: string;
+export class FlexTableModalComponent implements OnInit, OnDestroy {
+  currentAdIndex = -1;
+  @ViewChild(ModalDirective) adHost: ModalDirective;
+  interval: any;
 
   constructor(
+    private componentFactoryResolver: ComponentFactoryResolver,
     public dialogRef: MatDialogRef<FlexTableModalComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {}
 
   ngOnInit() {
-    this.data = this.data;
-    this.keys = this.getUniqueKeys(this.data);
+    console.log('data', this.data);
+    this.loadComponent();
   }
 
-  getUniqueKeys(obj = {}): string[] {
-    const keys = [];
-    Object.keys(obj).forEach(key => {
-      if (keys.indexOf(key) === -1) {
-        keys.push(key);
-      }
-    });
-    return keys;
+  ngOnDestroy() {
+    this.data = undefined;
   }
 
-  editValue(e, property: string): void {
-    if (!this.isEditing || this.isEditing === e.target) {
-      if (this.isEditing && this.editedValue !== e.target['value']) {
-        this.data[property] = this.isEditing['value'];
-      }
-      e.target['disabled'] = !e.target['disabled'];
-      e.target.focus();
-      this.editedValue = !e.target['disabled'] ? e.target['value'] : undefined;
-      this.isEditing = !e.target['disabled'] ? e.target : undefined;
-    }
+  loadComponent() {
+    const componentFactory = this.componentFactoryResolver.resolveComponentFactory(
+      this.data.componentClass
+    );
+
+    const viewContainerRef = this.adHost.viewContainerRef;
+    viewContainerRef.clear();
+
+    const componentRef = viewContainerRef.createComponent(componentFactory);
+    (<ModalComponent>componentRef.instance).data = this.data;
   }
 }

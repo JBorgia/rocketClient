@@ -1,6 +1,7 @@
 <app-flex-table
     [arrayObjects]="registeredUsers"
     [displayObject]="displayObject"
-    [editIn]="'INLINE'"
+    [editIn]="'MODAL'"
+    [componentClass]="componentClass"
     (outEvent)="tableEvents($event)">
 </app-flex-table>

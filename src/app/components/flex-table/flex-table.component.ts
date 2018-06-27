@@ -44,6 +44,7 @@ export class FlexTableComponent implements OnInit {
    * Its form and function hasn't been set up yet.
    */
   @Input() dataAccessObject;
+  @Input() componentClass;
 
   /**
    * The table should remain agnostic. Any database updating
@@ -79,7 +80,7 @@ export class FlexTableComponent implements OnInit {
 
   openDialog(obj: {}) {
     const dialogRef = this.dialog.open(FlexTableModalComponent, {
-      data: obj,
+      data: {obj, componentClass: this.componentClass},
     });
     dialogRef.afterClosed().subscribe(data => {
       console.log('persisting data', obj);
@@ -129,12 +130,12 @@ export class FlexTableComponent implements OnInit {
   /**
    * editValue() is the function call for INLINE editting
    *
-   * @param e is the event of the click and used to manipulate html element view
+   * @param event is the event of the click and used to manipulate html element view
    * @param obj is the object being edited
    * @param key is the key for the key of the object being editted
    */
-  editInLine(e: Event, obj: any, key: string): void {
-    const clickedHtmlElement = e.target;
+  editInLine(event: Event, obj: any, key: string): void {
+    const clickedHtmlElement = event.target;
     if (!this.activeObjEditing || this.activeObjEditing === clickedHtmlElement) {
       if (
         this.activeObjEditing &&

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserAPI } from '@app/services/api/userAPI.service';
 import { User } from '@models/user.model';
 import { Observable, of } from 'rxjs';
+import { EditUserComponent } from './edit-user/edit-user.component';
 
 import { testUsers } from './test-data';
 
@@ -11,6 +12,7 @@ import { testUsers } from './test-data';
   styleUrls: ['./users.component.scss'],
 })
 export class UsersComponent implements OnInit {
+  componentClass = EditUserComponent;
   registeredUsers: Observable<any[]>;
   users;
 

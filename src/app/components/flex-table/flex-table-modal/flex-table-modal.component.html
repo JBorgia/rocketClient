@@ -1,9 +1,4 @@
 <!-- <h1 mat-dialog-title>DATA!</h1> -->
 <div mat-dialog-content>
-  <div class="data-field" *ngFor="let key of keys">
-    <label>{{ key }}:</label>
-    <div (dblclick)="editValue($event, key)">
-      <input type="text" value="{{ data[key] || '' }}" (keyup.enter)="editValue($event, key)" disabled>
-    </div>
-  </div>
+    <ng-template appModalHost></ng-template>
 </div>

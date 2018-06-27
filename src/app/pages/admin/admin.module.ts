@@ -11,6 +11,7 @@ import { OrderrByPipeModule } from '@pipes/orderBy.pipe';
 import { AdminComponent } from './admin.component';
 
 import { UsersComponent } from './users/users.component';
+import { EditUserComponent } from './users/edit-user/edit-user.component';
 
 const ROUTES = [{ path: '', component: AdminComponent }];
 
@@ -24,12 +25,8 @@ const ROUTES = [{ path: '', component: AdminComponent }];
     OrderrByPipeModule,
     CardModule,
   ],
-  exports: [
-    AdminComponent
-  ],
-  declarations: [
-    AdminComponent,
-    UsersComponent,
-  ],
+  exports: [AdminComponent],
+  declarations: [AdminComponent, UsersComponent],
+  entryComponents: [EditUserComponent],
 })
-export class AdminModule { }
+export class AdminModule {}

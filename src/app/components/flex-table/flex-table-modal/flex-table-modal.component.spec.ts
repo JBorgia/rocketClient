@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FlexTableModalComponent } from './flex-table-modal.component';
+import { ModalDirective } from './modal.directive';
 
 describe('FlexTableModalComponent', () => {
   let component: FlexTableModalComponent;
@@ -8,7 +9,7 @@ describe('FlexTableModalComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FlexTableModalComponent ]
+      declarations: [ FlexTableModalComponent, ModalDirective ]
     })
     .compileComponents();
   }));
