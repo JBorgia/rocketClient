@@ -1,7 +1,5 @@
 import { Component, OnInit, Inject, Output, EventEmitter } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-import { Observable, of } from 'rxjs';
-import { tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-flex-table-modal',
@@ -12,7 +10,6 @@ export class FlexTableModalComponent implements OnInit {
   keys;
   isEditing: EventTarget;
   editedValue: string;
-  @Output() outEvent: EventEmitter<{ type: string; data: string | Array<any> }>;
 
   constructor(
     public dialogRef: MatDialogRef<FlexTableModalComponent>,
@@ -20,6 +17,7 @@ export class FlexTableModalComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.data = this.data;
     this.keys = this.getUniqueKeys(this.data);
   }
 
@@ -33,15 +31,16 @@ export class FlexTableModalComponent implements OnInit {
     return keys;
   }
 
-  editValue(e: MouseEvent, obj: any, property: string): void {
+  editValue(e, property: string): void {
     if (!this.isEditing || this.isEditing === e.target) {
       if (this.isEditing && this.editedValue !== e.target['value']) {
-        obj[property] = this.isEditing['value'];
-        this.outEvent.emit({ type: 'valueChanged', data: obj });
+        this.data[property] = this.isEditing['value'];
       }
       e.target['disabled'] = !e.target['disabled'];
+      e.target.focus();
       this.editedValue = !e.target['disabled'] ? e.target['value'] : undefined;
       this.isEditing = !e.target['disabled'] ? e.target : undefined;
     }
   }
+
 }

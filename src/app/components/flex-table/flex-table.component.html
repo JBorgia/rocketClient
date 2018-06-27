@@ -35,9 +35,9 @@
   </thead>
   <tbody class="tbody">
     <tr *ngFor="let d of tableData | async | filterBy: filter | orderBy: order : reverse ">
-      <td *ngFor="let column of headerData " (dblclick)="editValue($event, d, column); openObject($event, d, column)" [class.sorted]="order === column">
-        <input type="text" value="{{ d[column] || '' }}" disabled>
-      </td>
+        <td *ngFor="let column of headerData" (dblclick)="edit($event, d, column)" [class.sorted]="order === column">
+          <input type="text" value="{{ d[column] || '' }}" [attr.disabled]=true (keyup.enter)="editInLine($event, d, column)">
+        </td>
     </tr>
   </tbody>
 </table>

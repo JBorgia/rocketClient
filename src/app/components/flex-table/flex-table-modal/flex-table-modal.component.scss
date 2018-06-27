@@ -10,7 +10,8 @@
 input {
   border: 1px solid;
   font-size: 0.8rem;
-  padding: 3px;
+  padding: 2px;
+  margin: 0 4px;
   display: block;
   background-color: $white; //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
   border-radius: 3px;
@@ -20,6 +21,7 @@ input {
   width: 100%;
   outline: none;
   &:disabled {
+    padding: 3px;
     border: none;
     background-color: transparent;
     color: $color_mine_shaft_approx;

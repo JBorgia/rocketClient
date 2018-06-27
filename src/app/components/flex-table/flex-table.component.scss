@@ -75,8 +75,7 @@ span {
     .content {
       display: flex;
       align-items: center;
-      padding: 0 5px;
-      // color: $color_mine_shaft_approx;
+      padding: 0 5px; // color: $color_mine_shaft_approx;
       input {
         display: block;
         &:focus {
@@ -89,8 +88,7 @@ span {
         justify-content: flex-end;
         align-items: center;
       }
-      .head{
-      }
+      .head {}
     }
   }
   tbody {
@@ -105,7 +103,7 @@ span {
   input {
     border: 1px solid;
     font-size: 0.8rem;
-    padding: 3px;
+    padding: 2px;
     display: block;
     background-color: $white; //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
     border-radius: 3px;
@@ -115,9 +113,11 @@ span {
     width: 100%;
     outline: none;
     &:disabled {
+      padding: 3px;
       border: none;
       background-color: transparent;
       color: $color_mine_shaft_approx;
+      pointer-events: none;
     }
   }
   .inner-addon {

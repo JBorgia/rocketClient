@@ -4,19 +4,23 @@
       <div title>Reviews
         <span *ngIf="userInfo"> Assigned to {{userInfo.displayName | titlecase}}</span>
       </div>
-      <app-flex-table [arrayObjects]="reviewData" (outEvent)="tableEvents($event)"></app-flex-table>
+      <app-flex-table
+        [arrayObjects]="reviewData"
+        [editIn]="'MODAL'"
+        (outEvent)="tableEvents($event)">
+      </app-flex-table>
     </app-card>
   </div>
   <div class="flex-item">
     <div class="nested-container">
       <div class="flex-item">
-          <app-card isCollapsible="true">
+        <app-card isCollapsible="true">
           <div title>Messages
           </div>
         </app-card>
       </div>
       <div class="flex-item">
-          <app-card isCollapsible="true">
+        <app-card isCollapsible="true">
           <div title>RIDs
           </div>
         </app-card>

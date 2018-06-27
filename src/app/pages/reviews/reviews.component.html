@@ -5,7 +5,7 @@
       </div>
       <app-flex-table 
         [arrayObjects]="reviewData"
-        [inlineEdit]=false
+        [editIn]="'MODAL'"
         (outEvent)="tableEvents($event)">
       </app-flex-table>
     </app-card>
