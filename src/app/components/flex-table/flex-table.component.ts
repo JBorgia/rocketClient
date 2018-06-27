@@ -1,10 +1,4 @@
-import {
-  Component,
-  Input,
-  Output,
-  EventEmitter,
-  OnInit,
-} from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 
 import { FlexTableModalComponent } from './flex-table-modal/flex-table-modal.component';
 import { MatDialog } from '@angular/material';
@@ -27,7 +21,7 @@ export class FlexTableComponent implements OnInit {
    * complex data entry and editing. Allows for a custom component
    * and angular form to be used featuring full validation.
    */
-  @Input() editIn: 'INLINE'|'MODAL';
+  @Input() editIn: 'INLINE' | 'MODAL';
 
   /**
    * This table is desigend to auto build and populate to fit
@@ -60,7 +54,7 @@ export class FlexTableComponent implements OnInit {
   tableData: Observable<any>;
 
   headerData: string[];
-  isEditing: EventTarget;
+  activeObjEditing: EventTarget;
   reverse: true;
   order: string;
   editedValue: string;
@@ -140,42 +134,44 @@ export class FlexTableComponent implements OnInit {
    * @param key is the key for the key of the object being editted
    */
   editInLine(e: Event, obj: any, key: string): void {
-    if (!this.isEditing || this.isEditing === e.target) {
-      if (this.isEditing && this.editedValue !== e.target['value']) {
-        obj[key] = this.isEditing['value'];
+    const clickedHtmlElement = e.target;
+    if (!this.activeObjEditing || this.activeObjEditing === clickedHtmlElement) {
+      if (
+        this.activeObjEditing &&
+        this.editedValue !== clickedHtmlElement['value']
+      ) {
+        obj[key] = this.activeObjEditing['value'];
         this.outEvent.emit({ type: 'valueChanged', data: obj });
       }
-      if (e.target['tagName'] === 'TD') {
-        this.toggleFromTD(e);
-      } else {
-        this.toggleFromInput(e);
+
+      /**
+       * Due to Firefox not allowing click passthrough on disabled input fields,
+       * it has to be manually set in scss. Because of this, when the input is actively
+       * for editing, the click point changes to either it or the <td> element it is in
+       * based on where the user clicks in the cell. The two toggle functions ensure
+       * that it is the input that is always disabled by testing for click reference point.
+       **/
+      switch (clickedHtmlElement['tagName']) {
+        case 'TD':
+          this.toggle(clickedHtmlElement['firstChild']); // If the <td> was clicked, pass the child <input> for toggle.
+          break;
+        case 'INPUT':
+          this.toggle(clickedHtmlElement);
+          break;
+        default:
+          console.error(
+            'Incorrent HTML element selector reference',
+            clickedHtmlElement['tagName']
+          );
       }
     }
   }
 
-  /**
-   * Due to Firefox not allowing click passthrough on disabled input fields,
-   * it has to be manually set in scss. Because of this, when the input is actively
-   * for editing, the click point changes to either it or the <td> element it is in
-   * based on where the user clicks in the cell. The two toggle functions ensure
-   * that it is the input that is always disabled by testing for click reference point.
-   **/
-  toggleFromTD(e) {
-    e.target['firstChild']['disabled'] = !e.target['firstChild']['disabled'];
-    e.target['firstChild'].focus();
-    this.editedValue = !e.target['firstChild']['disabled']
-      ? e.target['firstChild']['value']
-      : undefined;
-    this.isEditing = !e.target['firstChild']['disabled']
-      ? e.target['firstChild']
-      : undefined;
-  }
-
-  toggleFromInput(e) {
-    e.target['disabled'] = !e.target['disabled'];
-    e.target.focus();
-    this.editedValue = !e.target['disabled'] ? e.target['value'] : undefined;
-    this.isEditing = !e.target['disabled'] ? e.target : undefined;
+  toggle(selectedInput) {
+    selectedInput['disabled'] = !selectedInput['disabled'];
+    selectedInput.focus();
+    this.editedValue = !selectedInput['disabled'] ? selectedInput['value'] : undefined;
+    this.activeObjEditing = !selectedInput['disabled'] ? selectedInput : undefined;
   }
 
   /**
