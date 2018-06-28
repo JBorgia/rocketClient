@@ -1,12 +1,12 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ModalComponent } from '@components/flex-table/flex-table-modal/modal.component';
+import { ModalInterface } from '@components/flex-table/flex-table-modal/modal.interface';
 
 @Component({
   selector: 'app-edit-user',
   templateUrl: './edit-user.component.html',
   styleUrls: ['./edit-user.component.scss'],
 })
-export class EditUserComponent implements OnInit, ModalComponent {
+export class EditUserComponent implements OnInit, ModalInterface {
   @Input() data: any;
   keys;
   activeObjEditing: EventTarget;

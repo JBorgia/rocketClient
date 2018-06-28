@@ -1,21 +1,21 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FlexTableModalComponent } from './flex-table-modal.component';
+import { ModalComponent } from './modal.component';
 import { ModalDirective } from './modal.directive';
 
-describe('FlexTableModalComponent', () => {
-  let component: FlexTableModalComponent;
-  let fixture: ComponentFixture<FlexTableModalComponent>;
+describe('ModalComponent', () => {
+  let component: ModalComponent;
+  let fixture: ComponentFixture<ModalComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FlexTableModalComponent, ModalDirective ]
+      declarations: [ ModalComponent, ModalDirective ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FlexTableModalComponent);
+    fixture = TestBed.createComponent(ModalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

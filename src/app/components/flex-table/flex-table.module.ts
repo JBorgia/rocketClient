@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 
 import { FlexTableComponent } from './flex-table.component';
-import { FlexTableModalComponent } from './flex-table-modal/flex-table-modal.component';
+import { ModalComponent } from './flex-table-modal/modal.component';
 import { FilterPipe, OrderPipe } from './flex-table.pipes';
 import { ModalDirective } from './flex-table-modal/modal.directive';
 import { EditUserComponent } from '@pages/admin/users/edit-user/edit-user.component';
@@ -12,7 +12,7 @@ import { EditUserComponent } from '@pages/admin/users/edit-user/edit-user.compon
 @NgModule({
   declarations: [
     FlexTableComponent,
-    FlexTableModalComponent,
+    ModalComponent,
     EditUserComponent,
     FilterPipe,
     OrderPipe,
@@ -20,6 +20,6 @@ import { EditUserComponent } from '@pages/admin/users/edit-user/edit-user.compon
   ],
   imports: [CommonModule, FormsModule, MatDialogModule],
   exports: [FlexTableComponent, FormsModule],
-  entryComponents: [FlexTableComponent, FlexTableModalComponent, EditUserComponent],
+  entryComponents: [FlexTableComponent, ModalComponent, EditUserComponent],
 })
 export class FlexTableModule {}

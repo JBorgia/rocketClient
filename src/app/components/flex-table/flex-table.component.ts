@@ -1,6 +1,6 @@
 import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 
-import { FlexTableModalComponent } from './flex-table-modal/flex-table-modal.component';
+import { ModalComponent } from './flex-table-modal/modal.component';
 import { MatDialog } from '@angular/material';
 
 import { Observable, of } from 'rxjs';
@@ -79,7 +79,7 @@ export class FlexTableComponent implements OnInit {
   }
 
   openDialog(obj: {}) {
-    const dialogRef = this.dialog.open(FlexTableModalComponent, {
+    const dialogRef = this.dialog.open(ModalComponent, {
       data: {obj, componentClass: this.componentClass},
     });
     dialogRef.afterClosed().subscribe(data => {
