@@ -21,7 +21,7 @@ export class FlexTableComponent implements OnInit {
    * complex data entry and editing. Allows for a custom component
    * and angular form to be used featuring full validation.
    */
-  @Input() editIn: 'INLINE' | 'MODAL';
+  @Input() editIn: 'INLINE' | 'MODAL' | 'HREF';
 
   /**
    * This table is desigend to auto build and populate to fit
@@ -32,7 +32,7 @@ export class FlexTableComponent implements OnInit {
 
   /**
    * Set displayObject keyvalue to false to hide the column.
-   * Set a string to override the database keyvalue name.
+   * Set a string to override the database keyvalue name as the header name.
    * Set to true to use existing name.
    */
   @Input() displayObject;
@@ -158,6 +158,9 @@ export class FlexTableComponent implements OnInit {
           break;
         case 'INPUT':
           this.toggle(clickedHtmlElement);
+          break;
+        case 'HREF':
+          console.log('open object in href');
           break;
         default:
           console.error(
