@@ -15,7 +15,6 @@ import { ToastComponent } from '@components/toast/toast.component';
 
 import { AuthGuard } from '@guards/auth.guard';
 
-
 import { AdminService } from '@services/admin.service';
 import { AuthenticationAPI } from '@services/api/authenticationAPI.service';
 import { ReviewAPI } from '@services/api/reviewAPI.service';
@@ -69,6 +68,6 @@ import { AppComponent } from './app.component';
     UserService,
     WhiteboardAPI,
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -1,6 +1,6 @@
 import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 
-import { ModalComponent } from './flex-table-modal/modal.component';
+import { ModalComponent } from '@components/modal/modal.component';
 import { MatDialog } from '@angular/material';
 
 import { Observable, of } from 'rxjs';

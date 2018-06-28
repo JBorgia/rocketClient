@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ModalInterface } from '@components/flex-table/flex-table-modal/modal.interface';
+import { ModalInterface } from '@components/modal/modal.interface';
 
 @Component({
   selector: 'app-edit-user',
