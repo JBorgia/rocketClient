@@ -14,7 +14,7 @@ export class EditUserComponent implements OnInit, ModalComponent {
   constructor() {}
 
   ngOnInit() {
-    this.keys = this.getUniqueKeys(this.data.obj);
+    this.keys = this.getUniqueKeys(this.data);
   }
 
   getUniqueKeys(obj = {}): string[] {
@@ -25,6 +25,10 @@ export class EditUserComponent implements OnInit, ModalComponent {
       }
     });
     return keys;
+  }
+
+  trackByFn(index, contact) {
+    return contact.id;
   }
 
   editValue(e, property: string): void {

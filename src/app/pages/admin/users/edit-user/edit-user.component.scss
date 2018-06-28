@@ -5,13 +5,23 @@
   label {
     margin-right: 10px;
   }
+  &.odd {
+    background-color: $alto;
+  }
+  &.even {
+    background-color: $ULA_SKY-BLUE;
+  }
+}
+
+label {
+  margin: .25rem;
 }
 
 input {
   border: 1px solid;
   font-size: 0.8rem;
   padding: 2px;
-  margin: 0 4px;
+  margin: 4px;
   display: block;
   background-color: $white; //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
   border-radius: 3px;

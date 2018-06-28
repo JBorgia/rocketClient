@@ -46,6 +46,6 @@ export class FlexTableModalComponent implements OnInit, OnDestroy {
     viewContainerRef.clear();
 
     const componentRef = viewContainerRef.createComponent(componentFactory);
-    (<ModalComponent>componentRef.instance).data = this.data;
+    (<ModalComponent>componentRef.instance).data = this.data.obj;
   }
 }
