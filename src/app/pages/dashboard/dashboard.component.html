@@ -5,7 +5,7 @@
         <span *ngIf="userInfo"> Assigned to {{userInfo.displayName | titlecase}}</span>
       </div>
       <app-flex-table
-        [arrayObjects]="reviewData"
+        [arrayObjects]="reviewData$"
         [editIn]="'MODAL'"
         (outEvent)="tableEvents($event)">
       </app-flex-table>
