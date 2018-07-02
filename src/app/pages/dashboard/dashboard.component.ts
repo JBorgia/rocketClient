@@ -14,12 +14,12 @@ import { TableData } from './dummy-data';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  reviewData;
+  reviewData$;
   constructor(
     private http: HttpClient,
     public auth: UserService,
     private router: Router,
-    private authenticationAPI: AuthenticationAPI) { this.reviewData = of(TableData); }
+    private authenticationAPI: AuthenticationAPI) { this.reviewData$ = of(TableData); }
 
 
   userInfo = this.auth.getUserInfo();
