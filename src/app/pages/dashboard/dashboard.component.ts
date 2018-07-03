@@ -15,13 +15,29 @@ import { TableData } from './dummy-data';
 })
 export class DashboardComponent implements OnInit {
   reviewData$;
+<<<<<<< HEAD
+=======
   checkMyAccess;
+>>>>>>> fc245275d7559e57d7ad1637e8be3548d06b353e
   constructor(
     public auth: UserService,
+<<<<<<< HEAD
+    private router: Router,
+    private authenticationAPI: AuthenticationAPI) { this.reviewData$ = of(TableData); }
+
+
+  userInfo = this.auth.getUserInfo();
+
+  userInTestTableValue = '';
+  userAccessChecked = false;
+
+  ngOnInit() {
+=======
     private authenticationAPI: AuthenticationAPI
   ) {
     this.reviewData$ = of(TableData);
     this.checkMyAccess = this.authenticationAPI.validateUserInTestTable();
+>>>>>>> fc245275d7559e57d7ad1637e8be3548d06b353e
   }
 
   ngOnInit() {}
