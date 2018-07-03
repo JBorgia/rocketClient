@@ -11,24 +11,20 @@ import { TableData } from './dummy-data';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent implements OnInit {
   reviewData$;
+  checkMyAccess;
   constructor(
-    private http: HttpClient,
     public auth: UserService,
-    private router: Router,
-    private authenticationAPI: AuthenticationAPI) { this.reviewData$ = of(TableData); }
-
-
-  userInfo = this.auth.getUserInfo();
-
-  userInTestTableValue = '';
-  userAccessChecked = false;
-
-  ngOnInit() {
+    private authenticationAPI: AuthenticationAPI
+  ) {
+    this.reviewData$ = of(TableData);
+    this.checkMyAccess = this.authenticationAPI.validateUserInTestTable();
   }
+
+  ngOnInit() {}
 
   tableEvents(value: Event): void {
     if (value) {
@@ -36,20 +32,4 @@ export class DashboardComponent implements OnInit {
     }
   }
 
-  checkMyAccess() {
-    const me = this;
-
-    let params = new HttpParams();
-    params = params.append('email', this.userInfo.email);
-
-    this.authenticationAPI.validateUserInTestTable(params, null)
-      .subscribe(
-        data => {
-          this.userInTestTableValue = data;
-          this.userAccessChecked = true;
-        },
-        err => console.error(err),
-        () => console.log('Finished checking access.')
-      );
-  }
 }

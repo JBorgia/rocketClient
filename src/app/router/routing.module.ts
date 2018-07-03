@@ -25,6 +25,11 @@ const routes: Routes = [
         //   canActivate: [CanActivateViaAuthGuard],
     },
     {
+        path: 'part-review',
+        loadChildren: '@pages/part-review/part-review.module#PartReviewModule',
+        //   canActivate: [CanActivateViaAuthGuard],
+    },
+    {
         path: 'reports',
         loadChildren: '@pages/reports/reports.module#ReportsModule',
         //   canActivate: [CanActivateViaAuthGuard],
@@ -39,7 +44,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes, { useHash: true })],
+    imports: [RouterModule.forRoot(routes)],
     exports: [RouterModule]
 })
 

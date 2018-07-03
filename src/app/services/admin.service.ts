@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-
-
+import { arsServiceBaseUrl } from '@environments/environment';
 
 import { HcmList } from '@models/test.model';
 
@@ -12,7 +11,7 @@ export class AdminService {
     constructor(private http: HttpClient) { }
 
     getAllHcm(): Observable<any> {
-        return this.http.get('http://localhost:8080/hardwareCriticalityMatrix');
+        return this.http.get(`${arsServiceBaseUrl}hardwareCriticalityMatrix`);
     }
 
     // getReview(id) {
