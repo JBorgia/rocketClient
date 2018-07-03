@@ -1,0 +1,30 @@
+<div flex class="flex-container">
+  <div class="flex-item">
+    <app-card isCollapsible="true">
+      <div title>Part Details
+        <span *ngIf="userInfo"> Assigned to {{userInfo.displayName | titlecase}}</span>
+      </div>
+      <app-flex-table
+        [arrayObjects]="reviewData$"
+        [editIn]="'MODAL'"
+        (outEvent)="tableEvents($event)">
+      </app-flex-table>
+    </app-card>
+  </div>
+  <div class="flex-item">
+    <div class="nested-container">
+      <div class="flex-item">
+        <app-card isCollapsible="true">
+          <div title>Tasks
+          </div>
+        </app-card>
+      </div>
+      <div class="flex-item">
+        <app-card isCollapsible="true">
+          <div title>Alerts
+          </div>
+        </app-card>
+      </div>
+    </div>
+  </div>
+</div>
