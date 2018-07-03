@@ -7,6 +7,7 @@ import { PartAPI } from '@services/api/partAPI.service';
 
 export * from '@services/api/whiteboardAPI.service';
 export * from '@services/api/reviewAPI.service';
+export * from '@services/api/partAPI.service';
 
 @NgModule()
 export class APIModule {
