@@ -1,4 +1,35 @@
 export class ArsUser {
+  constructor(
+    firstName?: string,
+    lastName?: string,
+    orgName?: string,
+    createdBy?: ArsUser,
+    roleName?: Role,
+    userType?: UserType,
+    supplierCode?: string,
+    team?: string,
+    technology?: VehicleSystem,
+    email?: string,
+    company?: string,
+    supplierName?: string
+  ) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.orgName = orgName;
+    this.isActive = 'Y'; // in database is char. Default is 'Y'
+    this.createdOn = new Date();
+    this.createdBy = createdBy;
+    this.lastUpdatedBy = createdBy;
+    this.roleName = roleName;
+    this.userType = userType;
+    this.supplierCode = supplierCode;
+    this.team = team;
+    this.technology = technology;
+    this.email = email;
+    this.company = company;
+    this.supplierName = supplierName;
+  }
+
   userId: string;
   firstName?: string;
   lastName?: string;
@@ -72,7 +103,41 @@ export class Document {
   docSignerNote?: string;
   dockIdInSource: string;
   createdOn: Date;
+  /** createdBy should be an actual user one the front end to ensure data is easily displayed.
+   * Also, as we only fetch part details when requested, it'd make sense to grab it here
+   * rather than in a separate request.
+   */
   createdBy: string;
   lastUpdatedOn?: Date;
+  /** lastUpdatedBy should be an actual user one the front end to ensure data is easily displayed.
+   * Also, as we only fetch part details when requested, it'd make sense to grab it here
+   * rather than in a separate request.
+   */
   lastUpdatedBy?: string;
+}
+
+export class DocNotes {
+  documentId: number;
+  noteId: number;
+  note: string;
+  createdOn: Date;
+  /** createdBy should be an actual user one the front end to ensure data is easily displayed.
+   * Also, as we only fetch part details when requested, it'd make sense to grab it here
+   * rather than in a separate request.
+   */
+  createdyBy: string;
+  lastUpdatedOn: Date;
+  /** lastUpdatedBy should be an actual user one the front end to ensure data is easily displayed.
+   * Also, as we only fetch part details when requested, it'd make sense to grab it here
+   * rather than in a separate request.
+   */
+  lastUpdatedBy: string;
+}
+
+export class DocReviewActivity {
+  documentId: number;
+  docAssignedTo?: string;
+  docReviewedBy?: string;
+  dockReviewDate?: Date;
+  docReviewNote?: string;
 }
