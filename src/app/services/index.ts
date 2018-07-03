@@ -3,6 +3,7 @@ import { ModuleWithProviders, NgModule } from '@angular/core';
 
 import { WhiteboardAPI } from '@services/api/whiteboardAPI.service';
 import { ReviewAPI } from '@services/api/reviewAPI.service';
+import { PartAPI } from '@services/api/partAPI.service';
 
 export * from '@services/api/whiteboardAPI.service';
 export * from '@services/api/reviewAPI.service';
@@ -15,6 +16,7 @@ export class APIModule {
       providers: [
         WhiteboardAPI,
         ReviewAPI,
+        PartAPI,
       ],
     };
   }

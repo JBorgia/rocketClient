@@ -4,12 +4,11 @@ import { Observable } from 'rxjs';
 
 
 
-import { Review, Whiteboard, ReviewUser } from '@models/test.model';
+import { Review, ReviewUser } from '@models/test.model';
 
 @Injectable()
 export class ReviewAPI {
     review = {};
-    Whiteboard = {};
     constructor(private http: HttpClient) { }
 
     getAllReviews(): Observable<any> {
@@ -28,6 +27,8 @@ export class ReviewAPI {
         return this.http.delete('http://localhost:8080/reviews/' + id, data);
     }
 
+
+    // DELETE EVERYTHING BELOW THIS LINE
     getAllUsers(): Observable<any> {
         return this.http.get('http://localhost:8080/reviewUsers');
     }
