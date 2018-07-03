@@ -1,7 +1,6 @@
 import {
   throwError as observableThrowError,
   Observable,
-  BehaviorSubject,
 } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Injectable, Inject } from '@angular/core';
@@ -26,14 +25,11 @@ export class LoginService {
   ) {}
 
   getToken(username: string, password: string): Observable<any> {
-    const me = this;
-
     const bodyData: LoginRequestParam = {
       username: username,
       password: password,
     };
 
-    const loginDataSubject: BehaviorSubject<any> = new BehaviorSubject<any>([]);
     let loginInfoReturn: LoginInfoInStorage;
 
     return this.authenticationAPI.authGets('', null, bodyData).pipe(

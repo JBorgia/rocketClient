@@ -7,7 +7,6 @@ import { User } from '@models/user.model';
 
 import { AuthenticationAPI } from '@services/api//authenticationAPI.service';
 
-
 import { arsServiceBaseUrl } from '@environments/environment';
 
 export interface UserInStorage {
@@ -43,7 +42,10 @@ export class UserAPI {
     }
 
     saveUser(user: User): Observable<User> {
-        return this.http.post<User>('http://localhost:8080/arsUsers', user);
+        return this.http.post<User>(`${arsServiceBaseUrl}arsUsers`, user).pipe(
+            tap(cursor => console.log(`saveUser returned:`, cursor)),
+            catchError(this.handleError)
+        );
     }
 
     // Store userinfo from session storage

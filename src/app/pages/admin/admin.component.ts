@@ -33,13 +33,12 @@ export class AdminComponent implements OnInit {
   roleName = new FormControl('', Validators.required);
 
   constructor(
-    private userServie: UserService,
     private userAPI: UserAPI,
     private adminService: AdminService,
     private formBuilder: FormBuilder) { }
 
   ngOnInit() {
-    this.userServie.getAllUsers().subscribe(data => {
+    this.userAPI.getAllUsers().subscribe(data => {
       this.users = data;
     });
 
@@ -62,7 +61,7 @@ export class AdminComponent implements OnInit {
   }
 
   saveUser() {
-    this.userServie.saveUser(this.addUserForm.value).subscribe(result => {
+    this.userAPI.saveUser(this.addUserForm.value).subscribe(result => {
       this.users.push(result);
     }, error => console.error(error));
   }

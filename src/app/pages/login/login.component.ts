@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
     public Authinacate: AuthGuard,
     private http: HttpClient,
   ) { }
-
+  checkMyAccess = this.authenticationAPI.validateUserInTestTable;
   userInfo = this.auth.getUserInfo();
 
   userInTestTableValue = '';
@@ -81,33 +81,5 @@ export class LoginComponent implements OnInit {
   onSignUp() {
     this.router.navigate(['signup']);
   }
-
-
-  checkMyAccess() {
-    const me = this;
-    this.userInfo = this.auth.getUserInfo();
-
-    let params = new HttpParams();
-    params = params.append('email', this.userInfo.email);
-
-    this.authenticationAPI.validateUserInTestTable(params, null)
-      .subscribe(
-      data => {
-        this.userInTestTableValue = data;
-        // console.log(data);
-        this.userAccessChecked = true;
-        if (data === true) {
-          this.router.navigateByUrl('reviews');
-        } else {
-          this.router.navigateByUrl('landing');
-        }
-
-      },
-      err => console.error(err),
-      () => console.log('Finished checking access.')
-      );
-  }
-
-
 }
 

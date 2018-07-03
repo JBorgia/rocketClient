@@ -1,12 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Observable ,  of } from 'rxjs';
-
-
-
-
-import { User} from '@models/user.model';
-
 
 export interface UserInStorage {
     fullName: string;
@@ -29,15 +22,7 @@ export class UserService {
     public currentUserKey: 'currentUser';
     public storage: Storage = sessionStorage; // <--- you may switch between sessionStorage or LocalStrage (only one place to change)
 
-    constructor(private http: HttpClient) { }
-
-    getAllUsers(): Observable<any> {
-        return this.http.get('http://localhost:8080/arsUsers');
-    }
-
-    saveUser(user: User): Observable<User> {
-        return this.http.post<User>('http://localhost:8080/arsUsers', user);
-    }
+    constructor() { }
 
     // Store userinfo from session storage
     storeUserInfo(userInfoString: string) {

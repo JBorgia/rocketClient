@@ -9,19 +9,15 @@ import { of } from 'rxjs';
 import { TableData } from './dummy-data';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss'],
+  selector: 'app-part-review',
+  templateUrl: './part-review.component.html',
+  styleUrls: ['./part-review.component.scss']
 })
-export class DashboardComponent implements OnInit {
+export class PartReviewComponent implements OnInit {
   reviewData$;
-<<<<<<< HEAD
-=======
-  checkMyAccess;
->>>>>>> fc245275d7559e57d7ad1637e8be3548d06b353e
   constructor(
+    private http: HttpClient,
     public auth: UserService,
-<<<<<<< HEAD
     private router: Router,
     private authenticationAPI: AuthenticationAPI) { this.reviewData$ = of(TableData); }
 
@@ -32,20 +28,11 @@ export class DashboardComponent implements OnInit {
   userAccessChecked = false;
 
   ngOnInit() {
-=======
-    private authenticationAPI: AuthenticationAPI
-  ) {
-    this.reviewData$ = of(TableData);
-    this.checkMyAccess = this.authenticationAPI.validateUserInTestTable();
->>>>>>> fc245275d7559e57d7ad1637e8be3548d06b353e
   }
-
-  ngOnInit() {}
 
   tableEvents(value: Event): void {
     if (value) {
       console.log(value);
     }
   }
-
 }
