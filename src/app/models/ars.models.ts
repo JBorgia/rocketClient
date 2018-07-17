@@ -3,7 +3,7 @@ export class ArsUser {
     firstName?: string,
     lastName?: string,
     orgName?: string,
-    createdBy?: ArsUser,
+    createdBy?: string,
     roleName?: Role,
     userType?: UserType,
     supplierCode?: string,
@@ -36,9 +36,9 @@ export class ArsUser {
   orgName?: string;
   isActive: string; // in database is char. Default is 'Y'
   createdOn: Date;
-  createdBy?: ArsUser;
+  createdBy?: string;
   lastUpdatedOn?: Date;
-  lastUpdatedBy?: ArsUser;
+  lastUpdatedBy?: string;
   roleName?: Role;
   userType?: UserType;
   supplierCode?: string;
@@ -82,7 +82,7 @@ export class Part {
   createdOn: Date;
   createdBy: string;
   lastUpdatedOn?: Date;
-  lastUpdatedBy?: ArsUser;
+  lastUpdatedBy?: string;
 }
 
 export class Document {
@@ -103,35 +103,19 @@ export class Document {
   docSignerNote?: string;
   dockIdInSource: string;
   createdOn: Date;
-  /** createdBy should be an actual user one the front end to ensure data is easily displayed.
-   * Also, as we only fetch part details when requested, it'd make sense to grab it here
-   * rather than in a separate request.
-   */
   createdBy: string;
   lastUpdatedOn?: Date;
-  /** lastUpdatedBy should be an actual user one the front end to ensure data is easily displayed.
-   * Also, as we only fetch part details when requested, it'd make sense to grab it here
-   * rather than in a separate request.
-   */
   lastUpdatedBy?: string;
 }
 
 export class DocNotes {
-  documentId: number;
+  documentId?: number;
   noteId: number;
   note: string;
   createdOn: Date;
-  /** createdBy should be an actual user one the front end to ensure data is easily displayed.
-   * Also, as we only fetch part details when requested, it'd make sense to grab it here
-   * rather than in a separate request.
-   */
   createdyBy: string;
-  lastUpdatedOn: Date;
-  /** lastUpdatedBy should be an actual user one the front end to ensure data is easily displayed.
-   * Also, as we only fetch part details when requested, it'd make sense to grab it here
-   * rather than in a separate request.
-   */
-  lastUpdatedBy: string;
+  lastUpdatedOn?: Date;
+  lastUpdatedBy?: string;
 }
 
 export class DocReviewActivity {
