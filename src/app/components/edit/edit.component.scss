@@ -1,0 +1,46 @@
+@import "../../../styles/theme/palette";
+
+.data-field {
+  display: flex;
+  justify-content: space-between;
+  label {
+    margin-right: 10px;
+  }
+  &.odd {
+    background-color: $alto;
+  }
+  &.even {
+    background-color: #EEE;
+  }
+}
+
+label {
+  margin: .25rem;
+}
+
+.data {
+  width: 300px;
+  margin-right: 24px;
+}
+
+input {
+  border: 1px solid;
+  font-size: 0.8rem;
+  padding: 2px;
+  margin: 4px;
+  display: block;
+  background-color: $white; //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 3px;
+  color: $black; //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: all 0.2s ease;
+  background-color: $white;
+  width: 100%;
+  outline: none;
+  &:disabled {
+    padding: 3px;
+    border: none;
+    background-color: transparent;
+    color: $color_mine_shaft_approx;
+    pointer-events: none;
+  }
+}

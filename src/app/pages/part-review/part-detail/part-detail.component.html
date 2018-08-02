@@ -1,0 +1,15 @@
+<mat-accordion [class.fixed]="fixed">
+  <mat-expansion-panel>
+    <mat-expansion-panel-header [collapsedHeight]="'32px'">
+      <mat-panel-title>
+        <span *ngIf="(partData$ | async)?.partNo; else noPart"> Part No. {{(partData$ | async)?.partNo }} | Serial No. {{(partData$ | async)?.serialNo }}</span>
+        <ng-template #noPart>
+          <span>Part Not Found</span>
+        </ng-template>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div class="detail-container">
+      <app-detail-item *ngFor="let item of partData$ | async | keyvalue" [item]="item"></app-detail-item>
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>

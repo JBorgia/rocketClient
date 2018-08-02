@@ -1,0 +1,15 @@
+@import "../../../../../styles/theme/palette";
+.detail-item {
+  padding: 6px;
+  margin: 2px;
+  overflow: hidden;
+  height: 16px;
+  div {
+    border-bottom: 1px solid;
+    margin: 0;
+    span {
+      font-weight: bold;
+      float: right;
+    }
+  }
+}

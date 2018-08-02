@@ -1,0 +1,10 @@
+<h1 mat-dialog-title>{{title}}</h1>
+<div class="data-field" *ngFor="let key of keys; let i = index; let c = count;" [ngClass]="{
+  'odd': i % 2 === 1,
+  'even': i % 2 === 0
+}">
+  <label>{{ key }}:</label>
+  <div class="data" (dblclick)="editValue($event, key)">
+    <input type="text" value="{{ data[key] || '' }}" [attr.disabled]=true (keyup.enter)="editValue($event, key)">
+  </div>
+</div>

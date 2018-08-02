@@ -1,0 +1,14 @@
+<app-card isCollapsible="true">
+  <div title>DOCUMENTS
+  </div>
+  <app-icon-data details
+    [text]="'Number of Documents'"
+    [faIcon]="faFileAlt"
+    [detail]="(documentsData$ | async)?.length">
+  </app-icon-data>
+  <app-flex-table
+    [arrayObjects]="documentsData$"
+    [displayObject]="displayObject"
+    (outEvent)="tableEvents($event)">
+  </app-flex-table>
+</app-card>

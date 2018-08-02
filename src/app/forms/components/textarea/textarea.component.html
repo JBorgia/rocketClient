@@ -1,0 +1,16 @@
+<mat-form-field class="full-width" [formGroup]="group">
+    <mat-label>{{field.label}}</mat-label>
+    <textarea
+        matInput
+        [formControlName]="field.name"
+        [placeholder]="field.label"
+        [type]="field.inputType"
+        cdkTextareaAutosize
+        #autosize="cdkTextareaAutosize"
+        cdkAutosizeMinRows="2"
+        cdkAutosizeMaxRows="5">
+    </textarea>
+    <ng-container *ngFor="let validation of field.validations;" ngProjectAs="mat-error">
+      <mat-error *ngIf="group.get(field.name).hasError(validation.name)">{{validation.message}}</mat-error>
+    </ng-container>
+</mat-form-field>

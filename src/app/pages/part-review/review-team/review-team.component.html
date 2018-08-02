@@ -1,0 +1,14 @@
+<app-card isCollapsible="true">
+  <div title>REVIEW TEAM
+  </div>
+  <app-icon-data details
+    [text]="'Number of Assigned Users'"
+    [faIcon]="faUser"
+    [detail]="(teamData$ | async)?.length">
+  </app-icon-data>
+  <app-flex-table
+    [arrayObjects]="teamData$"
+    [displayObject]="displayObject"
+    (outEvent)="tableEvents($event)">
+  </app-flex-table>
+</app-card>
