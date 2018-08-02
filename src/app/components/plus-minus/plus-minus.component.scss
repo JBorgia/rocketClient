@@ -33,52 +33,54 @@
 }
 
 .bottom-left {
-  -webkit-transform-origin: top right;
-  -moz-transform-origin: top right;
-  -o-transform-origin: top right;
-  -ms-transform-origin: top right;
-  transform-origin: top right;
+  -webkit-transform-origin: 12px 0px;
+  -moz-transform-origin: 12px 0px;
+  -o-transform-origin: 12px 0px;
+  -ms-transform-origin: 12px 0px;
+  transform-origin: 12px 0px;
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
   right: 0px;
-  transition: transform 0.6s ease;
+  transition: all 0.6s ease;
   &.collapsed {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+    transform-origin: 11px 3px;
   }
 }
 
 .bottom-right {
-  -webkit-transform-origin: top left;
-  -moz-transform-origin: top left;
-  -o-transform-origin: top left;
-  -ms-transform-origin: top left;
-  transform-origin: top left;
+  -webkit-transform-origin: 0px 0px;
+  -moz-transform-origin: 0px 0px;
+  -o-transform-origin: 0px 0px;
+  -ms-transform-origin: 0px 0px;
+  transform-origin: 0px 0px;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   left: 0px;
-  transition: transform 0.6s ease;
+  transition: all 0.6s ease;
   &.collapsed {
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
+    transform-origin: 1px 3px;
   }
 }
 
 .bar {
   width: 12px;
   height: 3px;
-  background-color: $ULA-BLUE;
+  background-color: #AAA;
   position: absolute;
 }

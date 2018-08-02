@@ -11,7 +11,6 @@ import { Observable } from 'rxjs';
 export class HeaderComponent implements OnInit {
   isLoggedIn$: Observable<boolean>;
 
-
   constructor(
     private userService: UserService, ) {
       this.isLoggedIn$ = userService.isLoggedIn();

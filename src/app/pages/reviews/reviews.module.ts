@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { OrderrByPipeModule } from '@pipes/orderBy.pipe';
+import { OrderrByPipeModule } from '@pipes/order-by.pipe';
 import { SearchPipeModule } from '@pipes/category.pipe';
 
 import { ReviewsComponent } from './reviews.component';

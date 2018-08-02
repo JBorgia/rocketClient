@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 import { ModalComponent } from '@components/modal/modal.component';
 import { MatDialog } from '@angular/material';
 
@@ -11,6 +11,7 @@ import { tap } from 'rxjs/operators';
   templateUrl: './flex-table.component.html',
   styleUrls: ['./flex-table.component.scss'],
 })
+
 export class FlexTableComponent implements OnInit {
   /**
    * The editIn is a ENUM with values of INLINE and MODAL.
@@ -21,7 +22,7 @@ export class FlexTableComponent implements OnInit {
    * complex data entry and editing. Allows for a custom component
    * and angular form to be used featuring full validation.
    */
-  @Input() editIn: 'INLINE' | 'MODAL' | 'HREF';
+  @Input() inline = false;
 
   /**
    * This table is desigend to auto build and populate to fit
@@ -44,7 +45,6 @@ export class FlexTableComponent implements OnInit {
    * Its form and function hasn't been set up yet.
    */
   @Input() dataAccessObject;
-  @Input() componentClass;
 
   /**
    * The table should remain agnostic. Any database updating
@@ -61,7 +61,7 @@ export class FlexTableComponent implements OnInit {
   editedValue: string;
   filter: Object = {};
 
-  constructor(public dialog: MatDialog) {
+  constructor(private router: Router, public dialog: MatDialog) {
     this.outEvent = new EventEmitter<{
       type: string;
       data: string | Array<any>;
@@ -78,30 +78,25 @@ export class FlexTableComponent implements OnInit {
     );
   }
 
-  openDialog(obj: {}) {
-    const dialogRef = this.dialog.open(ModalComponent, {
-      data: {obj, componentClass: this.componentClass},
-    });
-    dialogRef.afterClosed().subscribe(data => {
-      console.log('persisting data', obj);
-    });
-  }
-
   getUniqueKeys(obj = []): string[] {
-    return obj.reduce((acc, curr, idx) => {
-      Object.keys(curr).forEach(key => {
-        if (this.displayObject) {
-          if (this.displayObject[key] && acc.indexOf(key) === -1) {
-            acc.push(key);
+    if(Array.isArray(obj)){
+      return obj.reduce((acc, curr, idx) => {
+        Object.keys(curr).forEach(key => {
+          if (this.displayObject) {
+            if (this.displayObject[key] && acc.indexOf(key) === -1) {
+              acc.push(key);
+            }
+          } else {
+            if (acc.indexOf(key) === -1) {
+              acc.push(key);
+            }
           }
-        } else {
-          if (acc.indexOf(key) === -1) {
-            acc.push(key);
-          }
-        }
-      });
-      return acc;
-    }, []);
+        });
+        return acc;
+      }, []);
+    } else {
+      console.error('ERROR: Not an Array. FlexTable requires an array of flat objects.');
+    }
   }
 
   useAlt(head): boolean {
@@ -116,15 +111,11 @@ export class FlexTableComponent implements OnInit {
   }
 
   edit(e: Event, obj: any, key: string) {
-    switch (this.editIn) {
-      case 'INLINE':
+    if (this.inline) {
         this.editInLine(e, obj, key);
-        break;
-      case 'MODAL':
-        this.editInModal(obj);
-        break;
-      default:
-    }
+    } 
+    
+    this.outEvent.emit({ type: 'currentValue', data: obj });
   }
 
   /**
@@ -183,7 +174,33 @@ export class FlexTableComponent implements OnInit {
    *
    * @param obj the object being opened in a modal for editting
    */
-  editInModal(obj: any): void {
-    this.openDialog(obj);
-  }
+  // editInModal(obj: any): void {
+  //   this.openDialog(obj);
+  // }
+
+  // openDialog(obj: {}) {
+  //   const dialogRef = this.dialog.open(ModalComponent, {
+  //     data: { obj, componentClass: this.componentClass, componentTitle: this.componentTitle },
+  //   });
+  //   dialogRef.afterClosed().subscribe(data => {
+  //     console.log('persisting data', obj);
+  //   });
+  // }
+
+  /**
+   * openObject is the function call for PAGE editting
+   *
+   * @param obj the object being opened in a new page for editting
+   */
+  // editInPage(obj: any): void {
+  //   console.log('Editing in new page', obj);
+  //   let objId = obj ? obj.partId : null;
+  //   console.log('objId: ' + objId);
+  //   if (this.pageRoute && objId) {
+  //     this.router.navigate(['/part-review', objId]);
+  //   } else {
+  //     console.error('ERROR: this.pageRoute is NULL. No forwarding route was set.');
+  //   }
+
+  // }
 }

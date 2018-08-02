@@ -1,14 +1,15 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Component, OnInit, Input, Inject, HostListener } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap, Params } from '@angular/router';
 import { AuthenticationAPI } from '@services/api/authenticationAPI.service';
 import { UserService } from '@services/user.service';
+import { DOCUMENT } from '@angular/platform-browser';
 
 import { of } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
+import { switchMap, tap } from 'rxjs/operators';
 
 import { TableData } from './dummy-data';
-import { PartAPI } from '@app/services';
+import { UserAPI, PartAPI, DocumentAPI, WhiteboardAPI } from '@app/services';
 
 @Component({
   selector: 'app-part-review',
@@ -17,24 +18,51 @@ import { PartAPI } from '@app/services';
 })
 export class PartReviewComponent implements OnInit {
   partData$;
+  teamData$;
+  documentsData$;
+  wbIssuesData$;
   constructor(
     private http: HttpClient,
     public auth: UserService,
     private route: ActivatedRoute,
     private router: Router,
     private partAPI: PartAPI,
-    private authenticationAPI: AuthenticationAPI) { this.partData$ = of(TableData); }
+    private authenticationAPI: AuthenticationAPI,
+    @Inject(DOCUMENT) private doc: Document,
+    private userAPI: UserAPI,
+    private documentAPI: DocumentAPI,
+    private whiteboardAPI: WhiteboardAPI
+    ) {
+
+  }
 
 
+  private _isCollapsed = 'collapsed';
+  private _isCollapsible = false;
   userInfo = this.auth.getUserInfo();
 
   userInTestTableValue = '';
   userAccessChecked = false;
 
+  partId;
+
   ngOnInit() {
     this.partData$ = this.route.paramMap.pipe(
       switchMap((params: ParamMap) =>
-        this.partAPI.getPart(params.get('id')))
+        this.partAPI.getPart(this.partId = params.get('id')))
+    );
+
+    this.teamData$ = this.route.paramMap.pipe(
+      switchMap((params: ParamMap) =>
+        this.userAPI.getUsersByPart(this.partId = params.get('id')))
+    );
+    this.documentsData$ = this.route.paramMap.pipe(
+      switchMap((params: ParamMap) =>
+        this.documentAPI.getDocumentsByPart(this.partId = params.get('id')))
+    );
+    this.wbIssuesData$ = this.route.paramMap.pipe(
+      switchMap((params: ParamMap) =>
+        this.whiteboardAPI.getWbIssuesByPart(this.partId = params.get('id')))
     );
   }
 
@@ -43,4 +71,6 @@ export class PartReviewComponent implements OnInit {
       console.log(value);
     }
   }
+
 }
+

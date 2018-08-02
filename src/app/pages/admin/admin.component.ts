@@ -1,13 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpParams } from '@angular/common/http';
+import { Component, OnInit, Input, Inject, HostListener } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap, Params } from '@angular/router';
+import { AuthenticationAPI } from '@services/api/authenticationAPI.service';
 import { UserService } from '@services/user.service';
-import { AdminService } from '@services/admin.service';
-import { UserAPI } from '@services/api/userAPI.service';
+import { DOCUMENT } from '@angular/platform-browser';
 
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
+import { of } from 'rxjs';
+import { switchMap, tap } from 'rxjs/operators';
 
-import { User } from '@models/user.model';
-import { HcmList } from '@models/test.model';
+import { UserAPI, PartAPI, DocumentAPI, WhiteboardAPI } from '@app/services';
 
 @Component({
   selector: 'app-admin',
@@ -15,58 +16,48 @@ import { HcmList } from '@models/test.model';
   styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent implements OnInit {
-
-  users: User[] = [];
-  user = new User();
-  hcmLists: HcmList[] = [];
-  modalRef: BsModalRef;
-
-  addUserForm: FormGroup;
-  userId = new FormControl('', Validators.required);
-  firstName = new FormControl('', Validators.required);
-  lastName = new FormControl('', Validators.required);
-  email = new FormControl('', Validators.required);
-  company = new FormControl('', Validators.required);
-  supplierName = new FormControl('', Validators.required);
-  supplierCode = new FormControl('', Validators.required);
-  team = new FormControl('', Validators.required);
-  roleName = new FormControl('', Validators.required);
-
+  partsData$;
+  usersData$;
+  wbIssuesData$;
   constructor(
+    private http: HttpClient,
+    public auth: UserService,
+    private route: ActivatedRoute,
+    private router: Router,
+    private partAPI: PartAPI,
+    private authenticationAPI: AuthenticationAPI,
+    @Inject(DOCUMENT) private doc: Document,
     private userAPI: UserAPI,
-    private adminService: AdminService,
-    private formBuilder: FormBuilder) { }
+    private documentAPI: DocumentAPI,
+    private whiteboardAPI: WhiteboardAPI
+    ) {
+
+  }
+
+  private _isCollapsed = 'collapsed';
+  private _isCollapsible = false;
+  userInfo = this.auth.getUserInfo();
+
+  userInTestTableValue = '';
+  userAccessChecked = false;
 
   ngOnInit() {
-    this.userAPI.getAllUsers().subscribe(data => {
-      this.users = data;
-    });
+    this.partsData$ = this.partAPI.getAll();
 
-    console.log('this is employee id', this.userAPI.getEmployeeId());
-    this.adminService.getAllHcm().subscribe(data => {
-      this.hcmLists = data;
-    });
+    this.usersData$ = this.userAPI.getAll();
 
-    // Let's combine the initiation and validation of form fields
-    this.addUserForm = this.formBuilder.group({
-      firstName: this.firstName,
-      lastName: this.lastName,
-      email: this.email,
-      company: this.company,
-      supplierName: this.supplierName,
-      supplierCode: this.supplierCode,
-      team: this.team,
-      roleName: this.roleName,
-    });
+    this.wbIssuesData$ = of([]);
+    // this.wbIssuesData$ = this.route.paramMap.pipe(
+    //   switchMap((params: ParamMap) =>
+    //     this.whiteboardAPI.getWbIssuesByPart(this.partId = params.get('id')))
+    // );
   }
 
-  saveUser() {
-    this.userAPI.saveUser(this.addUserForm.value).subscribe(result => {
-      this.users.push(result);
-    }, error => console.error(error));
+  tableEvents(value: Event): void {
+    if (value) {
+      console.log(value);
+    }
   }
-
 
 }
-
 

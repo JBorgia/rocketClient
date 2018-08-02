@@ -9,6 +9,7 @@ export class User {
     supplierCode: string;
     team: string;
     roleName: string;
+    employeeId: number;
 }
 
 

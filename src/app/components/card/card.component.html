@@ -1,11 +1,17 @@
 <div class="head" (click)="toggle()">
-  <div  class="title" [ngClass]="isCollapsed">
-    <ng-content select="[title]"></ng-content>
-    <ng-content select="[details]"></ng-content>
+  <div class="title-container" [ngClass]="isCollapsed">
+    <div class="title-details">
+      <span #ref>
+        <ng-content select="[title]"></ng-content>
+      </span>
+      <span class="details" [ngClass]="isCollapsed">
+        <ng-content select="[details]"></ng-content>
+      </span>
+    </div>
   </div>
-    <app-plus-minus *ngIf="isCollapsible" [isCollapsed]="isCollapsed"></app-plus-minus>
+  <app-plus-minus *ngIf="isCollapsible" [isCollapsed]="isCollapsed"></app-plus-minus>
 </div>
-<hr>
+<hr *ngIf="ref.innerHTML.trim()">
 <div class="body" [ngClass]="isCollapsed">
   <ng-content></ng-content>
 </div>

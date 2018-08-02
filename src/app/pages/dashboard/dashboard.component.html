@@ -4,9 +4,9 @@
       <div title>Reviews
         <span *ngIf="userInfo"> Assigned to {{userInfo.displayName | titlecase}}</span>
       </div>
-      <app-flex-table
-        [arrayObjects]="reviewData$"
-        [editIn]="'MODAL'"
+      <app-flex-table 
+        [arrayObjects]="reviewData$" 
+        [displayObject]="displayObject"
         (outEvent)="tableEvents($event)">
       </app-flex-table>
     </app-card>

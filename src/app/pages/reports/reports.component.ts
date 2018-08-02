@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { OrderrByPipe } from '@pipes/orderBy.pipe';
+import { OrderrByPipe } from '@pipes/order-by.pipe';
 
 @Component({
   selector: 'app-reports',

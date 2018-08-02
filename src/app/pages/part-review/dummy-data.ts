@@ -1,5 +1,5 @@
 // dummy (aka test) data is used for test cases
-import { ArsUser, Part } from '@models/ars.models';
+import { ArsUser, Part } from '@models/ars-app.models';
 
 export const TableData: Array<Part> =  [
     {

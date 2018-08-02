@@ -1,11 +1,11 @@
 import {
   Component,
-  OnInit,
-  Inject,
-  ViewChild,
-  OnDestroy,
-  Input,
   ComponentFactoryResolver,
+  Inject,
+  Input,
+  OnDestroy,
+  OnInit,
+  ViewChild,
 } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
@@ -19,7 +19,7 @@ import { ModalInterface } from './modal.interface';
 })
 export class ModalComponent implements OnInit, OnDestroy {
   currentAdIndex = -1;
-  @ViewChild(ModalDirective) adHost: ModalDirective;
+  @ViewChild(ModalDirective) modalHost: ModalDirective;
   interval: any;
 
   constructor(
@@ -42,10 +42,11 @@ export class ModalComponent implements OnInit, OnDestroy {
       this.data.componentClass
     );
 
-    const viewContainerRef = this.adHost.viewContainerRef;
+    const viewContainerRef = this.modalHost.viewContainerRef;
     viewContainerRef.clear();
 
     const componentRef = viewContainerRef.createComponent(componentFactory);
     (<ModalInterface>componentRef.instance).data = this.data.obj;
+    (<ModalInterface>componentRef.instance).title = this.data.componentTitle;
   }
 }

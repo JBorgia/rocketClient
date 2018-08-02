@@ -15,14 +15,12 @@
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
   padding: 12px;
   margin: 4px;
-  &::ng-deep {
-  }
   hr {
     margin: 0.5em 0;
   }
   .head {
     cursor: pointer;
-    .title {
+    .title-container {
       margin: 0;
       text-align: center;
       white-space: nowrap;
@@ -31,6 +29,19 @@
       font-size: 1.5rem;
       &.collapsed {
         width: 0;
+      }
+      .title-details {
+        display: inline-flex;
+        .details{
+          width: 0;
+          opacity: 0;
+          margin-left: 10px;
+          transition: all 0.2s ease;
+          &.collapsed {
+            opacity: 1;
+            transition: all 0.4s ease;
+          }
+        }
       }
     }
   }
@@ -45,7 +56,7 @@
   }
   app-plus-minus {
     position: absolute;
-    top: 28px;
-    right: 32px;
+    top: 24px;
+    right: 28px;
   }
 }

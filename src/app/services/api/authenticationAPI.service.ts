@@ -5,7 +5,7 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Router } from '@angular/router';
 
 import { UserService } from '@services/user.service';
-import { arsServiceBaseUrl } from '@environments/environment';
+import { authBaseUrl, arsServiceBaseUrl } from '@environments/environment';
 
 @Injectable()
 export class AuthenticationAPI {
@@ -17,8 +17,7 @@ export class AuthenticationAPI {
     private userService: UserService
   ) {}
 
-  private authBaseUrl = 'http://seadta.dnvr.ulalaunch.com:9999';
-  // private authBaseUrl = 'http://localhost:9999';
+  private _authBaseUrl = authBaseUrl;
   private authEndpoint = '/authentication_service/user';
 
   private _arsServiceBaseUrl = arsServiceBaseUrl;
@@ -93,7 +92,7 @@ export class AuthenticationAPI {
   authGets(url: string, urlParams: HttpParams, data?: any): Observable<any> {
     const me = this;
     return this.http
-      .get(this.authBaseUrl + this.authEndpoint, {
+      .get(this._authBaseUrl + this.authEndpoint, {
         headers: this.authGetHeaders(data),
         params: urlParams,
       })

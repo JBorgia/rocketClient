@@ -1,51 +1,59 @@
-import { Component, OnInit } from '@angular/core';
-import { UserAPI } from '@app/services/api/userAPI.service';
-import { User } from '@models/user.model';
-import { Observable, of } from 'rxjs';
-import { EditUserComponent } from './edit-user/edit-user.component';
-
-import { testUsers } from './test-data';
+import { Component, OnInit, Input } from '@angular/core';
+import { UserFormComponent } from '@forms/user-form/user-form.component';
+import { Observable } from 'rxjs';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { ModalComponent } from '@components/modal/modal.component';
+import { MatDialog } from '@angular/material';
 
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
-  styleUrls: ['./users.component.scss'],
+  styleUrls: ['./users.component.scss']
 })
 export class UsersComponent implements OnInit {
-  componentClass = EditUserComponent;
-  registeredUsers: Observable<any[]>;
-  users;
-
+  @Input() usersData$: Observable<any>;
+  faUser = faUser;
+  componentTitle = 'Review Team Member';
+  componentClass = UserFormComponent;
   displayObject = {
-    'userId': false,
-    'firstName': 'First Name',
-    'lastName': true,
-    'orgName': false,
-    'isActive': false,
-    'createdOn': false,
-    'createdBy': false,
-    'lastUpdatedOn': false,
-    'lastUpdatedBy': false,
-    'roleName': true,
-    'userType': false,
-    'supplierName': false,
-    'supplierCode': false,
-    'team': false,
-    'technology': false,
-    'company': false,
-    'email': false
-  };
-
-  constructor(private userAPI: UserAPI) {
-    // this.registeredUsers = this.userAPI.getAllUsers();
-    this.registeredUsers = of(testUsers);
+    userId: false,
+    firstName: "First Name",
+    lastName: "Last Name",
+    org: false,
+    isActive: false,
+    createdOn: false,
+    createdBy: false,
+    lastUpdatedOn: false,
+    lastUpdatedBy: false,
+    supplierName: false,
+    team: true,
+    role: true,
+    userType: false,
+    supplier: false,
+    technology: true,
+    company: true,
+    email: false
   }
 
-  ngOnInit() {}
+  constructor(public dialog: MatDialog) { }
 
-  tableEvents(value: Event): void {
-    if (value) {
-      console.log(value);
+  ngOnInit() {
+
+  }
+
+  openDialog(obj: {}) {
+    const dialogRef = this.dialog.open(ModalComponent, {
+      data: { obj, componentClass: this.componentClass, componentTitle: this.componentTitle },
+    });
+    dialogRef.afterClosed().subscribe(data => {
+      console.log('persisting data', obj);
+    });
+  }
+  
+  tableEvents(e) {
+    console.log('TableEvent', e);
+    if(e.type === 'currentValue'){
+      this.openDialog(e.data);
     }
   }
 }

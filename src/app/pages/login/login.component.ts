@@ -48,13 +48,8 @@ export class LoginComponent implements OnInit {
           }
           return;
         }
-        this.checkMyAccess();
-        // if (this.userInTestTableValue === 'true') {
-          // this.router.navigate([resp.landingPage]);
+          this.router.navigate([resp.landingPage]);
 
-        // } else {
-        //   this.router.navigateByUrl('landing');
-        // }
       },
       errResponse => {
         switch (errResponse.status) {

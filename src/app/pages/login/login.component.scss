@@ -1,60 +1,111 @@
-input {
-  width: 100%;
-  margin: 10px 0;
-}
-
-.header {
-  margin-top: 80px;
-}
-
-.header p {
-  margin: 0;
-  font-size: 3em;
-}
-
-.header h1 {
-  font-size: 4.5em;
-  font-weight: 900;
-}
-
-.card {
-  padding: 10px 30px;
-  margin-top: 15px;
-  max-height: 200px;
+@import "../../../styles/theme/palette";
+form {
+  .inputs {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    input {
+      // FLEX
+      -webkit-order: 0;
+      -ms-flex-order: 0;
+      order: 0;
+      -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+      flex: 0 1 auto;
+      -webkit-align-self: auto;
+      -ms-flex-item-align: auto;
+      align-self: auto; // FORMATTING
+      margin: 10px 0;
+    }
+  }
+  button {
+    float: right;
+    background-color: $ULA-BLUE;
+    color: $white;
+  }
 }
 
 .welcome {
-  font-size: 3vw;
+  font-size: 2.5rem;
   @media only screen and (max-width: 600px) {
     font-size: 1.5rem;
   }
 }
 
-.title {
-  font-size: 4vw;
-  font-weight: 900;
-  @media only screen and (max-width: 600px) {
-    font-size: 2rem;
-    word-spacing: 100vw;
-    line-height: 2rem;
+.welcome-container {
+  padding: 8px;
+  .title {
+    font-size: 3.5vw;
+    font-weight: 900;
+    color: $ULA-BLUE;
+    text-shadow: 1px 1px 1px $black;
+    @media only screen and (max-width: 600px) {
+      font-size: 2rem;
+      word-spacing: 100vw;
+      line-height: 2rem;
+    }
   }
 }
 
 .container-fluid {
+  // FLEX
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch; // FORMATTING
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: calc(100vh - 90px - 3rem);
-  background-color: #fff;
-  background-image: url('../../../assets/images/schematic.jpg');
-  background-position: bottom right;
+  height: calc(100vh - 100px);
+  background-image: url('../../../assets/images/ULA_Vector-Abstraction_BLUR.png');
+  background-position: 50% 90%;
   background-repeat: no-repeat;
-  background-size: calc(70vw);
-  @media only screen and (max-width: 800px) {
-    background-size: 560px;
-  }
-  @media only screen and (min-width: 1500px) {
-    background-size: 1050px;
+  background-size: 106% 40%;
+  .center {
+    // FLEX
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 0 0;
+    -ms-flex: 0 0 0;
+    flex: 0 0 0;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center; // FORMATTING
+    max-width: 360px;
+    background-color: #ffffffa4;
+    padding: 20px;
+    border-radius: 2px;
+    margin-bottom: 20vh;
   }
 }

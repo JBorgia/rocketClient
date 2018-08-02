@@ -4,12 +4,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { ModalComponent } from './modal.component';
 import { ModalDirective } from './modal.directive';
-import { EditUserComponent } from '@pages/admin/users/edit-user/edit-user.component';
+import { EditComponent } from '@components/edit/edit.component';
+import { UserFormComponent } from '@forms/user-form/user-form.component';
+import { AppFormModule } from '@forms/app-form.module';
 
 @NgModule({
-  declarations: [ModalComponent, ModalDirective, EditUserComponent],
-  imports: [CommonModule, FormsModule, ReactiveFormsModule],
+  declarations: [ModalComponent, ModalDirective, EditComponent],
+  imports: [AppFormModule, CommonModule, FormsModule, ReactiveFormsModule,],
   exports: [ModalComponent, ModalDirective],
-  entryComponents: [ModalComponent, EditUserComponent],
+  entryComponents: [ModalComponent, EditComponent, UserFormComponent],
 })
-export class ModalModule {}
+export class ModalModule { }

@@ -1,11 +1,10 @@
 <div flex class="flex-container">
   <div class="flex-item">
-      <app-card isCollapsible="true">
+    <app-card isCollapsible="true">
       <div title>Reviews
       </div>
-      <app-flex-table 
-        [arrayObjects]="reviewData"
-        [editIn]="'MODAL'"
+      <app-flex-table
+        [arrayObjects]="reviewData" 
         (outEvent)="tableEvents($event)">
       </app-flex-table>
     </app-card>
