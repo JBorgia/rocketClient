@@ -1,16 +1,16 @@
 <mat-form-field  class="full-width margin-top" [formGroup]="group">
-    <mat-chip-list #chipList>
+    <mat-chip-list #chipList
+    [formControlName]="field.name">
       <mat-chip
-        *ngFor="let option of selectedOptions"
+        *ngFor="let item of field.value"
         [selectable]="selectable"
         [removable]="removable"
-        (removed)="remove(option)">
-        {{option}}
+        (removed)="remove(item)">
+        {{item.name}}
         <fa-icon matChipRemove [icon]="faIcon"></fa-icon>
       </mat-chip>
       <input
         [placeholder]="field.label"
-        [formControlName]="field.name"
         #optionInput
         [formControl]="formCtrl"
         [matAutocomplete]="auto"
@@ -20,8 +20,8 @@
         (matChipInputTokenEnd)="add($event)">
     </mat-chip-list>
     <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
-      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-        {{option}}
+      <mat-option *ngFor="let item of filteredOptions | async" [value]="item.value || item.name">
+        {{item.name}}
       </mat-option>
     </mat-autocomplete>
   </mat-form-field>

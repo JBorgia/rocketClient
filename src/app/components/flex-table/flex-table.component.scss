@@ -41,6 +41,9 @@ span {
     &:nth-last-child(1) {
       max-width: 150px;
     }
+    &:hover {
+      cursor: pointer;
+    }
   }
   thead {
     .sorted {
@@ -160,6 +163,8 @@ span {
   }
   .right-addon .icon {
     right: 0;
+    right: -5px;
+    top: 3px;
   }
   nav {
     margin: 0 10px;

@@ -6,9 +6,8 @@ import { map } from 'rxjs/operators';
 import { Injectable, Inject } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { LoginInfoInStorage } from '@services/api/userAPI.service';
-import { UserService } from '@services/user.service';
-import { AuthenticationAPI } from '@services/api/authenticationAPI.service';
+import { LoginInfoInStorage, AuthenticationService } from '@services/authentication.service';
+import { UserAPI } from '@services/api/userAPI.service';
 
 export interface LoginRequestParam {
   username: string;
@@ -17,12 +16,14 @@ export interface LoginRequestParam {
 
 @Injectable()
 export class LoginService {
-  public landingPage = '/dashboard';
+  public landingPage = '/dynamic/dashboard';
+  currentUserArsData;
   constructor(
     private router: Router,
-    private userInfoService: UserService,
-    private authenticationAPI: AuthenticationAPI
-  ) {}
+    private userAPI: UserAPI,
+    private authenticationService: AuthenticationService,
+  ) {
+  }
 
   getToken(username: string, password: string): Observable<any> {
     const bodyData: LoginRequestParam = {
@@ -32,42 +33,39 @@ export class LoginService {
 
     let loginInfoReturn: LoginInfoInStorage;
 
-    return this.authenticationAPI.authGets('', null, bodyData).pipe(
-      map(
-        jsonResp => {
-          console.log(jsonResp);
-          if (jsonResp !== undefined && jsonResp !== null) {
-            // Create a success object that we want to send back to login page
-            loginInfoReturn = {
-              success: true,
-              message: jsonResp.operationMessage,
-              landingPage: this.landingPage,
-              user: {
-                fullName: jsonResp.principal.fullName,
-                email: jsonResp.principal.email,
-                displayName: jsonResp.name,
-                token: jsonResp.details.sessionId,
-                jwt: jsonResp.principal.jwt,
-                employeeId: jsonResp.principal.employeeId,
-              },
-            };
-            // store username and jwt token in session storage to keep user logged in between page refreshes
-            this.userInfoService.storeUserInfo(
-              JSON.stringify(loginInfoReturn.user)
-            );
-          } else {
-            // Create a faliure object that we want to send back to login page
-            loginInfoReturn = {
-              success: false,
-              message: jsonResp.msgDesc,
-              landingPage: '/login',
-            };
-          }
-          // loginDataSubject.next(loginInfoReturn);
-          // return loginDataSubject;
-          // return Observable.of(loginInfoReturn);
-          return loginInfoReturn;
-        },
+    return this.authenticationService.authGets('', null, bodyData).pipe(
+      map(jsonResp => {
+        if (jsonResp !== undefined && jsonResp !== null) {
+          // Create a success object that we want to send back to login page
+          loginInfoReturn = {
+            success: true,
+            message: jsonResp.operationMessage,
+            landingPage: this.landingPage,
+            user: {
+              fullName: jsonResp.principal.fullName,
+              email: jsonResp.principal.email,
+              displayName: jsonResp.name,
+              token: jsonResp.details.sessionId,
+              jwt: jsonResp.principal.jwt,
+              employeeId: jsonResp.principal.employeeId,
+            },
+          };
+          // store username and jwt token in session storage to keep user logged in between page refreshes
+          this.authenticationService.storeUserInfo(JSON.stringify(loginInfoReturn.user));
+
+        } else {
+          // Create a faliure object that we want to send back to login page
+          loginInfoReturn = {
+            success: false,
+            message: jsonResp.msgDesc,
+            landingPage: '/dynamic/dashboard', //  we shouldn't send users here on fail.
+          };
+        }
+        // loginDataSubject.next(loginInfoReturn);
+        // return loginDataSubject;
+        // return Observable.of(loginInfoReturn);
+        return loginInfoReturn;
+      },
         err => {
           console.log(err);
           loginInfoReturn = {
@@ -85,7 +83,7 @@ export class LoginService {
 
   logout(navigatetoLogout = true): void {
     // clear token remove user from local storage to log user out
-    this.userInfoService.removeUserInfo();
+    this.authenticationService.removeUserInfo();
     if (navigatetoLogout) {
       this.router.navigate(['/']);
     }

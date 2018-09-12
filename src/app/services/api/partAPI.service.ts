@@ -3,10 +3,14 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { Part } from '@models/ars-app.models';
+import { tap, map } from 'rxjs/operators';
 
 @Injectable()
 export class PartAPI {
     part = {};
+    userParts$: Observable<any>;
+    documentParts$: Observable<any>;
+    page: number;
     constructor(private http: HttpClient) { }
 
     getAll(): Observable<any> {
@@ -15,6 +19,36 @@ export class PartAPI {
 
     getPart(id: string): Observable<any> {
         return this.http.get(`http://localhost:8080/parts/${id}`);
+    }
+
+    getPaginatedParts(page, pageSize): Observable<any> {
+        return this.http.get(`http://localhost:8080/parts/pagination/${page}/${pageSize}`);
+    }
+
+    getPaginatedPartsByUser(userId, page, pageSize): Observable<any> {
+        return this.http.get(`http://localhost:8080/parts/pagination/${userId}/${page}/${pageSize}`).pipe(
+            // tap(res => {
+            //     console.log('response from getPaginatedPartByUser:', res);
+
+            // }),
+            map((res: any) => res.content)
+        );
+    }
+
+    getPartsByUser(id: number): Observable<any> {
+        if (this.userParts$) {
+            return this.userParts$;
+        }
+        this.userParts$ = this.http.get(`http://localhost:8080/parts/user/${id}`);
+        return this.userParts$;
+    }
+
+    getPartByDocument(id: string): Observable<any> {
+        if (this.documentParts$) {
+            return this.documentParts$;
+        }
+        this.documentParts$ = this.http.get(`http://localhost:8080/parts/document/${id}`);
+        return this.documentParts$;
     }
 
     editPart(id, data: object) {

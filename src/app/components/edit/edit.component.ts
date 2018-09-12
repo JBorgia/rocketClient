@@ -8,14 +8,15 @@ import { ModalInterface } from '@components/modal/modal.interface';
 })
 export class EditComponent implements OnInit, ModalInterface {
   @Input() data: any;
-  @Input() title: string;
+  title: string;
   keys;
   activeObjEditing: EventTarget;
   editedValue: string;
   constructor() {}
 
   ngOnInit() {
-    this.keys = this.getUniqueKeys(this.data);
+    this.keys = this.getUniqueKeys(this.data.obj);
+    this.title = this.data.title;
   }
 
   getUniqueKeys(obj = {}): string[] {
@@ -79,6 +80,6 @@ export class EditComponent implements OnInit, ModalInterface {
   }
 
   get class() {
-    return EditComponent;
+    return this;
   }
 }

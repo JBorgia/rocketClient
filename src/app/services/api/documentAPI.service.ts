@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { Observable, of, throwError } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 import { tap, catchError } from 'rxjs/operators';
 
 // import { Document } from '@models/document.model';
 
-import { AuthenticationAPI } from '@services/api//authenticationAPI.service';
+import { AuthenticationService } from '@services/authentication.service';
 
 import { arsServiceBaseUrl } from '@environments/environment';
 
@@ -14,11 +14,25 @@ import { arsServiceBaseUrl } from '@environments/environment';
 export class DocumentAPI {
 
     constructor(
-        private authenticationAPI: AuthenticationAPI,
+        private authenticationService: AuthenticationService,
         private http: HttpClient) { }
-    
+
+    getById(id): Observable<Document> {
+        return this.http.get<Document>(`${arsServiceBaseUrl}documents/${id}`, { headers: this.authenticationService.apiGetHeaders() }).pipe(
+            tap(cursor => console.log(`getById (document) returned:`, cursor)),
+            catchError(this.handleError)
+        );
+    }
+
+    getPaginatedAll(page): Observable<Document[]> {
+        return this.http.get<Document[]>(`${arsServiceBaseUrl}documents/all/${page}`, { headers: this.authenticationService.apiGetHeaders() }).pipe(
+            tap(cursor => console.log(`getAllDocuments returned:`, cursor)),
+            catchError(this.handleError)
+        );
+    }
+
     getDocumentsByPart(partId: string): Observable<Document[]> {
-        return this.http.get<Document[]>(`${arsServiceBaseUrl}documents/part/${partId}`, { headers: this.authenticationAPI.apiGetHeaders() }).pipe(
+        return this.http.get<Document[]>(`${arsServiceBaseUrl}documents/part/${partId}`, { headers: this.authenticationService.apiGetHeaders() }).pipe(
             tap(cursor => console.log(`getDocumentsByPart returned:`, cursor)),
             catchError(this.handleError)
         );

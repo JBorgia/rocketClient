@@ -2,11 +2,13 @@
   display: inline-flex;
   .divider {
     font-size: 24px;
-    transform: translateY(-2px);
+    transform: translateY(-4px);
   }
   .details{
-    font-size: 20px;
-    transform: translateY(4px);
+    // font-size: 20px;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
     display: inline-flex;
     fa-icon {
       margin: 0 2px 0 12px;

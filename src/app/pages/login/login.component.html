@@ -5,15 +5,15 @@
       <div class="title">Automated Review System</div>
     </div>
     <app-card>
-      <form class="s-login-pg-form" name="form" (ngSubmit)="login()" #f="ngForm" novalidate>
+      <form name="form" (ngSubmit)="login()" #loginForm="ngForm" novalidate>
         <div class="inputs">
-          <input class="has-danger" type="text" placeholder="AD Username" name="username" [(ngModel)]="model.username" #username="ngModel"
+          <input type="text" placeholder="AD Username" name="username" [(ngModel)]="model.username" #username="ngModel"
             required/>
           <input type="password" placeholder="Password " name="password" [(ngModel)]="model.password" #password="ngModel" required/>
         </div>
-        <button mat-button type="submit" class="submit-btn">LOG IN</button>
+        <button mat-button type="submit">LOG IN</button>
       </form>
-      <div class="s-login-pg-foot">
+      <div>
         <div *ngIf="errMsg" style="color:indianred; font-weight: bold">{{errMsg}}</div>
       </div>
     </app-card>

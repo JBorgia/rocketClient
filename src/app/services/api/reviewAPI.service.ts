@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 
 
 
-import { Review, ReviewUser } from '@models/test.model';
+import { ArsUser } from '@models/ars-app.models';
 
 @Injectable()
 export class ReviewAPI {
@@ -16,11 +16,11 @@ export class ReviewAPI {
     }
 
     editReview(id, data: object) {
-        return this.http.put<Review>('http://localhost:8080/reviews/' + id, data);
+        return this.http.put<any>('http://localhost:8080/reviews/' + id, data);
     }
 
-    saveReview(review: Review): Observable<Review> {
-        return this.http.post<Review>('http://localhost:8080/reviews', review);
+    saveReview(review: any): Observable<any> {
+        return this.http.post<any>('http://localhost:8080/reviews', review);
     }
 
     deleteReview(id, data: object): Observable<any> {
@@ -33,8 +33,8 @@ export class ReviewAPI {
         return this.http.get('http://localhost:8080/reviewUsers');
     }
 
-    saveReviewUser(user: ReviewUser): Observable<ReviewUser> {
-        return this.http.post<ReviewUser>('http://localhost:8080/reviewUsers/1', user);
+    saveReviewUser(user: ArsUser): Observable<ArsUser> {
+        return this.http.post<ArsUser>('http://localhost:8080/reviewUsers/1', user);
     }
 
     getAllReviewDetails(): Observable<any> {
@@ -42,7 +42,7 @@ export class ReviewAPI {
     }
 
     editReviewUser( data: object) {
-        return this.http.post<ReviewUser>('http://localhost:8080/reviewUsers/1', data);
+        return this.http.post<ArsUser>('http://localhost:8080/reviewUsers/1', data);
     }
 
   // editReview(review: Review): Observable<string> {

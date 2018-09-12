@@ -51,16 +51,39 @@ export class ArsUser {
 
 export class Role {
   roleName: string;
-  description?: string;
+  descr?: string;
 }
 
 export class UserType {
   userType: string;
-  description?: string;
+  descr?: string;
+}
+
+export class Org {
+  orgName: string;
+  descr?: string;
 }
 
 export class VehicleSystem {
-  vehicleSystem?: string;
+  vehicleSystem: string;
+  descr?: string;
+}
+
+export class Supplier {
+  supplierCode: string;
+  supplierName: string;
+  city: string;
+  zip: string;
+  cageCode: string;
+  sourceSystem: string;
+  descr?: string;
+}
+
+export class Mission {
+  missionName: string;
+  tailNo: string;
+  flownOnDate: Date;
+  projectedLaunchDate: Date;
 }
 
 export class Part {
@@ -238,6 +261,190 @@ export class WhiteboardIssue {
   createdByLastName: string;
   category: string;
   issueSeq: number;
+  whiteboardDocs?: WhiteboardDoc[]; // different form
+  whiteboardNotes?: WhiteboardNote[]; // different form
+  rids?: RID[]; // different form
 }
 
-export class WhiteboardStatusLkup { }
+export class WhiteboardDoc {
+  constructor(
+    id: number,
+    whiteboardIssue: string,
+    document: string,
+    createdOn: Date,
+    createdBy: Date,
+    pages?: number,
+  ) {
+    this.id = id;
+    this.whiteboardIssue = whiteboardIssue;
+    this.document = document;
+    this.createdOn = createdOn;
+    this.createdBy = createdBy;
+    this.pages = pages;
+  }
+  id: number;
+  whiteboardIssue: string;
+  document: string;
+  createdOn: Date;
+  createdBy: Date;
+  pages?: number;
+}
+
+export class WhiteboardNote {
+  constructor(
+    id: number,
+    whiteboardIssue: string,
+    note: string,
+    createdOn: Date,
+    createdBy: Date,
+    lastUpdatedOn: Date,
+    lastUpdatedBy: Date,
+  ) {
+    this.id = id;
+    this.whiteboardIssue = whiteboardIssue;
+    this.note = note;
+    this.createdOn = createdOn;
+    this.createdBy = createdBy;
+    this.lastUpdatedOn = lastUpdatedOn;
+    this.lastUpdatedBy = lastUpdatedBy;
+  }
+  id: number;
+  whiteboardIssue: string;
+  note: string;
+  createdOn: Date;
+  createdBy: Date;
+  lastUpdatedOn: Date;
+  lastUpdatedBy: Date;
+
+}
+
+export class RID {
+  constructor(
+    ridId: number,
+    partId: number,
+    title: string,
+    descr: string,
+    ridridStatusLkup: ridridStatusLku,
+    lead: string,
+    closedOn: Date,
+    closedBy: Date,
+    createdOn: Date,
+    createdBy: Date,
+    lastUpdatedOn: Date,
+    lastUpdatedBy: Date,
+    category: RIDCategoryLkup,
+    whiteboardIssues: WhiteboardIssue,
+    ridNotes: RIDNote,
+  ) {
+    this.ridId = ridId;
+    this.partId = partId;
+    this.title = title;
+    this.descr = descr;
+    this.ridStatusLkup = this.ridStatusLkup;
+    this.lead = lead;
+    this.closedOn = closedOn;
+    this.closedBy = closedBy;
+    this.createdOn = createdOn;
+    this.createdBy = createdBy;
+    this.lastUpdatedOn = lastUpdatedOn;
+    this.lastUpdatedBy = lastUpdatedBy;
+    this.category = category;
+    this.whiteboardIssues = whiteboardIssues;
+    this.ridNotes = ridNotes;
+  }
+  ridId: number;
+  partId: number;
+  title: string;
+  descr: string;
+  ridStatusLkup: ridridStatusLku;
+  lead: string;
+  closedOn: Date;
+  closedBy: Date;
+  createdOn: Date;
+  createdBy: Date;
+  lastUpdatedOn: Date;
+  lastUpdatedBy: Date;
+  category: RIDCategoryLkup;
+  whiteboardIssues: WhiteboardIssue;
+  ridNotes: RIDNote;
+}
+
+export class WhiteboardStatusLkup {
+  constructor(
+    statusId: number,
+    descr: string,
+    whiteboardIssues: WhiteboardIssue,
+  ) {
+    this.statusId = statusId;
+    this.descr = descr;
+    this.whiteboardIssues = whiteboardIssues;
+  }
+  statusId: number;
+  descr: string;
+  whiteboardIssues: WhiteboardIssue;
+}
+
+export class RIDNote {
+  constructor(
+    id: number,
+    rids: RID,
+    note: string,
+    createdOn: Date,
+    createdBy: string,
+    lastUpdatedOn: Date,
+    lastUpdatedBy: string,
+  ) {
+    this.id = id;
+    this.rids = rids;
+    this.note = note;
+    this.createdOn = createdOn;
+    this.createdBy = createdBy;
+    this.lastUpdatedOn = lastUpdatedOn;
+    this.lastUpdatedBy = lastUpdatedBy;
+
+  }
+  id: number;
+  rids: RID;
+  note: string;
+  createdOn: Date;
+  createdBy: string;
+  lastUpdatedOn: Date;
+  lastUpdatedBy: string;
+}
+
+export class ridridStatusLku {
+  constructor(
+    statusId: string,
+    descr: string,
+    rids: RID,
+  ) {
+    this.statusId = statusId;
+    this.descr = descr;
+    this.rids = rids;
+  }
+  statusId: string;
+  descr: string;
+  rids: RID;
+}
+
+export class RIDCategoryLkup {
+  constructor(
+    category: string,
+    descr: string,
+    rids: RID,
+  ) {
+    this.category = category;
+    this.descr = descr;
+    this.rids = rids;
+  }
+  category: string;
+  descr: string;
+  rids: RID;
+}
+
+export class Message {
+  subject: string;
+  recipients: string[];
+  message: string;
+  createdBy: ArsUser[];
+}

@@ -15,28 +15,13 @@ const routes: Routes = [
         loadChildren: '@pages/landing/landing.module#LandingModule',
     },
     {
-        path: 'dashboard',
-        loadChildren: '@pages/dashboard/dashboard.module#DashboardModule',
-        //   canActivate: [CanActivateViaAuthGuard],
-    },
-    {
         path: 'reviews',
         loadChildren: '@pages/reviews/reviews.module#ReviewsModule',
         //   canActivate: [CanActivateViaAuthGuard],
     },
     {
-        path: 'part-review',
-        loadChildren: '@pages/part-review/part-review.module#PartReviewModule',
-        //   canActivate: [CanActivateViaAuthGuard],
-    },
-    {
-        path: 'reports',
-        loadChildren: '@pages/reports/reports.module#ReportsModule',
-        //   canActivate: [CanActivateViaAuthGuard],
-    },
-    {
-        path: 'admin',
-        loadChildren: '@pages/admin/admin.module#AdminModule',
+        path: 'dynamic',
+        loadChildren: '@pages/dynamic/dynamic.module#DynamicModule',
         //   canActivate: [CanActivateViaAuthGuard],
     },
     { path: 'whiteboard', component: WhiteboardComponent },

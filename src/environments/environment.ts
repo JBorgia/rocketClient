@@ -7,7 +7,6 @@ export const environment = {
   production: false
 };
 
-// export const arsServiceBaseUrl = 'http://seadta.dnvr.ulalaunch.com:8080/';
 
 export const authBaseUrl = 'http://seadta.dnvr.ulalaunch.com:9999';
 export const arsServiceBaseUrl = 'http://localhost:8080/';

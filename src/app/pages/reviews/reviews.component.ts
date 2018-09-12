@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { REVIEW_TEST_DATA } from './test-data';
-// import { AuthenticationAPI } from '@services/api-request.service';
-import { Observable, of } from 'rxjs';
+// import { AuthenticationService } from '@services/api-request.service';
+import { Observable } from 'rxjs';
 import { EditComponent } from '@components/edit/edit.component';
 
 @Component({
@@ -20,7 +19,6 @@ export class ReviewsComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    this.reviewData = of(REVIEW_TEST_DATA);
     // this.getReviews();
   }
 

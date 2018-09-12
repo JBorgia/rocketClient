@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '@services/user.service';
-import { WhiteboardAPI } from '@services/index';
+import { WhiteboardIssueAPI } from '@services/index';
 
-import { Review, Whiteboard } from '@models/test.model';
 @Component({
   selector: 'app-whiteboard',
   templateUrl: './Whiteboard.component.html',
@@ -12,11 +10,11 @@ export class WhiteboardComponent implements OnInit {
   whiteboards: Array<any>;
 
   constructor(
-    private whiteboardAPI: WhiteboardAPI
+    private whiteboardAPI: WhiteboardIssueAPI
   ) { }
 
   ngOnInit() {
-    this.whiteboardAPI.getAllWhiteboard().subscribe(data => {
+    this.whiteboardAPI.getAll().subscribe(data => {
       this.whiteboards = data;
       console.log(this.whiteboards, 'here');
 

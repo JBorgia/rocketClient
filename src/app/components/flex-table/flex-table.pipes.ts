@@ -1,4 +1,4 @@
-import { Pipe, Injectable, PipeTransform } from '@angular/core';
+import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'filterBy',

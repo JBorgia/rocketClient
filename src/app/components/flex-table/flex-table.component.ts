@@ -29,7 +29,7 @@ export class FlexTableComponent implements OnInit {
    * an array of objects. The objects in the array must be flat
    * (no nested object structures)
    */
-  @Input() arrayObjects: Observable<any>;
+  @Input() arrayObjects: Observable<any[]>;
 
   /**
    * Set displayObject keyvalue to false to hide the column.
@@ -69,13 +69,15 @@ export class FlexTableComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.tableData = this.arrayObjects.pipe(
-      tap((val: any) => {
-        this.headerData = this.getUniqueKeys(val);
-        this.order = this.headerData[0];
-        this.outEvent.emit({ type: 'init', data: 'none' });
-      })
-    );
+    if(this.arrayObjects){
+      this.tableData = this.arrayObjects.pipe(
+        tap((val: any) => {
+          this.headerData = this.getUniqueKeys(val);
+          this.order = this.headerData[0];
+          this.outEvent.emit({ type: 'init', data: 'none' });
+        })
+      );
+    }
   }
 
   getUniqueKeys(obj = []): string[] {
@@ -197,7 +199,7 @@ export class FlexTableComponent implements OnInit {
   //   let objId = obj ? obj.partId : null;
   //   console.log('objId: ' + objId);
   //   if (this.pageRoute && objId) {
-  //     this.router.navigate(['/part-review', objId]);
+  //     this.router.navigate(['/review', objId]);
   //   } else {
   //     console.error('ERROR: this.pageRoute is NULL. No forwarding route was set.');
   //   }

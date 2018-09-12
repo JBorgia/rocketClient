@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { UserService } from '@services/user.service';
+import { AuthenticationService } from '@services/authentication.service';
 import { LoginService } from '@services/login.service';
 import { Router, CanActivate, CanActivateChild, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 
@@ -9,7 +9,7 @@ export class AuthGuard implements CanActivate, CanActivateChild {
     constructor(
         private router: Router,
         private loginService: LoginService,
-        private userInfoService: UserService
+        private authenticationService: AuthenticationService
     ) { }
 
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
@@ -23,7 +23,7 @@ export class AuthGuard implements CanActivate, CanActivateChild {
     }
 
     checkLogin(url: string): boolean {
-        if (this.userInfoService.isLoggedIn()) {
+        if (this.authenticationService.isLoggedIn()) {
             return true;
         }
         console.log('User is not logged - This routing guard prvents redirection to any routes that needs logging.');

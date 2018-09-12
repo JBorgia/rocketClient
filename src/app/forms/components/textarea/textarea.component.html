@@ -7,8 +7,8 @@
         [type]="field.inputType"
         cdkTextareaAutosize
         #autosize="cdkTextareaAutosize"
-        cdkAutosizeMinRows="2"
-        cdkAutosizeMaxRows="5">
+        [cdkAutosizeMinRows]="field.matConfig ? field.matConfig.cdkAutosizeMinRows : 2"
+        [cdkAutosizeMaxRows]="field.matConfig ? field.matConfig.cdkAutosizeMaxRows : 5">
     </textarea>
     <ng-container *ngFor="let validation of field.validations;" ngProjectAs="mat-error">
       <mat-error *ngIf="group.get(field.name).hasError(validation.name)">{{validation.message}}</mat-error>

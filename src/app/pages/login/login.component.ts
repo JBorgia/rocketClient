@@ -1,13 +1,11 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
-import { LoginService } from '@services/login.service';
-import { AuthenticationAPI } from '@services/api/authenticationAPI.service';
-
 import { AuthGuard } from '@guards/auth.guard';
-import { UserService } from '@services/user.service';
-
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { AuthenticationService } from '@services/authentication.service';
+import { UserAPI } from '@services/index';
+import { LoginService } from '@services/login.service';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-login',
@@ -21,17 +19,15 @@ export class LoginComponent implements OnInit {
   constructor(
     private router: Router,
     private loginService: LoginService,
-    private authenticationAPI: AuthenticationAPI,
-    public auth: UserService,
+    private authenticationService: AuthenticationService,
+    public userAPI: UserAPI,
     public Authinacate: AuthGuard,
     private http: HttpClient,
   ) { }
-  checkMyAccess = this.authenticationAPI.validateUserInTestTable;
-  userInfo = this.auth.getUserInfo();
-
+  checkMyAccess = this.authenticationService.validateUserInTestTable;
+  userInfo = this.authenticationService.getUserInfo();
   userInTestTableValue = '';
   userAccessChecked = false;
-
 
   ngOnInit() {
     // reset login status
@@ -41,35 +37,33 @@ export class LoginComponent implements OnInit {
   login() {
     this.loginService.getToken(this.model.username, this.model.password)
       .subscribe(resp => {
-        console.log('call this shit', this.userInTestTableValue);
         if (resp.user === undefined || resp.user.token === undefined || resp.user.token === 'INVALID') {
           if (!Array.isArray(resp)) {
             this.errMsg = 'Username or password is incorrect ';
           }
           return;
         }
-          this.router.navigate([resp.landingPage]);
-
+        this.router.navigate([resp.landingPage]);
       },
-      errResponse => {
-        switch (errResponse.status) {
-          case 401:
-            this.errMsg = 'Username or password is incorrect';
-            console.log(this.errMsg);
-            break;
-          case 404:
-            this.errMsg = 'Service not found';
-            break;
-          case 408:
-            this.errMsg = 'Request Timedout';
-            break;
-          case 500:
-            this.errMsg = 'Internal Server Error';
-            break;
-          default:
-            this.errMsg = 'Login failed: Make sure Username and Password are correct and try again.';
+        errResponse => {
+          switch (errResponse.status) {
+            case 401:
+              this.errMsg = 'Username or password is incorrect';
+              console.log(this.errMsg);
+              break;
+            case 404:
+              this.errMsg = 'Service not found';
+              break;
+            case 408:
+              this.errMsg = 'Request Timedout';
+              break;
+            case 500:
+              this.errMsg = 'Internal Server Error';
+              break;
+            default:
+              this.errMsg = 'Login failed: Make sure Username and Password are correct and try again.';
+          }
         }
-      }
       );
   }
 

@@ -1,61 +1,50 @@
-import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { RoutingModule } from '@app/router/routing.module';
-import { WhiteboardAPI } from '@app/services';
-import { DropdownComponent } from '@components/dropdown/dropdown.component';
 import { FooterComponent } from '@components/navigation/footer/footer.component';
 import { HeaderModule } from '@components/navigation/header/header.module';
 import { ToastComponent } from '@components/toast/toast.component';
+import { FormModule } from '@forms/form.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AuthGuard } from '@guards/auth.guard';
+import { DynamicModule } from '@pages/dynamic/dynamic.module';
 import { WhiteboardComponent } from '@pages/whiteboard/whiteboard.component';
+import { DocumentAPI, PartAPI, ReviewAPI, UserAPI, UserLkupAPI, WhiteboardIssueAPI, SupplierLkupAPI, MissionLkupAPI } from '@services/index.ts';
 import { AdminService } from '@services/admin.service';
-import { AppFormModule } from '@forms/app-form.module';
-import {
-  AuthenticationAPI,
-  DocumentAPI,
-  PartAPI,
-  ReviewAPI,
-  UserAPI,
-  UserPartAPI
-  } from '@services/index';
+import { AuthenticationService } from '@services/authentication.service';
 import { LoginService } from '@services/login.service';
 import { NavbarService } from '@services/navbar.service';
 import { PaginationService } from '@services/pagination.service';
-import { UserService } from '@services/user.service';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
-// import { VirtualScrollModule } from '@components/odvs/virtualScroll.module';
+import { AppComponent } from './app.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    DropdownComponent,
     FooterComponent,
-    // RidReportComponent,
-    // SupplierReviewStatusComponent,
     ToastComponent,
     WhiteboardComponent,
   ],
   imports: [
     // external imports:
-    HeaderModule,
+    FormModule,
     BrowserAnimationsModule,
+    FontAwesomeModule,
     FormsModule,
+    HeaderModule,
     HttpClientModule,
     ReactiveFormsModule,
     RouterModule,
     RoutingModule,
-    AppFormModule,
-    FontAwesomeModule,
-    // VirtualScrollModule,
+    DynamicModule,
   ],
   providers: [
     AdminService,
-    AuthenticationAPI,
+    AuthenticationService,
     AuthGuard,
     DocumentAPI,
     LoginService,
@@ -64,9 +53,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     PartAPI,
     ReviewAPI,
     UserAPI,
-    UserPartAPI,
-    UserService,
-    WhiteboardAPI,
+    WhiteboardIssueAPI,
+    UserLkupAPI,
+    SupplierLkupAPI,
+    MissionLkupAPI,
   ],
   bootstrap: [AppComponent],
 })

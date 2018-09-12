@@ -1,132 +1,83 @@
-import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { Observable, of, throwError } from 'rxjs';
-import { tap, catchError } from 'rxjs/operators';
-
-import { User } from '@models/user.model';
-
-import { AuthenticationAPI } from '@services/api//authenticationAPI.service';
-
+import { Injectable } from '@angular/core';
 import { arsServiceBaseUrl } from '@environments/environment';
+import { ArsUser, Role, UserType, VehicleSystem, Org, Supplier } from '@models/ars-app.models';
+import { AuthenticationService } from '@services/authentication.service';
+import { Observable, throwError } from 'rxjs';
+import { catchError, tap } from 'rxjs/operators';
 
-export interface UserInStorage {
-    fullName: string;
-    email: string;
-    displayName: string;
-    token: string;
-    jwt: string;
-    employeeId?: number;
-}
-
-export interface LoginInfoInStorage {
-    success: boolean;
-    message: string;
-    landingPage: string;
-    user?: UserInStorage;
-}
 
 @Injectable()
 export class UserAPI {
-    public currentUserKey: 'currentUser';
-    public storage: Storage = sessionStorage; // <--- you may switch between sessionStorage or LocalStrage (only one place to change)
 
     constructor(
-        private authenticationAPI: AuthenticationAPI,
-        private http: HttpClient) { }
+        private authenticationService: AuthenticationService,
+        private http: HttpClient
+    ) {}
 
-    getAll(): Observable<User[]> {
-        return this.http.get<User[]>(`${arsServiceBaseUrl}arsUsers`, { headers: this.authenticationAPI.apiGetHeaders() }).pipe(
+    getUser(id): Observable<ArsUser> {
+        return this.http.get<ArsUser>(`${arsServiceBaseUrl}arsUsers/${id}`, { headers: this.authenticationService.apiGetHeaders() }).pipe(
+            tap(cursor => console.log(`getUser returned:`, cursor)),
+            catchError(this.handleError)
+        );
+    }
+
+    getAll(): Observable<ArsUser[]> {
+        return this.http.get<ArsUser[]>(`${arsServiceBaseUrl}arsUsers`, { headers: this.authenticationService.apiGetHeaders() }).pipe(
             tap(cursor => console.log(`getAllUsers returned:`, cursor)),
             catchError(this.handleError)
         );
     }
-    
-    getUsersByPart(partId: string): Observable<User[]> {
-        return this.http.get<User[]>(`${arsServiceBaseUrl}arsUsers/part/${partId}`, { headers: this.authenticationAPI.apiGetHeaders() }).pipe(
+
+    getUsersByPart(id: string): Observable<ArsUser[]> {
+        return this.http.get<ArsUser[]>(`${arsServiceBaseUrl}arsUsers/part/${id}`, { headers: this.authenticationService.apiGetHeaders() }).pipe(
             tap(cursor => console.log(`getUsersByPart returned:`, cursor)),
             catchError(this.handleError)
         );
     }
 
-    saveUser(user: User): Observable<User> {
-        return this.http.post<User>(`${arsServiceBaseUrl}arsUsers`, user).pipe(
+    getUsersByDocument(id: string): Observable<ArsUser[]> {
+        return this.http.get<ArsUser[]>(`${arsServiceBaseUrl}arsUsers/document/${id}`, { headers: this.authenticationService.apiGetHeaders() }).pipe(
+            tap(cursor => console.log(`getUsersByDocument returned:`, cursor)),
+            catchError(this.handleError)
+        );
+    }
+
+    saveUser(user: ArsUser): Observable<ArsUser> {
+        return this.http.post<ArsUser>(`${arsServiceBaseUrl}arsUsers`, user).pipe(
             tap(cursor => console.log(`saveUser returned:`, cursor)),
             catchError(this.handleError)
         );
     }
 
-    // Store userinfo from session storage
-    storeUserInfo(userInfoString: string) {
-        this.storage.setItem(this.currentUserKey, userInfoString);
+    getRoles(): Observable<Role[]> {
+        return this.http.get<Role[]>(`${arsServiceBaseUrl}roles`, { headers: this.authenticationService.apiGetHeaders() }).pipe(
+            tap(cursor => console.log(`getRoles returned:`, cursor)),
+            catchError(this.handleError)
+        );
     }
 
-    // Remove userinfo from session storage
-    removeUserInfo() {
-        this.storage.removeItem(this.currentUserKey);
+    getTypes(): Observable<UserType[]> {
+        return this.http.get<UserType[]>(`${arsServiceBaseUrl}types`, { headers: this.authenticationService.apiGetHeaders() }).pipe(
+            tap(cursor => console.log(`getTypes returned:`, cursor)),
+            catchError(this.handleError)
+        );
     }
 
-    // Get userinfo from session storage
-    getUserInfo(): UserInStorage | null {
-        try {
-            const userInfoString: string = this.storage.getItem(this.currentUserKey);
-            if (userInfoString) {
-                const userObj: UserInStorage = JSON.parse(this.storage.getItem(this.currentUserKey));
-                return userObj;
-            } else {
-                return null;
-            }
-        } catch (e) {
-            return null;
-        }
+    getTechnologies(): Observable<VehicleSystem[]> {
+        return this.http.get<VehicleSystem[]>(`${arsServiceBaseUrl}vehicleSystemsLkup`, { headers: this.authenticationService.apiGetHeaders() }).pipe(
+            tap(cursor => console.log(`getTechnologiess returned:`, cursor)),
+            catchError(this.handleError)
+        );
     }
 
-    isLoggedIn(): boolean {
-        return this.storage.getItem(this.currentUserKey) ? true : false;
+    getOrganizations(): Observable<Org[]> {
+        return this.http.get<Org[]>(`${arsServiceBaseUrl}orgs`, { headers: this.authenticationService.apiGetHeaders() }).pipe(
+            tap(cursor => console.log(`getOrganizations returned:`, cursor)),
+            catchError(this.handleError)
+        );
     }
 
-    // Get User's Display name from session storage
-    getUserName(): string {
-        const userObj: UserInStorage = this.getUserInfo();
-        if (userObj !== null) {
-            // console.log(userObj.fullName);
-            return userObj.fullName;
-        }
-        return 'no-user';
-    }
-
-    // Get User's Display name from session storage
-    getUserEmail(): string {
-        const userObj: UserInStorage = this.getUserInfo();
-        if (userObj !== null) {
-            return userObj.email;
-        }
-        // console.log(userObj.email);
-        return 'no-user';
-    }
-
-    getStoredToken(): string | null {
-        const userObj: UserInStorage = this.getUserInfo();
-        if (userObj !== null) {
-            return userObj.token;
-        }
-        return null;
-    }
-
-    getJwtToken(): string | null {
-        const userObj: UserInStorage = this.getUserInfo();
-        if (userObj !== null) {
-            return userObj.jwt;
-        }
-        return null;
-    }
-
-    getEmployeeId(): number | null {
-        const userObj: UserInStorage = this.getUserInfo();
-        if (userObj !== null) {
-            return userObj.employeeId;
-        }
-        return null;
-    }
 
     private handleError(error: HttpErrorResponse) {
         if (error.error instanceof ErrorEvent) {

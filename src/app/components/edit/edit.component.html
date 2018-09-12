@@ -5,6 +5,6 @@
 }">
   <label>{{ key }}:</label>
   <div class="data" (dblclick)="editValue($event, key)">
-    <input type="text" value="{{ data[key] || '' }}" [attr.disabled]=true (keyup.enter)="editValue($event, key)">
+    <input type="text" value="{{ data.obj[key] || '' }}" [attr.disabled]=true (keyup.enter)="editValue($event, key)">
   </div>
 </div>

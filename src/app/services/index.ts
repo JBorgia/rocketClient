@@ -1,21 +1,23 @@
 
 import { ModuleWithProviders, NgModule } from '@angular/core';
 
-import { WhiteboardAPI } from '@services/api/whiteboardAPI.service';
+import { WhiteboardIssueAPI } from '@services/api/whiteboardIssueAPI.service';
 import { ReviewAPI } from '@services/api/reviewAPI.service';
 import { PartAPI } from '@services/api/partAPI.service';
 import { UserAPI } from '@services/api/userAPI.service';
 import { DocumentAPI } from '@services/api/documentAPI.service';
-import { AuthenticationAPI } from '@services/api/authenticationAPI.service';
-import { UserPartAPI } from '@services/api/userPartAPI.service';
+import { UserLkupAPI } from '@services/api/userLkupAPI.service';
+import { SupplierLkupAPI } from '@services/api/supplierLkupAPI.service';
+import { MissionLkupAPI } from '@services/api/missionLkupAPI.service';
 
-export * from '@services/api/whiteboardAPI.service';
+export * from '@services/api/whiteboardIssueAPI.service';
 export * from '@services/api/reviewAPI.service';
 export * from '@services/api/partAPI.service';
 export * from '@services/api/userAPI.service';
-export * from '@services/api/authenticationAPI.service';
 export * from '@services/api/documentAPI.service';
-export * from '@services/api/userPartAPI.service';
+export * from '@services/api/userLkupAPI.service';
+export * from '@services/api/supplierLkupAPI.service';
+export * from '@services/api/missionLkupAPI.service';
 
 @NgModule()
 export class APIModule {
@@ -23,13 +25,14 @@ export class APIModule {
     return {
       ngModule: APIModule,
       providers: [
-        AuthenticationAPI,
         DocumentAPI,
         PartAPI,
         ReviewAPI,
         UserAPI,
-        UserPartAPI,
-        WhiteboardAPI,
+        WhiteboardIssueAPI,
+        UserLkupAPI,
+        SupplierLkupAPI,
+        MissionLkupAPI,
       ],
     };
   }

@@ -3,8 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { arsServiceBaseUrl } from '@environments/environment';
 
-import { HcmList } from '@models/test.model';
-
 @Injectable()
 export class AdminService {
     hcmList = {};

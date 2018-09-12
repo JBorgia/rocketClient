@@ -46,7 +46,6 @@ export class ModalComponent implements OnInit, OnDestroy {
     viewContainerRef.clear();
 
     const componentRef = viewContainerRef.createComponent(componentFactory);
-    (<ModalInterface>componentRef.instance).data = this.data.obj;
-    (<ModalInterface>componentRef.instance).title = this.data.componentTitle;
+    (<ModalInterface>componentRef.instance).data = this.data;
   }
 }
