@@ -1,0 +1,18 @@
+<app-card>
+  <div title="">Click here to add users to this application</div>
+    <button footer mat-raised-button color="primary" (click)="openDialog()">Add Users</button>
+</app-card>
+<app-card isCollapsible="true">
+  <div title>USERS
+  </div>
+  <app-icon-data details
+    [text]="'Number of Users'"
+    [faIcon]="faUser"
+    [detail]="(usersData$ | async)?.length">
+  </app-icon-data>
+  <app-flex-table
+    [arrayObjects]="usersData$"
+    [displayObject]="displayObject"
+    >
+  </app-flex-table>
+</app-card>

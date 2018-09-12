@@ -1,0 +1,36 @@
+<div class="container" [ngClass]="{'banded': item.index % 2 === 1 }">
+  <div class="controls">
+    #{{item.index}}<br>
+    place<br>controls<br>here
+  </div>
+  <div class="details">
+    <div class="flex-container-vertical">
+      <!-- <div class="flex-item">
+        <div class="name">ID#</div>
+        <div class="value">{{item.partId}}</div>
+      </div> -->
+      <div class="flex-item">
+        <div class="name">SUPPLIER:</div>
+        <div class="value">{{item.supplierName}}</div>
+      </div>
+      <div class="flex-item">
+        <div class="name">PART:</div>
+        <div class="value">{{item.partName}}</div>
+      </div>
+    </div>
+    <div class="flex-container-vertical">
+      <div class="flex-item">
+        <div class="name">PART#</div>
+        <div class="value">{{item.partNo}}</div>
+      </div>
+      <div class="flex-item">
+        <div class="name">SERIAL#</div>
+        <div class="value">{{item.serialNo}}</div>
+      </div>
+      <div class="flex-item">
+        <div class="name">MISSION:</div>
+        <div class="value">{{item.missionName}}</div>
+      </div>
+    </div>
+  </div>
+</div>

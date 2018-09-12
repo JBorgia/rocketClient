@@ -1,0 +1,12 @@
+<app-card isCollapsible="true">
+  <button footer mat-raised-button color="primary" (click)="openDialog()">Add WhiteBoard</button>
+  <div title>WHITEBOARDS
+  </div>
+  <div details *ngIf="(wbIssuesData$ | async)?.length > 0">Count: {{(wbIssuesData$ | async)?.length}}
+  </div>
+  <app-flex-table
+    [arrayObjects]="wbIssuesData$"
+    [displayObject]="displayObject"
+    (outEvent)="tableEvents($event)">
+  </app-flex-table>
+</app-card>

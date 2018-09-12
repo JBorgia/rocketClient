@@ -1,0 +1,66 @@
+@import "../../../../styles/theme/palette";
+
+:host {
+  width: 100%;
+  margin: 8px;
+}
+
+::ng-deep {
+  .dynamic-form {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+  .field {
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 1 1 240px;
+    -ms-flex: 1 1 240px;
+    flex: 1 1 240px;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    @media only screen and (min-width: 1024px) {
+      max-width: calc(25% - 16px);
+    }
+    @media only screen and (min-width: 1320px) {
+      max-width: calc(20% - 16px);
+    }
+  }
+  .form {
+    // max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  button {
+    float: right;
+  } // this is to override placement of button
+  .field:last-child {
+    -webkit-flex: auto !important;
+    -ms-flex: auto !important;
+    flex: auto !important;
+  }
+}
+
+.title {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 700;
+  margin: 8px 0;
+}

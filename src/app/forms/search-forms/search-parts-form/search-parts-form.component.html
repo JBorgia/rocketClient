@@ -1,0 +1,8 @@
+<div class="form">
+  <div class="title">
+      {{title}}
+  </div>
+  <dynamic-form [fields]="regConfig" (onFormChanges)="onFormChanges($event)" (submit)="submit($event)">
+    <button footer type="submit" mat-raised-button color="primary">Submit</button>
+  </dynamic-form>
+</div>

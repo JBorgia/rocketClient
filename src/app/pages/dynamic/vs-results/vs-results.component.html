@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="summary">
+    <div class="flex-item">
+      {{title}}
+    </div>
+    <app-icon-data class="flex-item" details [text]="'Number of Parts'" [faIcon]="faFileAlt" [detail]="items?.length">
+    </app-icon-data>
+  </div>
+  <hr>
+  <app-virtual-scroll [items]="items" (vsUpdate)="viewPortItems = $event" (vsEnd)="fetchMore($event)">
+    <div #container>
+      <!-- Warning: using [ngClass] here breaks the virtual scroll functionality -->
+      <ng-container vsresultshost *ngFor="let item of viewPortItems" [component]="this.data.dynamicType" [item]="item"></ng-container>
+      <div *ngIf="loading" class="loader">Loading...</div>
+    </div>
+  </app-virtual-scroll>
+</div>

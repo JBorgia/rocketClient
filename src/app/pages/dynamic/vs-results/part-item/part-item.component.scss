@@ -1,0 +1,71 @@
+@import "../../../../../styles/theme/palette";
+.container {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: flex-start;
+  padding: 4px 4px 0px 4px;
+  .controls {
+    // as flex item
+    order: 0;
+    flex: 0 0 100px;
+    align-self: auto; 
+    // as flex container
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: flex-start;
+  }
+  .details {
+    // as flex item
+    order: 0;
+    flex: 1 1 0;
+    align-self: auto;
+    
+    // as flex container
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: flex-start;
+    .flex-container-vertical{
+      // as flex item
+      order: 0;
+      flex: 1 1 0;
+      align-self: auto;
+      
+      // as flex container
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-content: stretch;
+      align-items: flex-start;
+      .flex-item {
+        order: 0;
+        flex: 1 1 1;
+        align-self: auto;
+        display: inline-flex;
+        margin: 2px;
+      }
+
+    }
+  }
+}
+
+.banded {
+  background: #DDDDDD;
+  border-radius: 8px 0px 0px 8px;
+}
+
+.name{
+  font-weight: 700;
+  min-width: 6em;
+}

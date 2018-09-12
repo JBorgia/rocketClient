@@ -1,0 +1,15 @@
+<app-card isCollapsible="true">
+  <div title>{{title}}
+    <span *ngIf="userInfo"> ({{userInfo.fullName}})</span>
+  </div>
+  <app-icon-data details
+    [text]="'Number of Reviews'"
+    [faIcon]="faFileAlt"
+    [detail]="(reviewsData$ | async)?.length">
+  </app-icon-data>
+  <app-flex-table
+    [arrayObjects]="reviewsData$"
+    [displayObject]="displayObject"
+    (outEvent)="tableEvents($event)">
+  </app-flex-table>
+</app-card>

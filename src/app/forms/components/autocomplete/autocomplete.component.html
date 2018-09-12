@@ -1,0 +1,8 @@
+<mat-form-field class="full-width" [formGroup]="group">
+  <input type="text" [placeholder]="field.label" matInput [formControlName]="field.name" [matAutocomplete]="auto">
+  <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+    <mat-option *ngFor="let item of filteredOptions | async | orderObjectBy: order : reverse" [value]="item">
+      {{item.name}}
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field>
