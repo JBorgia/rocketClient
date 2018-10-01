@@ -1,0 +1,38 @@
+<div class="container" [ngClass]="{'banded': item.index % 2 === 0 }">
+  <div class="index">#{{item.index}}</div>
+  <div class="controls">
+    <!-- 
+        Add the code below to the div below to add alternating color to index numbers
+       [ngClass]="{'banded': item.index % 2 === 0, 'not-banded': item.index % 2 === 1 }"
+     -->
+    <fa-icon class="envelope" matTooltip="Send {{item.firstName}} a message" [icon]="faEnvelope" (click)="message(item)"></fa-icon>
+    <!-- <fa-icon class="external-link" matTooltip="Open {{item.firstName}}'s details" [icon]="faExternalLinkAlt" (click)="openInPage(item)"></fa-icon> -->
+    <fa-icon class="external-link" matTooltip="Remove {{item.firstName}}" [icon]="faUserMinus" (click)="openInPage(item)"></fa-icon>
+  </div>
+  <div class="details">
+    <div class="flex-container-vertical">
+      <div class="flex-item">
+        <div class="name">USER ID#:</div>
+        <div class="value">{{item.userId}}</div>
+      </div>
+      <div class="flex-item">
+        <div class="name">FIRST NAME:</div>
+        <div class="value">{{item.firstName}}</div>
+      </div>
+      <div class="flex-item">
+        <div class="name">LAST NAME:</div>
+        <div class="value">{{item.lastName}}</div>
+      </div>
+    </div>
+    <div class="flex-container-vertical">
+      <div class="flex-item">
+        <div class="name">ROLE:</div>
+        <div class="value">{{item.role}}</div>
+      </div>
+      <div class="flex-item">
+        <div class="name">TEAM:</div>
+        <div class="value">{{item.team}}</div>
+      </div>
+    </div>
+  </div>
+</div>

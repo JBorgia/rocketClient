@@ -4,16 +4,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {
   CreateMessageFormComponent,
   SelectEmployeeFormComponent,
-  UserFormComponent,
-  WhiteboardIssueFormComponent,
-  ReviewCloseFormComponent,
-  DocumentCloseFormComponent,
+  CreateUserFormComponent,
+  AddUserFormComponent,
+  CreateWhiteboardIssueFormComponent,
+  CloseWhiteboardIssueFormComponent,
+  CloseReviewFormComponent,
+  CreateWhiteboardNoteFormComponent,
  } from '@app/forms';
 import { EditComponent } from '@components/edit/edit.component';
 import { FormModule } from '@forms/form.module';
 
 import { ModalComponent } from './modal.component';
 import { ModalDirective } from './modal.directive';
+import { WhiteboardNotesComponent } from '@app/pages/dynamic/vs-display/display-items/_index';
 
 @NgModule({
   declarations: [ModalComponent, ModalDirective, EditComponent],
@@ -26,12 +29,15 @@ import { ModalDirective } from './modal.directive';
   entryComponents: [
     EditComponent, 
     CreateMessageFormComponent, 
+    CreateWhiteboardNoteFormComponent,
     ModalComponent, 
     SelectEmployeeFormComponent,
-    UserFormComponent, 
-    WhiteboardIssueFormComponent,
-    ReviewCloseFormComponent,
-     DocumentCloseFormComponent
+    AddUserFormComponent,
+    CreateUserFormComponent, 
+    CreateWhiteboardIssueFormComponent,
+    CloseWhiteboardIssueFormComponent,
+    CloseReviewFormComponent,
+    WhiteboardNotesComponent,
   ],
 })
 export class ModalModule { }

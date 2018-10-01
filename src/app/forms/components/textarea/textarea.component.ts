@@ -1,7 +1,7 @@
 import { CdkTextareaAutosize } from '@angular/cdk/text-field';
 import { Component, ViewChild, OnInit } from '@angular/core';
 import { FormGroup } from "@angular/forms";
-import { FieldConfig } from "../../field.interface";
+import { FieldConfig } from "@forms/field.interface";
 
 /**
  * TextAreaComponent uses matInput on a textarea tag and while much of the settings are statically 

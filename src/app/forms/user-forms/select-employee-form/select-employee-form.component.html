@@ -1,0 +1,19 @@
+<div class="form">
+  <div class="title">
+    <h1>
+      {{title}}
+    </h1>
+  </div>
+  <!--
+    The submit is triggered by the submit button that is projected into the dynamic-form component.
+    However, as the dynamic-form component has the data we need, we bind to the submit emitter to get
+    the data. This data is passed to our submit function which then calls openDialogue, passing the data
+    and pre-populating the add ars user form.
+   -->
+  <dynamic-form [fields]="regConfig" (onFormChanges)="onFormChanges($event)" (submit)="submit($event)">
+    <button footer type="submit" mat-raised-button color="primary">Submit</button>
+  </dynamic-form>
+  <!-- <div class="margin-top">
+    {{ form.value | json }}
+  </div> -->
+</div>

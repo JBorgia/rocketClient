@@ -5,7 +5,7 @@ import { MatAutocompleteSelectedEvent, MatChipInputEvent } from '@angular/materi
 import { Observable } from 'rxjs';
 import { map, startWith, take } from 'rxjs/operators';
 import { FormGroup } from "@angular/forms";
-import { FieldConfig, Option } from "../../field.interface";
+import { FieldConfig, Option } from "@forms/field.interface";
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
 /**
@@ -146,15 +146,18 @@ export class ChipsComponent implements OnInit {
    * the this.field.value array of preset selected values) are removed from unselectedOptions.
    */
   ngOnInit(): void {
-    this.field.options.subscribe(res => this.unselectedOptions = res);
+    this.field.options.subscribe(res => {
+      this.unselectedOptions = res;
 
-    // Remove already selected values from selectable options
-    if(this.field.value){
-      this.field.value.forEach(value => {
-        let index = this.unselectedOptions.map((option: Option) => option.value).indexOf(value.value);
-        this.unselectedOptions.splice(index, 1);
-      });
-    }
+      // Remove already selected values from selectable options
+      if (this.field.value) {
+        this.field.value.forEach(value => {
+          let index = this.unselectedOptions.map((option: Option) => option.name).indexOf(value.name);
+          this.unselectedOptions.splice(index, 1);
+        });
+      }
+      this.formCtrl.setValue('');
+    });
   }
 
   /**

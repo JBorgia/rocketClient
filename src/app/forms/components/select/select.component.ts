@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { FieldConfig } from '../../field.interface';
+import { FieldConfig } from "@forms/field.interface";
+import { MatSelect } from '@angular/material';
 
 /**
  * SelectComponent uses mat-select and settings may be statically set in the template.
@@ -65,9 +66,14 @@ import { FieldConfig } from '../../field.interface';
         label: 'Gender',
         name: 'gender',
         options: arsUserData.map(user => ({ name: `${user.nameLast}, ${user.nameFirst}`, value: user.userId })),,
-        value: {name: `${employee.nameLast}, ${employee.nameFirst}`, value: employee.userId}
+        value:  employee.userId
       },
     ];
+ *  
+ * IMPORTANT! The compareByValue() used to verify change is functional, but simple. The simplicity and speed come at
+ * a cost. The value set to the 'value' property MUST be exactly that of the 'value' of the option. The value can even
+ * be an Object, but the ORDER and VALUE of the fields of the object must EXACTLY and COMPLETELY align with the option object.
+ *  
  */
 
 @Component({
@@ -77,20 +83,27 @@ import { FieldConfig } from '../../field.interface';
 })
 
 export class SelectComponent implements OnInit {
+  // @ViewChild() matSelect: MatSelect;
   field: FieldConfig;
   group: FormGroup;
   reverse: boolean;
   order: string;
 
-  constructor() { }
+  constructor(
+  ) { }
 
   ngOnInit() {
     /**
      * https://angular.io/api/forms/FormControlName#use-with-ngmodel
      * To avoid mixing reactive and template-driven forms, we set the value reactively.
      */
-    this.group.get(this.field.name).setValue(this.field.value);
     this.reverse = false;
     this.order = 'name';
+  }
+
+  compareFn: ((f1: any, f2: any) => boolean)|null = this.compareByValue;
+
+  compareByValue(f1: any, f2: any) { 
+    return f1 && f2 && JSON.stringify(f1) === JSON.stringify(f2); 
   }
 }

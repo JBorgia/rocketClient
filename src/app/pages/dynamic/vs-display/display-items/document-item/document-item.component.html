@@ -1,0 +1,45 @@
+<div class="container" [ngClass]="{'banded': item.index % 2 === 0 }">
+  <div class="index">#{{item.index}}</div>
+  <div class="controls">
+    <!-- 
+        Add the code below to the div below to add alternating color to index numbers
+       [ngClass]="{'banded': item.index % 2 === 0, 'not-banded': item.index % 2 === 1 }"
+     -->
+    <!-- <fa-icon class="envelope" matTooltip="Send {{item.firstName}} a message" [icon]="faEnvelope" (click)="message(item)"></fa-icon> -->
+    <fa-icon class="external-link" matTooltip="Open {{item.docFilename}} details" [icon]="faExternalLinkAlt" (click)="openInPage(item)"></fa-icon>
+  </div>
+  <div class="details">
+    <div class="flex-container-vertical">
+      <div class="flex-item">
+        <div class="name">TYPE:</div>
+        <div class="value">{{item.docType}}</div>
+      </div>
+      <div class="flex-item">
+        <div class="name">FILE NAME:</div>
+        <div class="value">{{item.docFilename}}</div>
+      </div>
+      <div class="flex-item">
+        <div class="name">DESCRIPTION:</div>
+        <div class="value">{{item.docDesc}}</div>
+      </div>
+    </div>
+    <div class="flex-container-vertical">
+      <div class="flex-item">
+        <div class="name">STATUS:</div>
+        <div class="value">{{item.docStatus}}</div>
+      </div>
+      <div class="flex-item">
+        <div class="name">SOURCE:</div>
+        <div class="value">{{item.docSource}}</div>
+      </div>
+      <div class="flex-item" *ngIf="item.docSigner">
+        <div class="name">SIGNED BY:</div>
+        <div class="value">{{item.docSigner}}</div>
+      </div>
+      <div class="flex-item" *ngIf="item.docSignedDate">
+        <div class="name">SIGNED ON:</div>
+        <div class="value">{{item.docSignedDate}}</div>
+      </div>
+    </div>
+  </div>
+</div>

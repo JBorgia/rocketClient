@@ -12,7 +12,7 @@ import {
   Validators,
   FormControl
 } from '@angular/forms';
-import { FieldConfig, Validator } from '../../field.interface';
+import { FieldConfig, Validator } from "@forms/field.interface";
 
 /**
  * The dynamic-form component generates forms by projecting field configuration items
@@ -72,7 +72,7 @@ export class DynamicFormComponent implements OnInit {
 
   // on the click of a submit button, the form is emitted if valid.
   onSubmit(event: Event) {
-    let submitForm = { value: null };
+    let submitForm = this.form.value;
     console.log('SUBMITTED!');
     event.preventDefault();
     /** 

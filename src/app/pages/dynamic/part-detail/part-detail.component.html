@@ -2,7 +2,7 @@
 </div>
 <mat-accordion>
   <mat-expansion-panel (click)="getExpandedState()">
-    <mat-expansion-panel-header [collapsedHeight]="'32px'">
+    <mat-expansion-panel-header [collapsedHeight]="'32px'" [expandedHeight]="'32px'">
       <mat-panel-title>
         <span *ngIf="(partData$ | async)?.partNo; else noPart"> Part No. {{(partData$ | async)?.partNo }} | Serial No. {{(partData$ | async)?.serialNo }}</span>
         <ng-template #noPart>

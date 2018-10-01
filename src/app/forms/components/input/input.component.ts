@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FormGroup } from "@angular/forms";
-import { FieldConfig } from "../../field.interface";
+import { FieldConfig } from "@forms/field.interface";
 
 /**
  * InputComponent uses matInput and much of the settings are statically set in the template.

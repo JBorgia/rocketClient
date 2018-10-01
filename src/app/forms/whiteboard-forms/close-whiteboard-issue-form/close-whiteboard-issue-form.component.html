@@ -1,0 +1,15 @@
+<div class="form">
+  <div class="title">
+    <h1>
+        {{title}} Whiteboard Issue #{{data.whiteboard.issueId}}
+    </h1>
+  </div>
+  <div class="flex-container">
+    <app-whiteboard-display [whiteboard]="data.whiteboard"></app-whiteboard-display>
+    <div class="spacer">
+    </div>
+    <dynamic-form [fields]="regConfig" (submit)="submit($event)">
+      <button footer type="submit" mat-raised-button color="primary">Submit</button>
+    </dynamic-form>
+  </div>
+</div>

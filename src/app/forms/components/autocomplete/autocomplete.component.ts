@@ -3,7 +3,7 @@ import { FormGroup } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { debounceTime, distinctUntilChanged, filter, map, startWith, switchMap, tap } from 'rxjs/operators';
 
-import { FieldConfig, Option } from '../../field.interface';
+import { FieldConfig, Option } from "@forms/field.interface";
 import { MatAutocomplete, MatAutocompleteSelectedEvent } from '@angular/material';
 
 /**

@@ -1,0 +1,25 @@
+<div class="container">
+  <div #searchForm>
+    <app-search-form *ngIf="data.vsObject.showSearch"></app-search-form>
+  </div>
+  <div class="summary">
+    <div class="title">
+      {{data.vsObject.title}}
+    </div>
+    <app-icon-data class="count" details [text]="'Number of Parts'" [faIcon]="data.vsObject.faIcon" [detail]="items?.length">
+    </app-icon-data>
+    <div class="toolbar">
+      <app-create [data]="data" (vsObjectCreated)="append([$event])"></app-create>
+    </div>
+  </div>
+  <hr>
+  <app-virtual-scroll [items]="items" (vsUpdate)="viewPortItems = $event" (vsEnd)="fetchMore($event)" [ngClass]="data.vsObject.vsHeight">
+    <!-- <app-virtual-scroll [items]="items" (vsUpdate)="viewPortItems = $event" (vsEnd)="fetchMore($event)"> -->
+    <div #container>
+      <!-- Warning: using [ngClass] here breaks the virtual scroll functionality -->
+      <ng-container vsresultshost *ngFor="let item of viewPortItems" [objectType]="data.vsObject.type" [item]="item" [review]="data.review"></ng-container>
+      <div *ngIf="!loading && (!items || items.length === 0)" class="loader">No {{data.vsObject.title}} &#9785;</div>
+      <div *ngIf="loading" class="loader">Loading...</div>
+    </div>
+  </app-virtual-scroll>
+</div>

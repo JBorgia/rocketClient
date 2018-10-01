@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { arsServiceBaseUrl } from '@environments/environment';
 
-import { WhiteboardIssue } from '@models/ars-app.models';
+import { WhiteboardIssue, WhiteboardNote } from '@models/ars-app.models';
 import { AuthenticationService } from '@services/authentication.service';
 
 @Injectable()
@@ -33,12 +33,11 @@ export class WhiteboardIssueAPI {
         return this.http.get(`${this._arsServiceBaseUrl}whiteboardIssues/document/${id}`);
     }
 
-    editWhiteboardIssue(id, data: object) {
-        return this.http.put<WhiteboardIssue>(`${this._arsServiceBaseUrl}whiteboardIssues/${id}`, data);
+    updateWhiteboardIssue(whiteboardIssue: WhiteboardIssue) {
+        return this.http.put<WhiteboardIssue>(`${this._arsServiceBaseUrl}whiteboardIssues/${whiteboardIssue.issueId}`, whiteboardIssue);
     }
 
     saveWhiteboardIssue(whiteboardIssue: WhiteboardIssue): Observable<any> {
-        console.log('whiteboardIssue', whiteboardIssue);
         return this.http.post(`${this._arsServiceBaseUrl}whiteboardIssues`, whiteboardIssue, { headers: this.authenticationService.apiGetHeaders() });
     }
 //, { headers: this.authenticationService.apiGetHeaders() }
@@ -49,5 +48,13 @@ export class WhiteboardIssueAPI {
 
     getWbCategories(){
         return this.http.get<any>(`${this._arsServiceBaseUrl}/whiteboardCategoryLkup`);
+    }
+
+    getNotesByIssue(issueId){
+        return this.http.get<WhiteboardNote[]>(`${this._arsServiceBaseUrl}/whiteboardNotes${issueId}`)
+    }
+
+    saveWhiteboardNote(whiteboardNote: WhiteboardNote): Observable<any> {
+        return this.http.post(`${this._arsServiceBaseUrl}whiteboardNotes`, whiteboardNote, { headers: this.authenticationService.apiGetHeaders() });
     }
 }

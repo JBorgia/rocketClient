@@ -1,0 +1,14 @@
+
+<mat-accordion>
+  <mat-expansion-panel (click)="getExpandedState()">
+    <mat-expansion-panel-header [collapsedHeight]="'32px'" [expandedHeight]="'32px'">
+      <mat-panel-title>
+        <span>Admin Tools</span>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div class="detail-container">
+      <app-tool *ngFor="let tool of adminTools" [title]="tool.title" [icon]="tool.icon" [tooltip]="tool.tooltip" [modalTitle]="tool.modalTitle"
+        [modalClass]="tool.modalClass" (closeExpansionPanel)="closeExpansionPanel()"></app-tool>
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>

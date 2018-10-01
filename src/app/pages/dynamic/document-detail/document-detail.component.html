@@ -2,7 +2,7 @@
 </div>
 <mat-accordion>
   <mat-expansion-panel (click)="getExpandedState()">
-    <mat-expansion-panel-header [collapsedHeight]="'32px'">
+    <mat-expansion-panel-header [collapsedHeight]="'32px'" [expandedHeight]="'32px'">
       <mat-panel-title>
         <span *ngIf="(documentData$ | async)?.docFilename; else noDocument">{{(documentData$ | async)?.docFilename }}</span>
         <ng-template #noDocument>

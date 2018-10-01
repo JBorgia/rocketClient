@@ -24,6 +24,7 @@ import { DynamicService } from './dynamic.service';
   styleUrls: ['./dynamic.component.scss']
 })
 export class DynamicComponent implements OnInit {
+
   constructor(
     private authenticationService: AuthenticationService,
     private userAPI: UserAPI,
@@ -69,7 +70,7 @@ export class DynamicComponent implements OnInit {
        * If this pattern does not continue in the future, it may be better to have an identifier on detail components to make
        * this determination instead.
        */
-      if (index === 0 && this.reviewId && this.reviewId !== 'search') {
+      if (dynamicItem.data.detailComponent) {
         viewContainerRef = this.detailHost.viewContainerRef;
       } else {
         viewContainerRef = this.dynamicHost.viewContainerRef;
@@ -77,7 +78,6 @@ export class DynamicComponent implements OnInit {
 
       const componentRef = viewContainerRef.createComponent(componentFactory);
       (<DynamicInterface>componentRef.instance).data = dynamicItem.data;
-
     })
   }
 

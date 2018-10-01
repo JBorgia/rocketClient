@@ -30,12 +30,12 @@ export class AuthenticationService {
   constructor(
     private http: HttpClient,
     private router: Router
-  ) {}
+  ) { }
 
   private _currentUserArsData: ArsUser;
   public currentUserKey: 'currentUser';
   public storage: Storage = sessionStorage; // <--- you may switch between sessionStorage or LocalStrage (only one place to change)
-  
+
   private _authBaseUrl = authBaseUrl;
   private authEndpoint = '/authentication_service/user';
 
@@ -48,15 +48,15 @@ export class AuthenticationService {
    * be getting pulled from the browser storage. In the case that the currentUserArsData is attempted to be stored as null or undefined
    * the user should be directed to relogin.
    */
-  set currentUserArsData(user){
-    if(user){
+  set currentUserArsData(user) {
+    if (user) {
       this._currentUserArsData = user;
-    } else{
+    } else {
       this.router.navigate(['/']);
     }
   }
 
-  get currentUserArsData(){
+  get currentUserArsData() {
     return this._currentUserArsData;
     // if(this._currentUserArsData){
     //   return this._currentUserArsData;
@@ -109,7 +109,7 @@ export class AuthenticationService {
     return this.http
       .post(
         this._arsServiceBaseUrl +
-          this.arsValidateUserInTestTableWithAuthEndpoint,
+        this.arsValidateUserInTestTableWithAuthEndpoint,
         {
           params: urlParams,
           withCredentials: true,
@@ -146,77 +146,77 @@ export class AuthenticationService {
   }
 
   getJwtToken(): string | null {
-      const userObj: UserInStorage = this.getUserInfo();
-      if (userObj !== null) {
-          return userObj.jwt;
-      }
-      return null;
+    const userObj: UserInStorage = this.getUserInfo();
+    if (userObj !== null) {
+      return userObj.jwt;
+    }
+    return null;
   }
 
   // Get userinfo from session storage
   getUserInfo(): UserInStorage | null {
-      try {
-          const userInfoString: string = this.storage.getItem(this.currentUserKey);
-          if (userInfoString) {
-              const userObj: UserInStorage = JSON.parse(this.storage.getItem(this.currentUserKey));
-              return userObj;
-          } else {
-              return null;
-          }
-      } catch (e) {
-          return null;
+    try {
+      const userInfoString: string = this.storage.getItem(this.currentUserKey);
+      if (userInfoString) {
+        const userObj: UserInStorage = JSON.parse(this.storage.getItem(this.currentUserKey));
+        return userObj;
+      } else {
+        return null;
       }
+    } catch (e) {
+      return null;
+    }
   }
 
   getStoredToken(): string | null {
-      const userObj: UserInStorage = this.getUserInfo();
-      if (userObj !== null) {
-          return userObj.token;
-      }
-      return null;
+    const userObj: UserInStorage = this.getUserInfo();
+    if (userObj !== null) {
+      return userObj.token;
+    }
+    return null;
   }
 
   // Get User's Display name from session storage
   getUserName(): string {
-      const userObj: UserInStorage = this.getUserInfo();
-      if (userObj !== null) {
-          // console.log(userObj.fullName);
-          return userObj.fullName;
-      }
-      return 'no-user';
+    const userObj: UserInStorage = this.getUserInfo();
+    if (userObj !== null) {
+      // console.log(userObj.fullName);
+      return userObj.fullName;
+    }
+    return 'no-user';
   }
 
   // Get User's Display name from session storage
   getUserEmail(): string {
-      const userObj: UserInStorage = this.getUserInfo();
-      if (userObj !== null) {
-          return userObj.email;
-      }
-      // console.log(userObj.email);
-      return 'no-user';
+    const userObj: UserInStorage = this.getUserInfo();
+    if (userObj !== null) {
+      return userObj.email;
+    }
+    // console.log(userObj.email);
+    return 'no-user';
   }
 
   getEmployeeId(): number | null {
-      const userObj: UserInStorage = this.getUserInfo();
-      if (userObj !== null) {
-          return userObj.employeeId;
-      }
-      return null;
+    const userObj: UserInStorage = this.getUserInfo();
+    if (userObj !== null) {
+      return userObj.employeeId;
+    }
+    return null;
   }
 
   isLoggedIn(): Observable<boolean> {
-      return of(this.storage.getItem(this.currentUserKey) ? true : false);
+    return of(this.storage.getItem(this.currentUserKey) ? true : false);
   }
 
   // Remove userinfo from session storage
   removeUserInfo() {
-      this.storage.removeItem(this.currentUserKey);
-      this.currentUserArsData = null;
+    this.storage.removeItem(this.currentUserKey);
+    this.currentUserArsData = null;
   }
 
   // Store userinfo from session storage
   storeUserInfo(userInfoString: string) {
-      this.storage.setItem(this.currentUserKey, userInfoString);
+    this.storage.setItem(this.currentUserKey, userInfoString);
   }
 
 }

@@ -1,8 +1,8 @@
 .details-container {
   display: inline-flex;
   .divider {
-    font-size: 24px;
-    transform: translateY(-4px);
+    font-size: 20px;
+    transform: translateY(-2px);
   }
   .details{
     // font-size: 20px;
@@ -11,10 +11,10 @@
     align-self: center;
     display: inline-flex;
     fa-icon {
-      margin: 0 2px 0 12px;
+      margin-left: 2px;
     }
     div {
-      margin-left: 2px;
+      margin: 0 2px 0 8px;
     }
   }
 }

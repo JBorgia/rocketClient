@@ -1,0 +1,12 @@
+@import "palette";
+
+.create {
+  &:hover {
+    cursor: pointer;
+    color: $accent-yellow;
+  }
+  &::after {
+    content: "+";
+    font-weight: 700;
+  }
+}

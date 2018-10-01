@@ -11,7 +11,6 @@ import { FormModule } from '@forms/form.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AuthGuard } from '@guards/auth.guard';
 import { DynamicModule } from '@pages/dynamic/dynamic.module';
-import { WhiteboardComponent } from '@pages/whiteboard/whiteboard.component';
 import { DocumentAPI, PartAPI, ReviewAPI, UserAPI, UserLkupAPI, WhiteboardIssueAPI, SupplierLkupAPI, MissionLkupAPI } from '@services/index.ts';
 import { AdminService } from '@services/admin.service';
 import { AuthenticationService } from '@services/authentication.service';
@@ -27,7 +26,6 @@ import { AppComponent } from './app.component';
     AppComponent,
     FooterComponent,
     ToastComponent,
-    WhiteboardComponent,
   ],
   imports: [
     // external imports:

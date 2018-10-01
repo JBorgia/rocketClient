@@ -1,0 +1,60 @@
+@import "palette";
+// $expand-height: 48px;
+
+.detail-container {
+  // FLEX
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: space-between;
+  align-items: flex-start; // Height of display area
+  // height: $expand-height; // Breakpoint for different display. Should correspond to breakpoint for item.
+  // @media only screen and (max-width: 900px) {
+  //   height: $expand-height;
+  // }
+  app-tool {
+    margin: 8px auto;
+    // FLEX
+    order: 0;
+    flex: 0 0 auto;
+    align-self: stretch; // Width of each item
+  }
+}
+
+mat-panel-title {
+  span {
+    color: $ULA_BLUE;
+    font-size: 1em;
+  }
+}
+
+.ula-card-title {
+  margin: 0;
+  text-align: center;
+}
+
+hr {
+  margin-top: 0.5em;
+  margin-bottom: 0.5rem;
+}
+
+// .spacer {
+//   height: 32px;
+//   width: 100%;
+//   transition: height 225ms cubic-bezier(.4,0,.2,1);
+//   &.expanded {
+//     height: $expand-height + 48px;
+//     @media only screen and (max-width: 900px) {
+//       height: $expand-height + 48px + 96px;
+//     }
+//   }
+// }
+
+.mat-expansion-panel {
+  // position: fixed;
+  // top: 60px;
+  width: 100vw;
+  z-index: 1;
+}

@@ -22,8 +22,7 @@ export class LoginService {
     private router: Router,
     private userAPI: UserAPI,
     private authenticationService: AuthenticationService,
-  ) {
-  }
+  ) { }
 
   getToken(username: string, password: string): Observable<any> {
     const bodyData: LoginRequestParam = {
@@ -35,7 +34,7 @@ export class LoginService {
 
     return this.authenticationService.authGets('', null, bodyData).pipe(
       map(jsonResp => {
-        if (jsonResp !== undefined && jsonResp !== null) {
+        if (jsonResp) {
           // Create a success object that we want to send back to login page
           loginInfoReturn = {
             success: true,
@@ -58,7 +57,7 @@ export class LoginService {
           loginInfoReturn = {
             success: false,
             message: jsonResp.msgDesc,
-            landingPage: '/dynamic/dashboard', //  we shouldn't send users here on fail.
+            landingPage: '/', //  we shouldn't send users here on fail.
           };
         }
         // loginDataSubject.next(loginInfoReturn);
@@ -72,7 +71,7 @@ export class LoginService {
             success: false,
             message:
               err.url + ' >>> ' + err.statusText + '[' + err.status + ']',
-            landingPage: '/dashboard',
+            landingPage: '/',
           };
           return observableThrowError(err);
         }

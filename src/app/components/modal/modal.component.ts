@@ -25,7 +25,7 @@ export class ModalComponent implements OnInit, OnDestroy {
   constructor(
     private componentFactoryResolver: ComponentFactoryResolver,
     public dialogRef: MatDialogRef<ModalComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any
+    @Inject(MAT_DIALOG_DATA) public data: any,
   ) {}
 
   ngOnInit() {
@@ -45,6 +45,7 @@ export class ModalComponent implements OnInit, OnDestroy {
     const viewContainerRef = this.modalHost.viewContainerRef;
     viewContainerRef.clear();
 
+    delete this.data.componentClass;
     const componentRef = viewContainerRef.createComponent(componentFactory);
     (<ModalInterface>componentRef.instance).data = this.data;
   }

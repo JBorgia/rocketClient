@@ -6,13 +6,15 @@ import { OrderObjectByPipeModule } from '@pipes/order-object-by.pipe';
 import { SortArrayModule } from '@pipes/sort-array.pipe';
 
 import {
-  DocumentCloseFormComponent,
   CreateMessageFormComponent,
-  ReviewCloseFormComponent,
+  CreateWhiteboardNoteFormComponent,
+  CloseReviewFormComponent,
   SelectEmployeeFormComponent,
-  SearchPartsFormComponent,
-  UserFormComponent,
-  WhiteboardIssueFormComponent,
+  SearchFormComponent,
+  AddUserFormComponent,
+  CreateUserFormComponent,
+  CreateWhiteboardIssueFormComponent,
+  CloseWhiteboardIssueFormComponent,
 } from '.';
 import {
   AutocompleteComponent,
@@ -28,17 +30,24 @@ import {
 import { DynamicFieldDirective } from './components/dynamic-field/dynamic-field.directive';
 import { DynamicFormComponent } from './components/dynamic-form/dynamic-form.component';
 import { MaterialModule } from './material.module';
+import { WhiteboardDisplayComponent } from './whiteboard-forms/close-whiteboard-issue-form/whiteboard-display/whiteboard-display.component';
+import { VsDisplayModule } from '@app/pages/dynamic/vs-display/vs-display.module';
 
 @NgModule({
   declarations: [
     // FORMS
-    UserFormComponent,
+    AddUserFormComponent,
+    CreateUserFormComponent,
     CreateMessageFormComponent,
-    WhiteboardIssueFormComponent,
+    CreateWhiteboardNoteFormComponent,
+    CreateWhiteboardIssueFormComponent,
+    CloseWhiteboardIssueFormComponent,
     SelectEmployeeFormComponent,
-    SearchPartsFormComponent,
-    ReviewCloseFormComponent,
-    DocumentCloseFormComponent,
+    SearchFormComponent,
+    CloseReviewFormComponent,
+
+    // DISPLAY
+    WhiteboardDisplayComponent,
     
     // FORM COMPONENTS
     AutocompleteComponent,
@@ -52,8 +61,7 @@ import { MaterialModule } from './material.module';
     ChipsComponent,
     DynamicFieldDirective,
     DynamicFormComponent,
-    ReviewCloseFormComponent,
-    DocumentCloseFormComponent,
+    CloseReviewFormComponent,
   ],
   imports: [
     SortArrayModule,
@@ -63,6 +71,10 @@ import { MaterialModule } from './material.module';
     OrderObjectByPipeModule,
     ReactiveFormsModule,
     FormsModule,
+  ],
+  exports: [
+    SearchFormComponent,
+    WhiteboardDisplayComponent,
   ],
   providers: [],
   /**

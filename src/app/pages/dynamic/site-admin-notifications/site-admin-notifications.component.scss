@@ -1,0 +1,65 @@
+@import "palette";
+$expand-height: 352px;
+.detail-container {
+  // FLEX
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: space-between;
+  -ms-flex-line-pack: space-between;
+  align-content: space-between;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start; // Height of display area
+  height: $expand-height; // Breakpoint for different display. Should correspond to breakpoint for item.
+  @media only screen and (max-width: 900px) {
+    height: $expand-height;
+  }
+  app-detail-item {
+    // FLEX
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch; // Width of each item
+    width: 50%; // Breakpoint for different display. Should correspond to breakpoint for container.
+    @media only screen and (max-width: 900px) {
+      width: 100%;
+    }
+  }
+}
+
+mat-panel-title {
+  span {
+    color: $ULA_BLUE;
+    font-size: 1em;
+  }
+}
+
+.ula-card-title {
+  margin: 0;
+  text-align: center;
+}
+
+hr {
+  margin-top: 0.5em;
+  margin-bottom: 0.5rem;
+}
+
+.mat-expansion-panel {
+  width: 100vw;
+  z-index: 1;
+}

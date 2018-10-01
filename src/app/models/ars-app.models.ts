@@ -30,7 +30,7 @@ export class ArsUser {
     this.supplierName = supplierName;
   }
 
-  userId: string;
+  userId: number;
   firstName?: string;
   lastName?: string;
   orgName?: string;
@@ -103,7 +103,7 @@ export class Part {
   partReviewDate?: Date;
   partSource: string;
   createdOn: Date;
-  createdBy: string;
+  createdBy: number;
   lastUpdatedOn?: Date;
   lastUpdatedBy?: ArsUser;
 }
@@ -130,7 +130,7 @@ export class Document {
    * Also, as we only fetch part details when requested, it'd make sense to grab it here
    * rather than in a separate request.
    */
-  createdBy: string;
+  createdBy: number;
   lastUpdatedOn?: Date;
   /** lastUpdatedBy should be an actual user one the front end to ensure data is easily displayed.
    * Also, as we only fetch part details when requested, it'd make sense to grab it here
@@ -186,15 +186,15 @@ export class WhiteboardIssue {
     response: string,
     closedComment: string,
     responseByFirstName: string,
-    lastUpdatedByUser: string,
-    createdByUser: string,
+    lastUpdatedByUser: number,
+    createdByUser: number,
     assignedToUser: string,
-    responseByUser: string,
+    responseByUser: number,
     assignedToLastName: string,
     closedByLastName: string,
     lastUpdatedByLastName: string,
     responseByLastName: string,
-    closedByUser: string,
+    closedByUser: number,
     createdByLastName: string,
     category: string,
     issueSeq: number,
@@ -230,8 +230,8 @@ export class WhiteboardIssue {
     this.category = category;
     this.issueSeq = issueSeq;
   }
-
-  issueId: number;
+  index?: number; // this is something that is added for reference by the front end. It does not exist in the database.
+  issueId?: number;
   title: string;
   descr: string;
   status: WhiteboardStatusLkup; // is an fk
@@ -249,15 +249,15 @@ export class WhiteboardIssue {
   response: string;
   closedComment: string;
   responseByFirstName: string;
-  lastUpdatedByUser: string;
-  createdByUser: string;
+  lastUpdatedByUser: number;
+  createdByUser: number;
   assignedToUser: string;
-  responseByUser: string;
+  responseByUser: number;
   assignedToLastName: string;
   closedByLastName: string;
   lastUpdatedByLastName: string;
   responseByLastName: string;
-  closedByUser: string;
+  closedByUser: number;
   createdByLastName: string;
   category: string;
   issueSeq: number;
@@ -292,30 +292,29 @@ export class WhiteboardDoc {
 
 export class WhiteboardNote {
   constructor(
-    id: number,
-    whiteboardIssue: string,
     note: string,
     createdOn: Date,
-    createdBy: Date,
+    createdBy: number,
     lastUpdatedOn: Date,
-    lastUpdatedBy: Date,
+    lastUpdatedBy: number,
+    whiteboardIssue?: WhiteboardIssue,
+    noteId?: number
   ) {
-    this.id = id;
-    this.whiteboardIssue = whiteboardIssue;
     this.note = note;
     this.createdOn = createdOn;
     this.createdBy = createdBy;
     this.lastUpdatedOn = lastUpdatedOn;
     this.lastUpdatedBy = lastUpdatedBy;
+    this.whiteboardIssue = whiteboardIssue;
+    this.noteId = noteId;
   }
-  id: number;
-  whiteboardIssue: string;
   note: string;
   createdOn: Date;
-  createdBy: Date;
+  createdBy: number;
   lastUpdatedOn: Date;
-  lastUpdatedBy: Date;
-
+  lastUpdatedBy: number;
+  whiteboardIssue?: WhiteboardIssue
+  noteId?: number;
 }
 
 export class RID {
@@ -371,7 +370,7 @@ export class RID {
 
 export class WhiteboardStatusLkup {
   constructor(
-    statusId: number,
+    statusId: string,
     descr: string,
     whiteboardIssues: WhiteboardIssue,
   ) {
@@ -379,7 +378,7 @@ export class WhiteboardStatusLkup {
     this.descr = descr;
     this.whiteboardIssues = whiteboardIssues;
   }
-  statusId: number;
+  statusId: string;
   descr: string;
   whiteboardIssues: WhiteboardIssue;
 }
@@ -390,7 +389,7 @@ export class RIDNote {
     rids: RID,
     note: string,
     createdOn: Date,
-    createdBy: string,
+    createdBy: number,
     lastUpdatedOn: Date,
     lastUpdatedBy: string,
   ) {
@@ -407,7 +406,7 @@ export class RIDNote {
   rids: RID;
   note: string;
   createdOn: Date;
-  createdBy: string;
+  createdBy: number;
   lastUpdatedOn: Date;
   lastUpdatedBy: string;
 }
@@ -447,4 +446,14 @@ export class Message {
   recipients: string[];
   message: string;
   createdBy: ArsUser[];
+}
+
+export class Note {
+  partId: string;
+  noteId: string;
+  note: string;
+  createdOn: Date;
+  createdBy: number; 
+  lastUpdatedOn: Date;
+  lastUpdatedBy: number;
 }

@@ -1,0 +1,12 @@
+<div class="form">
+  <div class="title">
+    <h1>
+      Whiteboard Issue #{{data.whiteboard.issueId}}
+    </h1>
+  </div>
+  <div class="flex-container">
+    <app-whiteboard-display [whiteboard]="data.whiteboard"></app-whiteboard-display>
+    <div class="spacer"></div>
+    <app-vs-display [data]="whiteboardNotesVsData"></app-vs-display>
+  </div>
+</div>

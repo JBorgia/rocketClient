@@ -1,0 +1,98 @@
+@import "palette";
+.container {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: flex-start;
+  padding: 4px;
+  margin-left: 8px;
+  border-radius: 8px 0px 0px 8px;
+  .index {
+    flex: 0 0 30px;
+    font-weight: 700;
+    left: 4px;
+    align-self: flex-start;
+    padding: 2px 4px 1px 2px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .controls {
+    // as flex item
+    order: 0;
+    flex: 0 0 60px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 4px;
+    fa-icon {
+      align-self: flex-start;
+      width: 24px;
+      height: 24px;
+      text-align: center;
+      &:hover {
+        cursor: pointer;
+        color: $accent-yellow;
+      }
+      &.envelope {
+        font-size: 21px;
+      }
+      &.external-link {
+        font-size: 18px;
+        transform: translateY(1px);
+      }
+    }
+  }
+  .details {
+    // as flex item
+    order: 0;
+    flex: 1 1 0;
+    align-self: auto; // as flex container
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: stretch;
+    align-items: flex-start;
+    .flex-container-vertical {
+      // as flex item
+      order: 0;
+      flex: 1 1 208px;
+      align-self: auto; // as flex container
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-content: stretch;
+      align-items: stretch;
+      .flex-item {
+        order: 0;
+        flex: 1 1 auto;
+        display: flex;
+        align-self: stretch;
+        margin-top: 2px;
+        .name {
+          font-weight: 700;
+          flex: 1 1 5.5em;
+          text-align: right;
+          padding-right: 8px;
+          max-width: 7.5em;
+        }
+        .value {
+          flex: 2 0 7em;
+        }
+      }
+    }
+  }
+}
+
+.banded {
+  background: $alabaster;
+}
+
+.not-banded {
+  background: #FFFFFF;
+}

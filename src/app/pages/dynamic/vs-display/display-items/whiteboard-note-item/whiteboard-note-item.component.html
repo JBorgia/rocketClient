@@ -1,0 +1,27 @@
+<div class="container" [ngClass]="{'banded': item.index % 2 === 0 }">
+  <div class="index">#{{item.index}}</div>
+  <!-- <div class="controls">
+        Add the code below to the div below to add alternating color to index numbers
+       [ngClass]="{'banded': item.index % 2 === 0, 'not-banded': item.index % 2 === 1 }"
+    <fa-icon class="envelope" matTooltip="Send {{item.firstName}} a message" [icon]="faEnvelope" (click)="message(item)"></fa-icon>
+    <fa-icon class="external-link" matTooltip="View whiteboard issue #{{item.index}} details" [icon]="faEye" (click)="viewWhiteboardNote(item)"></fa-icon>
+    <fa-icon class="external-link" matTooltip="{{tooltip}}" [icon]="isHover ? alternateIcon : defaultIcon" (click)="closeWhiteboardNote(item)" (mouseenter)="isHover = true" (mouseleave)="isHover = false"></fa-icon>
+    <fa-icon class="external-link add" matTooltip="Add a whiteboard issue note" [icon]="faStickyNote" (click)="viewWhiteboardNote(item)"></fa-icon>
+  </div> -->
+  <div class="details">
+    <div class="flex-container-vertical">
+      <!-- <div class="flex-item">
+        <div class="name">NOTE ID:</div>
+        <div class="value">{{item.noteId}}</div>
+      </div> -->
+      <div class="flex-item">
+        <div class="name">BY:</div>
+        <div class="value">{{createdBy$ | async}}</div>
+      </div>
+    </div>
+    <div class="big flex-item" *ngIf="item.note">
+      <div class="name">NOTE:</div>
+      <div class="value">{{item.note}}</div>
+    </div>
+  </div>
+</div>

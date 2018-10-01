@@ -1,0 +1,38 @@
+<div class="details">
+  <div class="flex-container-vertical">
+    <div class="flex-item">
+      <div class="name">TITLE:</div>
+      <div class="value">{{whiteboard.title}}</div>
+    </div>
+    <div class="flex-item">
+      <div class="name">CATEGORY:</div>
+      <div class="value">{{whiteboard.category.category}}</div>
+    </div>
+    <div class="flex-item">
+      <div class="name">STATUS:</div>
+      <div class="value">{{whiteboard.status.statusId}}</div>
+    </div>
+  </div>
+  <div class="flex-container-vertical">
+    <div class="flex-item">
+      <div class="name">CREATOR:</div>
+      <div class="value">{{whiteboard.createdByLastName}}, {{whiteboard.createdByFirstName}} #{{whiteboard.createdByUser}}</div>
+    </div>
+    <div class="flex-item" *ngIf="whiteboard.assignedToUser">
+      <div class="name">ASSIGNEE:</div>
+      <div class="value">{{whiteboard.assignedToLastName}}, {{whiteboard.assignedToFirstName}} #{{whiteboard.assignedToUser}}</div>
+    </div>
+    <div class="flex-item" *ngIf="whiteboard.closedByUser">
+      <div class="name">CLOSER:</div>
+      <div class="value">{{whiteboard.closedByLastName}}, {{whiteboard.closedByFirstName}} #{{whiteboard.closedByUser}}</div>
+    </div>
+  </div>
+  <div class="description flex-item" *ngIf="whiteboard.descr">
+    <div class="name">DESCRIPTION:</div>
+    <div class="value">{{whiteboard.descr}}</div>
+  </div>
+  <div class="description flex-item" *ngIf="whiteboard.action">
+    <div class="name">REQUEST:</div>
+    <div class="value">{{whiteboard.action}}</div>
+  </div>
+</div>

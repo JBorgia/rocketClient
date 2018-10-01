@@ -1,0 +1,57 @@
+@import "palette";
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  app-whiteboard-display {
+    order: 0;
+    flex: 1 1 300px;
+    align-self: auto;
+  }
+}
+
+::ng-deep {
+  dynamic-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+    order: 0;
+    flex: 1 1 300px;
+    align-self: auto;
+    .field {
+      order: 0;
+      flex: 1 0 calc(50% - 12px);
+      align-self: auto;
+    }
+    form {
+      max-height: 80vh;
+      overflow-y: auto;
+      width: 100%;
+    }
+    button {
+      float: right;
+    } // this is to override placement of button
+    .field:last-child {
+      -webkit-flex: auto !important;
+      -ms-flex: auto !important;
+      flex: auto !important;
+    }
+  }
+}
+
+.title {
+  text-align: center;
+}
+
+.form {
+  width: calc(80vw - 48px);
+}
+
+.spacer{
+    flex: 0 0 24px;
+}

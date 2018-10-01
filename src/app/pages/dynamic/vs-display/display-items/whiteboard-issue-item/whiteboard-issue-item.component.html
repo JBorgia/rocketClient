@@ -1,0 +1,103 @@
+<div class="container" [ngClass]="{'banded': item.index % 2 === 0 }">
+  <div class="index">#{{item.index}}</div>
+  <div class="controls">
+    <!-- 
+        Add the code below to the div below to add alternating color to index numbers
+       [ngClass]="{'banded': item.index % 2 === 0, 'not-banded': item.index % 2 === 1 }"
+     -->
+    <!-- <fa-icon class="envelope" matTooltip="Send {{item.firstName}} a message" [icon]="faEnvelope" (click)="message(item)"></fa-icon> -->
+    <fa-icon class="external-link" matTooltip="View whiteboard issue #{{item.index}} details" [icon]="faEye" (click)="viewWhiteboardIssue(item)"></fa-icon>
+    <fa-icon class="external-link" matTooltip="{{tooltip}}" [icon]="isHover ? alternateIcon : defaultIcon" (click)="closeWhiteboardIssue(item)" (mouseenter)="isHover = true" (mouseleave)="isHover = false"></fa-icon>
+    <!-- <fa-icon class="external-link add" matTooltip="Add a whiteboard issue note" [icon]="faStickyNote" (click)="viewWhiteboardIssue(item)"></fa-icon> -->
+  </div>
+  <div class="details">
+    <div class="flex-container-vertical">
+      <!-- <div class="flex-item">
+        <div class="name">ISSUE#:</div>
+        <div class="value">{{item.issueId}}</div>
+      </div> -->
+      <div class="flex-item">
+        <div class="name">TITLE:</div>
+        <div class="value">{{item.title}}</div>
+      </div>
+      <div class="flex-item">
+        <div class="name">CATEGORY:</div>
+        <div class="value">{{item.category.category}}</div>
+      </div>
+      <div class="flex-item">
+        <div class="name">STATUS:</div>
+        <div class="value">{{item.status.statusId}}</div>
+      </div>
+    </div>
+    <div class="flex-container-vertical">
+      <!-- <div class="flex-item">
+        <div class="name">DESCRIPTION:</div>
+        <div class="value">{{item.descr}}</div>
+      </div> -->
+      <div class="flex-item">
+        <div class="name">CREATOR:</div>
+        <div class="value">{{item.createdByLastName}}, {{item.createdByFirstName}} #{{item.createdByUser}}</div>
+      </div>
+      <!-- <div class="flex-item">
+        <div class="name">REQUEST:</div>
+        <div class="value">{{item.action}}</div>
+      </div> -->
+      <div class="flex-item" *ngIf="item.assignedToUser">
+        <div class="name">ASSIGNEE:</div>
+        <div class="value">{{item.assignedToLastName}}, {{item.assignedToFirstName}} #{{item.assignedToUser}}</div>
+      </div>
+      <div class="flex-item" *ngIf="item.closedByUser">
+        <div class="name">CLOSER:</div>
+        <div class="value">{{item.closedByLastName}}, {{item.closedByFirstName}} #{{item.closedByUser}}</div>
+      </div>
+    </div>
+    <div class="big flex-item" *ngIf="item.descr">
+      <div class="name">DESCRIPTION:</div>
+      <div class="value">{{item.descr}}</div>
+    </div>
+    <!-- <div class="big flex-item" *ngIf="item.response">
+      <div class="name">RESPONSE:</div>
+      <div class="value">{{item.response}}</div>
+    </div>
+    <div class="big flex-item" *ngIf="item.closedComment">
+      <div class="name">COMMENTS:</div>
+      <div class="value">{{item.closedComment}}</div>
+    </div> -->
+  </div>
+</div>
+
+<!-- 
+    issueId: number;
+  title: string;
+  descr: string;
+  status: WhiteboardStatusLkup; // is an fk
+  assignedToFirstName: string;
+  closedOn: Date;
+  createdOn: Date;
+  createdByFirstName: string;
+  lastUpdatedOn: Date;
+  lastUpdatedByFirstName: string;
+  closedByFirstName: string;
+  part: Part; // is an fk
+  documentId: number;
+  pages: string;
+  action: string;
+  response: string;
+  closedComment: string;
+  responseByFirstName: string;
+  lastUpdatedByUser: string;
+  createdByUser: string;
+  assignedToUser: string;
+  responseByUser: string;
+  assignedToLastName: string;
+  closedByLastName: string;
+  lastUpdatedByLastName: string;
+  responseByLastName: string;
+  closedByUser: string;
+  createdByLastName: string;
+  category: string;
+  issueSeq: number;
+  whiteboardDocs?: WhiteboardDoc[]; // different form
+  whiteboardNotes?: WhiteboardNote[]; // different form
+  rids?: RID[]; // different form
+ -->

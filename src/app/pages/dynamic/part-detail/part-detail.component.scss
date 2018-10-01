@@ -1,4 +1,5 @@
-@import "../../../../styles/theme/palette";
+@import "palette";
+$expand-height: 128px;
 .detail-container {
   // FLEX
   display: -ms-flexbox;
@@ -19,9 +20,9 @@
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
   align-items: flex-start; // Height of display area
-  height: 128px; // Breakpoint for different display. Should correspond to breakpoint for item.
+  height: $expand-height; // Breakpoint for different display. Should correspond to breakpoint for item.
   @media only screen and (max-width: 900px) {
-    height: 224px;
+    height: $expand-height + 96px;
   }
   app-detail-item {
     // FLEX
@@ -72,16 +73,16 @@ hr {
   width: 100%;
   transition: height 225ms cubic-bezier(.4,0,.2,1);
   &.expanded {
-    height: 208px; // Breakpoint for different display. Should correspond to breakpoint for item.
+    height: $expand-height + 48px;
     @media only screen and (max-width: 900px) {
-      height: 304px;
+      height: $expand-height + 48px + 96px;
     }
   }
 }
 
 .mat-expansion-panel {
   position: fixed;
-  width: 100vw;
   top: 60px;
+  width: 100vw;
   z-index: 1;
 }

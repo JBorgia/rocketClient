@@ -1,0 +1,15 @@
+<mat-accordion>
+  <mat-expansion-panel (click)="getExpandedState()">
+    <mat-expansion-panel-header [collapsedHeight]="'32px'" [expandedHeight]="'32px'">
+      <mat-panel-title>
+        <span *ngIf="(documentData$ | async)?.docFilename; else noDocument">{{(documentData$ | async)?.docFilename }}</span>
+        <ng-template #noDocument>
+          <span>Document Not Found</span>
+        </ng-template>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div class="detail-container">
+      <app-detail-item *ngFor="let item of documentData$ | async | keyvalue" [item]="item"></app-detail-item>
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>

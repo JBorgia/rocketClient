@@ -11,6 +11,7 @@ export class PartAPI {
     userParts$: Observable<any>;
     documentParts$: Observable<any>;
     page: number;
+    
     constructor(private http: HttpClient) { }
 
     getAll(): Observable<any> {
